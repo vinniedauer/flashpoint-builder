@@ -1,0 +1,2421 @@
+{
+  "factions": [
+    {
+      "id": "unsc",
+      "name": "UNSC",
+      "colorHex": "#3A7CA5",
+      "units": [
+        {
+          "id": "master_chief",
+          "name": "Master Chief",
+          "pointCost": 117,
+          "type": "hero",
+          "description": "The legendary Spartan-II super-soldier. Master Chief Petty Officer John-117.",
+          "upgradeSlots": [],
+          "unique": true
+        },
+        {
+          "id": "spartan_mk7",
+          "name": "Spartan MK VII",
+          "pointCost": 40,
+          "type": "infantry",
+          "description": "Versatile Spartan-IV in Mjolnir MK VII armor. Standard multi-role configuration.",
+          "upgradeSlots": [
+            {
+              "id": "spartan_mk7_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "mk7_ma40",
+                  "name": "MA40 Assault Rifle",
+                  "pointCost": 0,
+                  "description": "Reliable automatic rifle."
+                },
+                {
+                  "id": "mk7_pulse_carbine",
+                  "name": "Pulse Carbine",
+                  "pointCost": 1,
+                  "description": "Banished burst-fire plasma weapon."
+                }
+              ]
+            },
+            {
+              "id": "spartan_mk7_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_mk7_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_mk7_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "spartan_mk7_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "spartan_zvezda",
+          "name": "Spartan Zvezda",
+          "pointCost": 40,
+          "type": "infantry",
+          "description": "Medium-range specialist Spartan-IV. Excels at sustained fire at mid-range engagements.",
+          "upgradeSlots": [
+            {
+              "id": "zvezda_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "zv_vk78",
+                  "name": "VK78 Commando",
+                  "pointCost": 0,
+                  "description": "Precision semi-automatic rifle."
+                },
+                {
+                  "id": "zv_cindershot",
+                  "name": "Cindershot",
+                  "pointCost": 1,
+                  "description": "Explosive bolt launcher."
+                }
+              ]
+            },
+            {
+              "id": "zvezda_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "zvezda_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_zvezda_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "spartan_zvezda_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "spartan_deadeye",
+          "name": "Spartan Deadeye",
+          "pointCost": 46,
+          "type": "infantry",
+          "description": "Long-range Spartan-IV marksman. Optimized for precision fire from distance.",
+          "upgradeSlots": [
+            {
+              "id": "deadeye_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "de_dmr",
+                  "name": "M392 DMR",
+                  "pointCost": 0,
+                  "description": "Designated marksman rifle."
+                },
+                {
+                  "id": "de_stalker",
+                  "name": "Stalker Rifle",
+                  "pointCost": 0,
+                  "description": "Banished long-range energy rifle."
+                }
+              ]
+            },
+            {
+              "id": "deadeye_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "deadeye_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_deadeye_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "spartan_deadeye_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "spartan_brawler",
+          "name": "Spartan Brawler",
+          "pointCost": 39,
+          "type": "infantry",
+          "description": "Close-range Spartan-IV specialist. Built for aggressive assaults and tight-quarters fighting.",
+          "upgradeSlots": [
+            {
+              "id": "brawler_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "br_bulldog",
+                  "name": "CQS48 Bulldog Shotgun",
+                  "pointCost": 0,
+                  "description": "High-capacity pump-action shotgun."
+                },
+                {
+                  "id": "br_needler",
+                  "name": "Needler",
+                  "pointCost": 0,
+                  "description": "Crystal shards track and supercombine on targets."
+                }
+              ]
+            },
+            {
+              "id": "brawler_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "brawler_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_brawler_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "spartan_brawler_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "spartan_cqb",
+          "name": "Spartan CQB",
+          "pointCost": 45,
+          "type": "infantry",
+          "description": "Close-quarters battle Spartan-IV. Deadly in melee, equipped with battlefield-recovered Covenant blades.",
+          "upgradeSlots": [
+            {
+              "id": "cqb_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "cqb_sword",
+                  "name": "Energy Sword",
+                  "pointCost": 0,
+                  "description": "Covenant plasma blade."
+                },
+                {
+                  "id": "cqb_hammer",
+                  "name": "Gravity Hammer",
+                  "pointCost": 2,
+                  "description": "Jiralhanae gravity-enhanced melee weapon."
+                }
+              ]
+            },
+            {
+              "id": "cqb_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "cqb_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_cqb_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "spartan_cqb_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "spartan_hazop",
+          "name": "Spartan HAZOP",
+          "pointCost": 44,
+          "type": "infantry",
+          "description": "Hazardous Operations Spartan-IV. Suited for toxic and extreme environment combat.",
+          "upgradeSlots": [
+            {
+              "id": "hazop_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "hz_m45",
+                  "name": "M45 Shotgun",
+                  "pointCost": 0,
+                  "description": "Classic UNSC combat shotgun."
+                },
+                {
+                  "id": "hz_spike_rifle",
+                  "name": "Spike Rifle",
+                  "pointCost": 0,
+                  "description": "Banished full-auto spike weapon."
+                }
+              ]
+            },
+            {
+              "id": "hazop_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "hazop_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_hazop_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "spartan_hazop_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "spartan_gungnir",
+          "name": "Spartan Gungnir",
+          "pointCost": 45,
+          "type": "infantry",
+          "description": "Heavy weapons Spartan-IV. Specializes in explosive and energy-based ordnance.",
+          "upgradeSlots": [
+            {
+              "id": "gungnir_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "gn_plasma_launcher",
+                  "name": "Plasma Launcher",
+                  "pointCost": 0,
+                  "description": "Tracking plasma bolts."
+                },
+                {
+                  "id": "gn_grenade_launcher",
+                  "name": "Grenade Launcher",
+                  "pointCost": 0,
+                  "description": "MRLS-2 Hydra grenade launcher."
+                }
+              ]
+            },
+            {
+              "id": "gungnir_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "gungnir_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_gungnir_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "spartan_gungnir_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "sangheili_mercenary_unsc",
+          "name": "Sangheili Mercenary",
+          "pointCost": 44,
+          "type": "infantry",
+          "description": "Elite Sangheili warrior fighting for profit. Can be recruited by either UNSC or Banished fireteams.",
+          "upgradeSlots": [
+            {
+              "id": "sg_unsc_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "sgu_needler",
+                  "name": "Needler",
+                  "pointCost": 0,
+                  "description": "Crystal shards track and supercombine on targets."
+                },
+                {
+                  "id": "sgu_pulse_carbine",
+                  "name": "Pulse Carbine",
+                  "pointCost": 0,
+                  "description": "Banished burst-fire plasma weapon."
+                },
+                {
+                  "id": "sgu_plasma_rifle",
+                  "name": "Plasma Rifle",
+                  "pointCost": 1,
+                  "description": "Rapid-fire plasma weapon."
+                },
+                {
+                  "id": "sgu_energy_sword",
+                  "name": "Energy Sword",
+                  "pointCost": 5,
+                  "description": "Covenant plasma blade \u2014 devastating in close combat."
+                }
+              ]
+            },
+            {
+              "id": "sg_unsc_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "sgu_energy_dagger",
+                  "name": "Energy Dagger",
+                  "pointCost": 2,
+                  "description": "Short-range plasma blade for initial close combat."
+                }
+              ]
+            },
+            {
+              "id": "sg_unsc_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "sg_unsc_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "sangheili_mercenary_unsc_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "sangheili_mercenary_unsc_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "spartan_jfo",
+          "name": "Spartan JFO",
+          "pointCost": 45,
+          "type": "infantry",
+          "description": "Joint Fires Observer Spartan-IV. Battlefield coordinator and fire support specialist.",
+          "upgradeSlots": [
+            {
+              "id": "jfo_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "jfo_concussion",
+                  "name": "Concussion Rifle",
+                  "pointCost": 0,
+                  "description": "Plasma bolt burst weapon."
+                },
+                {
+                  "id": "jfo_target_locator",
+                  "name": "Target Locator",
+                  "pointCost": 0,
+                  "description": "Calls in orbital strike on marked targets."
+                }
+              ]
+            },
+            {
+              "id": "jfo_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "jfo_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "spartan_jfo_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "spartan_jfo_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        }
+      ],
+      "specialOrders": [
+        {
+          "id": "snap_shot",
+          "name": "Snap Shot",
+          "pointCost": 2,
+          "restriction": "Any Spartan"
+        },
+        {
+          "id": "army_of_one",
+          "name": "Army of One",
+          "pointCost": 6,
+          "restriction": "Master Chief only"
+        },
+        {
+          "id": "return_to_sender",
+          "name": "Return to Sender",
+          "pointCost": 5,
+          "restriction": "Any Spartan"
+        }
+      ]
+    },
+    {
+      "id": "banished",
+      "name": "Banished",
+      "colorHex": "#C0392B",
+      "units": [
+        {
+          "id": "atriox",
+          "name": "Atriox",
+          "pointCost": 86,
+          "type": "hero",
+          "description": "Legendary Jiralhanae warlord who defied the Covenant and built the Banished from their survivors. Wields Chainbreaker.",
+          "upgradeSlots": [],
+          "unique": true
+        },
+        {
+          "id": "sangheili_mercenary",
+          "name": "Sangheili Mercenary",
+          "pointCost": 44,
+          "type": "infantry",
+          "description": "Elite Sangheili warrior fighting for profit. Can be recruited by either UNSC or Banished fireteams.",
+          "upgradeSlots": [
+            {
+              "id": "sangheili_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "sg_needler",
+                  "name": "Needler",
+                  "pointCost": 0,
+                  "description": "Crystal shards track and supercombine on targets."
+                },
+                {
+                  "id": "sg_pulse_carbine",
+                  "name": "Pulse Carbine",
+                  "pointCost": 0,
+                  "description": "Banished burst-fire plasma weapon."
+                },
+                {
+                  "id": "sg_plasma_rifle",
+                  "name": "Plasma Rifle",
+                  "pointCost": 1,
+                  "description": "Rapid-fire plasma weapon."
+                },
+                {
+                  "id": "sg_energy_sword",
+                  "name": "Energy Sword",
+                  "pointCost": 5,
+                  "description": "Covenant plasma blade \u2014 devastating in close combat."
+                }
+              ]
+            },
+            {
+              "id": "sangheili_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "sg_energy_dagger",
+                  "name": "Energy Dagger",
+                  "pointCost": 2,
+                  "description": "Short-range plasma blade for initial close combat."
+                }
+              ]
+            },
+            {
+              "id": "sangheili_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "sangheili_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "sangheili_mercenary_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "sangheili_mercenary_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "brute_berserker",
+          "name": "Jiralhanae Berserker",
+          "pointCost": 34,
+          "type": "infantry",
+          "description": "Frenzied Jiralhanae warrior who fights with unrestrained ferocity. Armed with wrist blades.",
+          "upgradeSlots": [
+            {
+              "id": "berserker_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "bk_spike",
+                  "name": "Wrist Blades + Spike Grenade",
+                  "pointCost": 0,
+                  "description": ""
+                },
+                {
+                  "id": "bk_dynamo",
+                  "name": "Wrist Blades + Dynamo Grenade",
+                  "pointCost": 19,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "berserker_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "brute_berserker_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "brute_berserker_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "brute_captain",
+          "name": "Jiralhanae Captain",
+          "pointCost": 58,
+          "type": "infantry",
+          "description": "Banished squad leader. Carries heavy weaponry and Jiralhanae power gauntlets for close combat.",
+          "upgradeSlots": [
+            {
+              "id": "captain_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "cp_ravager",
+                  "name": "Ravager + Power Gauntlet",
+                  "pointCost": 0,
+                  "description": "Three-round plasma burst launcher."
+                },
+                {
+                  "id": "cp_hydra",
+                  "name": "MRLS-2 Hydra + Power Gauntlet",
+                  "pointCost": 2,
+                  "description": "Multi-lock missile system."
+                }
+              ]
+            },
+            {
+              "id": "captain_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "captain_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "brute_captain_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "brute_captain_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "brute_warrior",
+          "name": "Jiralhanae Warrior",
+          "pointCost": 33,
+          "type": "infantry",
+          "description": "Standard Banished Jiralhanae trooper. Armed with a scavenged VK78 Commando, spike grenade, and fists.",
+          "upgradeSlots": [
+            {
+              "id": "warrior_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "brute_warrior_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "brute_warrior_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "brute_sniper",
+          "name": "Jiralhanae Sniper",
+          "pointCost": 35,
+          "type": "infantry",
+          "description": "Long-range Jiralhanae marksman. Capable of eliminating targets at extreme distances.",
+          "upgradeSlots": [
+            {
+              "id": "sniper_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "sn_shock_disruptor",
+                  "name": "Shock Rifle + Disruptor + Fists",
+                  "pointCost": 0,
+                  "description": "Shock damage disrupts electronics and chaining bolts."
+                },
+                {
+                  "id": "sn_skewer_mangler",
+                  "name": "Skewer + Mangler",
+                  "pointCost": 7,
+                  "description": "Anti-vehicle spike launcher with sidearm."
+                }
+              ]
+            },
+            {
+              "id": "sniper_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "sniper_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "brute_sniper_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "brute_sniper_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        },
+        {
+          "id": "brute_chosen",
+          "name": "Jiralhanae Chosen Warrior",
+          "pointCost": 43,
+          "type": "infantry",
+          "description": "Elite Jiralhanae warrior selected for honor and strength. Armed with Sentinel Beam, spike grenade, and fists.",
+          "upgradeSlots": [
+            {
+              "id": "chosen_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "brute_chosen_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "brute_chosen_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ]
+        }
+      ],
+      "specialOrders": [
+        {
+          "id": "reinforcements_incoming",
+          "name": "Reinforcements Incoming",
+          "pointCost": 5,
+          "restriction": "Sangheili Mercenaries only"
+        },
+        {
+          "id": "alliance",
+          "name": "Alliance",
+          "pointCost": 3,
+          "restriction": "Any Banished"
+        },
+        {
+          "id": "rampage",
+          "name": "Rampage",
+          "pointCost": 4,
+          "restriction": "Jiralhanae only"
+        },
+        {
+          "id": "defiance",
+          "name": "Defiance",
+          "pointCost": 5,
+          "restriction": "Fireteam must include Atriox"
+        }
+      ]
+    }
+  ],
+  "weaponUpgrades": [
+    {
+      "id": "wu_spartan_laser",
+      "name": "M6 Spartan Laser",
+      "pointCost": 16,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_energy_sword",
+      "name": "Energy Sword",
+      "pointCost": 14,
+      "category": "melee"
+    },
+    {
+      "id": "wu_gravity_hammer",
+      "name": "Gravity Hammer",
+      "pointCost": 13,
+      "category": "melee"
+    },
+    {
+      "id": "wu_spnkr",
+      "name": "M41 SPNKr",
+      "pointCost": 11,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_br75",
+      "name": "BR75 Battle Rifle",
+      "pointCost": 11,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_covenant_carbine",
+      "name": "Covenant Carbine",
+      "pointCost": 11,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_focus_rifle",
+      "name": "Focus Rifle",
+      "pointCost": 11,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_s7_sniper",
+      "name": "S7 Sniper Rifle",
+      "pointCost": 10,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_fuel_rod_gun",
+      "name": "Fuel Rod Gun",
+      "pointCost": 10,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_bulldog",
+      "name": "CQS48 Bulldog",
+      "pointCost": 10,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_shock_rifle",
+      "name": "Shock Rifle",
+      "pointCost": 9,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_spike_rifle",
+      "name": "Spike Rifle",
+      "pointCost": 9,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_needle_rifle",
+      "name": "Needle Rifle",
+      "pointCost": 8,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_m45_shotgun",
+      "name": "M45 Shotgun",
+      "pointCost": 8,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_plasma_launcher",
+      "name": "Plasma Launcher",
+      "pointCost": 8,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_dmr",
+      "name": "M392 DMR",
+      "pointCost": 8,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_heatwave",
+      "name": "Heatwave",
+      "pointCost": 8,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_target_locator",
+      "name": "H-165 Target Locator",
+      "pointCost": 7,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_concussion_rifle",
+      "name": "Concussion Rifle",
+      "pointCost": 7,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_hydra",
+      "name": "MLRS-2 Hydra",
+      "pointCost": 7,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_stalker_rifle",
+      "name": "Stalker Rifle",
+      "pointCost": 7,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_vk78",
+      "name": "VK78 Commando",
+      "pointCost": 7,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_plasma_repeater",
+      "name": "Plasma Repeater",
+      "pointCost": 7,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_plasma_rifle",
+      "name": "Plasma Rifle",
+      "pointCost": 6,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_grenade_launcher",
+      "name": "M339 Grenade Launcher",
+      "pointCost": 6,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_cindershot",
+      "name": "Cindershot",
+      "pointCost": 6,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_pulse_carbine",
+      "name": "Pulse Carbine",
+      "pointCost": 5,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_needler",
+      "name": "Needler",
+      "pointCost": 5,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_m6g_magnum",
+      "name": "M6G Magnum",
+      "pointCost": 5,
+      "category": "ranged"
+    },
+    {
+      "id": "wu_ma40",
+      "name": "MA40 Assault Rifle",
+      "pointCost": 5,
+      "category": "ranged"
+    }
+  ]
+}
