@@ -5,9 +5,16 @@ struct NewArmyListView: View {
     @Environment(GameDataStore.self) private var gameData
     @Environment(\.dismiss) private var dismiss
 
+    let defaultFactionId: String
+
     @State private var name = ""
-    @State private var selectedFactionId = ""
+    @State private var selectedFactionId: String
     @State private var pointBudget = 200
+
+    init(defaultFactionId: String) {
+        self.defaultFactionId = defaultFactionId
+        _selectedFactionId = State(initialValue: defaultFactionId)
+    }
 
     private var isValid: Bool { !selectedFactionId.isEmpty }
 
@@ -16,11 +23,22 @@ struct NewArmyListView: View {
             Form {
                 Section("Fireteam Details") {
                     TextField("Name (optional)", text: $name)
-                    Picker("Faction", selection: $selectedFactionId) {
+                }
+
+                Section("Faction") {
+                    HStack(spacing: 12) {
                         ForEach(gameData.factions) { faction in
-                            Text(faction.name).tag(faction.id)
+                            Button {
+                                selectedFactionId = faction.id
+                            } label: {
+                                Text(faction.name)
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.bordered)
+                            .tint(selectedFactionId == faction.id ? .accentColor : .secondary)
                         }
                     }
+                    .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
                 }
 
                 Section {
@@ -57,11 +75,6 @@ struct NewArmyListView: View {
                     Button("Create") { createList() }
                         .disabled(!isValid)
                 }
-            }
-        }
-        .onAppear {
-            if selectedFactionId.isEmpty {
-                selectedFactionId = gameData.factions.first?.id ?? ""
             }
         }
     }

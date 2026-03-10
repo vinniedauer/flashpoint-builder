@@ -28,7 +28,7 @@ struct ArmyListsView: View {
             }
         }
         .sheet(isPresented: $showingNewList) {
-            NewArmyListView()
+            NewArmyListView(defaultFactionId: gameData.factions.first?.id ?? "")
         }
     }
 

@@ -6,15 +6,23 @@ final class GameDataStore {
     let gameData: GameData
 
     init() {
-        guard
-            let url = Bundle.main.url(forResource: "game_data", withExtension: "json"),
-            let data = try? Data(contentsOf: url),
-            let decoded = try? JSONDecoder().decode(GameData.self, from: data)
-        else {
+        guard let url = Bundle.main.url(forResource: "game_data", withExtension: "json") else {
+            print("❌ game_data.json not found in bundle")
             self.gameData = GameData(factions: [], weaponUpgrades: [])
             return
         }
-        self.gameData = decoded
+        guard let data = try? Data(contentsOf: url) else {
+            print("❌ Failed to read game_data.json")
+            self.gameData = GameData(factions: [], weaponUpgrades: [])
+            return
+        }
+        do {
+            self.gameData = try JSONDecoder().decode(GameData.self, from: data)
+            print("✅ Loaded \(self.gameData.factions.count) factions, \(self.gameData.weaponUpgrades.count) weapons")
+        } catch {
+            print("❌ JSON decode error: \(error)")
+            self.gameData = GameData(factions: [], weaponUpgrades: [])
+        }
     }
 
     var factions: [Faction] { gameData.factions }

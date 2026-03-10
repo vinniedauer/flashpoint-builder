@@ -17,6 +17,8 @@
 		2B71FFCFE88600F2379F19F7 /* EditUpgradesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EADEBE5972614B20EE135B /* EditUpgradesView.swift */; };
 		3A860E94A3424F6C2515755A /* ArmyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4DB5E5A532709DA5B206B /* ArmyList.swift */; };
 		3EA2F42F5BAFD5C86D2E1580 /* UnitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA49237DF367DE2BA3E9668 /* UnitDetailView.swift */; };
+		5E5891FD20B815B081496515 /* SpecialOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886E2B1AA7965B5E939083A /* SpecialOrdersView.swift */; };
+		6684B0C474548E480E54FA4A /* WeaponPoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28708A4291354A28F436F5EB /* WeaponPoolView.swift */; };
 		777E3AE8AA0248085E3F312A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9799F950E2E7BD2AC4BE42FE /* ContentView.swift */; };
 		7DF859DF97A0258CAE1698E7 /* NewArmyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90758195A02DF0211F6B6851 /* NewArmyListView.swift */; };
 		9B23995CE9B48B31AFF5B783 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFED4BA20B7482D3DB2536D /* Color+Hex.swift */; };
@@ -24,6 +26,8 @@
 		C82AED91BD14BACE4DDD6440 /* ArmyListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6B0C050E201F4C256D7EB /* ArmyListDetailView.swift */; };
 		D1C2C692D489F0CD5F6D57DB /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8375FDF5ABCA63C440B2A43E /* GameData.swift */; };
 		D7AC042BD7141CC2A1460D4B /* GameDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C12A1273E40DA8130B2511 /* GameDataStore.swift */; };
+		E9607CBB183F0F01CF4206E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA162E940CBD9F6FBD8F08A /* Assets.xcassets */; };
+		ED9EBF0E35C8D98E3FA34B92 /* game_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A5DED874F74ADB46DEDB254B /* game_data.json */; };
 		F8FF96F0EC35DF79534C556D /* PointBudgetBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79BE4C27C910D49F7A58577 /* PointBudgetBar.swift */; };
 		FD08D1CED663B881F2FBD2B2 /* ArmyListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69324C72DF889665E0AE1452 /* ArmyListsView.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +37,7 @@
 		06EADEBE5972614B20EE135B /* EditUpgradesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpgradesView.swift; sourceTree = "<group>"; };
 		0CA49237DF367DE2BA3E9668 /* UnitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailView.swift; sourceTree = "<group>"; };
 		0EFED4BA20B7482D3DB2536D /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		28708A4291354A28F436F5EB /* WeaponPoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponPoolView.swift; sourceTree = "<group>"; };
 		2F11D382DE65265CD1E90ED9 /* ArmyEntryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyEntryRow.swift; sourceTree = "<group>"; };
 		354BDFB5918C8D113DE7EFC8 /* AddUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUnitView.swift; sourceTree = "<group>"; };
 		48B495A287E54B1DA1B97300 /* ArmyListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyListRow.swift; sourceTree = "<group>"; };
@@ -40,15 +45,18 @@
 		5821636BEA09FE67D7B5E232 /* ArmyListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyListStore.swift; sourceTree = "<group>"; };
 		69324C72DF889665E0AE1452 /* ArmyListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyListsView.swift; sourceTree = "<group>"; };
 		6CCE4B585B8A74AABD47C299 /* FlashpointBuilder.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FlashpointBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7886E2B1AA7965B5E939083A /* SpecialOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOrdersView.swift; sourceTree = "<group>"; };
 		8375FDF5ABCA63C440B2A43E /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		83A6B0C050E201F4C256D7EB /* ArmyListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyListDetailView.swift; sourceTree = "<group>"; };
 		90758195A02DF0211F6B6851 /* NewArmyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArmyListView.swift; sourceTree = "<group>"; };
 		9799F950E2E7BD2AC4BE42FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A5A91BE58A0C0A59F2C1B7A5 /* UnitBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitBrowserView.swift; sourceTree = "<group>"; };
+		A5DED874F74ADB46DEDB254B /* game_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = game_data.json; sourceTree = "<group>"; };
 		B0E4DB5E5A532709DA5B206B /* ArmyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyList.swift; sourceTree = "<group>"; };
 		B9C12A1273E40DA8130B2511 /* GameDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataStore.swift; sourceTree = "<group>"; };
 		D79BE4C27C910D49F7A58577 /* PointBudgetBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointBudgetBar.swift; sourceTree = "<group>"; };
 		FA1073212797A07C482D8D44 /* UnitSelectRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSelectRow.swift; sourceTree = "<group>"; };
+		FAA162E940CBD9F6FBD8F08A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -83,6 +91,7 @@
 		856C86CB8F311662CFD1A2BB = {
 			isa = PBXGroup;
 			children = (
+				C603F524A52F0FB46553C38B /* Resources */,
 				C06957A7418D6E86FB1C5ABC /* Sources */,
 				64C6BE455D3A9CC53062C59E /* Products */,
 			);
@@ -96,9 +105,11 @@
 				69324C72DF889665E0AE1452 /* ArmyListsView.swift */,
 				06EADEBE5972614B20EE135B /* EditUpgradesView.swift */,
 				90758195A02DF0211F6B6851 /* NewArmyListView.swift */,
+				7886E2B1AA7965B5E939083A /* SpecialOrdersView.swift */,
 				A5A91BE58A0C0A59F2C1B7A5 /* UnitBrowserView.swift */,
 				0CA49237DF367DE2BA3E9668 /* UnitDetailView.swift */,
 				02084F822AADC42EF041C5CF /* UpgradeConfigForm.swift */,
+				28708A4291354A28F436F5EB /* WeaponPoolView.swift */,
 				110EF50F4B4CDC8D5FCC97CA /* Components */,
 			);
 			path = Views;
@@ -125,6 +136,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C603F524A52F0FB46553C38B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAA162E940CBD9F6FBD8F08A /* Assets.xcassets */,
+				A5DED874F74ADB46DEDB254B /* game_data.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FF8E11AA29ED1D03BB4995EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +162,7 @@
 			buildConfigurationList = A65C14D373247BD4E37A4938 /* Build configuration list for PBXNativeTarget "FlashpointBuilder" */;
 			buildPhases = (
 				29E91A85C1B7138EDB67756E /* Sources */,
+				D827A509BB133831A2E6B1B0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +208,18 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		D827A509BB133831A2E6B1B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9607CBB183F0F01CF4206E1 /* Assets.xcassets in Resources */,
+				ED9EBF0E35C8D98E3FA34B92 /* game_data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		29E91A85C1B7138EDB67756E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -207,10 +240,12 @@
 				D7AC042BD7141CC2A1460D4B /* GameDataStore.swift in Sources */,
 				7DF859DF97A0258CAE1698E7 /* NewArmyListView.swift in Sources */,
 				F8FF96F0EC35DF79534C556D /* PointBudgetBar.swift in Sources */,
+				5E5891FD20B815B081496515 /* SpecialOrdersView.swift in Sources */,
 				C51E186577C1DD7D54F3DA4F /* UnitBrowserView.swift in Sources */,
 				3EA2F42F5BAFD5C86D2E1580 /* UnitDetailView.swift in Sources */,
 				0ADBB70822EC4F36A8873653 /* UnitSelectRow.swift in Sources */,
 				051B0C446637D2769B399EB0 /* UpgradeConfigForm.swift in Sources */,
+				6684B0C474548E480E54FA4A /* WeaponPoolView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
