@@ -8,6 +8,7 @@ struct ArmyListDetailView: View {
     @State private var showingAddUnit = false
     @State private var editingEntry: ArmyEntry?
     @State private var showingSpecialOrders = false
+    @State private var showingCommandUpgrades = false
 
     private var list: ArmyList? {
         store.lists.first { $0.id == listId }
@@ -83,6 +84,47 @@ struct ArmyListDetailView: View {
                 }
             }
 
+            // Command Upgrades
+            Section {
+                if list.selectedCommandUpgradeIds.isEmpty {
+                    Text("None selected")
+                        .foregroundStyle(.secondary)
+                        .font(.subheadline)
+                } else {
+                    ForEach(list.selectedCommandUpgradeIds, id: \.self) { id in
+                        if let upgrade = gameData.commandUpgrades.first(where: { $0.id == id }) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(upgrade.name)
+                                    Text(upgrade.detail)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                                Spacer()
+                                Text("\(upgrade.pointCost) pts")
+                                    .font(.subheadline.bold())
+                                    .foregroundStyle(factionColor)
+                            }
+                        }
+                    }
+                }
+
+                Button {
+                    showingCommandUpgrades = true
+                } label: {
+                    Label("Edit Command Upgrades", systemImage: "pencil.circle.fill")
+                        .foregroundStyle(factionColor)
+                }
+            } header: {
+                HStack {
+                    Text("Command Upgrades")
+                    Spacer()
+                    Text("\(gameData.commandUpgradePoints(list)) pts")
+                        .font(.caption.bold())
+                        .foregroundStyle(factionColor)
+                }
+            }
+
             // Units
             Section {
                 ForEach(list.entries) { entry in
@@ -137,6 +179,9 @@ struct ArmyListDetailView: View {
                 SpecialOrdersSheetWrapper(listId: listId, faction: faction)
             }
         }
+        .sheet(isPresented: $showingCommandUpgrades) {
+            CommandUpgradesSheetWrapper(listId: listId, factionColor: factionColor)
+        }
     }
 
     private func removeEntry(_ entry: ArmyEntry, from list: ArmyList) {
@@ -165,6 +210,31 @@ private struct SpecialOrdersSheetWrapper: View {
                 updated.selectedSpecialOrderIds = newIds
                 store.updateList(updated)
             }
+    }
+}
+
+private struct CommandUpgradesSheetWrapper: View {
+    let listId: UUID
+    let factionColor: Color
+
+    @Environment(ArmyListStore.self) private var store
+    @Environment(GameDataStore.self) private var gameData
+    @State private var selectedIds: [String] = []
+
+    private var list: ArmyList? { store.lists.first { $0.id == listId } }
+
+    var body: some View {
+        CommandUpgradesView(
+            upgrades: gameData.commandUpgrades,
+            factionColor: factionColor,
+            selectedIds: $selectedIds
+        )
+        .onAppear { selectedIds = list?.selectedCommandUpgradeIds ?? [] }
+        .onChange(of: selectedIds) { _, newIds in
+            guard var updated = list else { return }
+            updated.selectedCommandUpgradeIds = newIds
+            store.updateList(updated)
+        }
     }
 }
 

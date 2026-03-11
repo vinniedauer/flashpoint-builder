@@ -7,6 +7,7 @@ struct ArmyList: Codable, Identifiable {
     var pointBudget: Int
     var entries: [ArmyEntry]
     var selectedSpecialOrderIds: [String]
+    var selectedCommandUpgradeIds: [String]
     var createdAt: Date
     var modifiedAt: Date
 
@@ -15,7 +16,8 @@ struct ArmyList: Codable, Identifiable {
         factionId: String,
         pointBudget: Int,
         entries: [ArmyEntry] = [],
-        selectedSpecialOrderIds: [String] = []
+        selectedSpecialOrderIds: [String] = [],
+        selectedCommandUpgradeIds: [String] = []
     ) {
         self.id = UUID()
         self.name = name
@@ -23,6 +25,7 @@ struct ArmyList: Codable, Identifiable {
         self.pointBudget = pointBudget
         self.entries = entries
         self.selectedSpecialOrderIds = selectedSpecialOrderIds
+        self.selectedCommandUpgradeIds = selectedCommandUpgradeIds
         self.createdAt = Date()
         self.modifiedAt = Date()
     }
@@ -30,7 +33,7 @@ struct ArmyList: Codable, Identifiable {
     // Custom decoder for backward compatibility with any previously saved lists
     private enum CodingKeys: String, CodingKey {
         case id, name, factionId, pointBudget, entries, createdAt, modifiedAt
-        case selectedSpecialOrderIds
+        case selectedSpecialOrderIds, selectedCommandUpgradeIds
     }
 
     init(from decoder: Decoder) throws {
@@ -43,6 +46,7 @@ struct ArmyList: Codable, Identifiable {
         createdAt = try c.decode(Date.self, forKey: .createdAt)
         modifiedAt = try c.decode(Date.self, forKey: .modifiedAt)
         selectedSpecialOrderIds = try c.decodeIfPresent([String].self, forKey: .selectedSpecialOrderIds) ?? []
+        selectedCommandUpgradeIds = try c.decodeIfPresent([String].self, forKey: .selectedCommandUpgradeIds) ?? []
     }
 }
 

@@ -2529,5 +2529,31 @@
       "pointCost": 5,
       "category": "ranged"
     }
+  ],
+  "commandUpgrades": [
+    {
+      "id": "cmd_extra_die_permanent",
+      "name": "Extra Command Die",
+      "pointCost": 10,
+      "detail": "Gain an extra Command Die every round."
+    },
+    {
+      "id": "cmd_extra_die_single",
+      "name": "Extra Command Die (Single Use)",
+      "pointCost": 2,
+      "detail": "Once per game: gain an extra Command Die for one round. Declare before rolling."
+    },
+    {
+      "id": "cmd_extra_d8",
+      "name": "Extra d8 (Single Use)",
+      "pointCost": 1,
+      "detail": "Once per game: roll an extra d8 alongside a Symbol command die result."
+    },
+    {
+      "id": "cmd_recon_roll",
+      "name": "Extra Recon Roll",
+      "pointCost": 3,
+      "detail": "Gain an extra roll on the Recon table (Winner or Loser table, as appropriate)."
+    }
   ]
 }

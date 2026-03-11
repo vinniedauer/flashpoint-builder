@@ -8,12 +8,12 @@ final class GameDataStore {
     init() {
         guard let url = Bundle.main.url(forResource: "game_data", withExtension: "json") else {
             print("❌ game_data.json not found in bundle")
-            self.gameData = GameData(factions: [], weaponUpgrades: [])
+            self.gameData = GameData(factions: [], weaponUpgrades: [], commandUpgrades: [])
             return
         }
         guard let data = try? Data(contentsOf: url) else {
             print("❌ Failed to read game_data.json")
-            self.gameData = GameData(factions: [], weaponUpgrades: [])
+            self.gameData = GameData(factions: [], weaponUpgrades: [], commandUpgrades: [])
             return
         }
         do {
@@ -21,12 +21,13 @@ final class GameDataStore {
             print("✅ Loaded \(self.gameData.factions.count) factions, \(self.gameData.weaponUpgrades.count) weapons")
         } catch {
             print("❌ JSON decode error: \(error)")
-            self.gameData = GameData(factions: [], weaponUpgrades: [])
+            self.gameData = GameData(factions: [], weaponUpgrades: [], commandUpgrades: [])
         }
     }
 
     var factions: [Faction] { gameData.factions }
     var weaponUpgrades: [WeaponUpgrade] { gameData.weaponUpgrades }
+    var commandUpgrades: [CommandUpgrade] { gameData.commandUpgrades }
 
     func faction(_ id: String) -> Faction? { gameData.faction(id: id) }
     func unit(_ id: String) -> Unit? { gameData.unit(id: id) }
@@ -65,8 +66,14 @@ final class GameDataStore {
         }
     }
 
+    func commandUpgradePoints(_ list: ArmyList) -> Int {
+        list.selectedCommandUpgradeIds.reduce(0) { total, id in
+            total + (gameData.commandUpgrades.first { $0.id == id }?.pointCost ?? 0)
+        }
+    }
+
     func listPoints(_ list: ArmyList) -> Int {
-        list.entries.reduce(0) { $0 + entryPoints($1) } + specialOrderPoints(list)
+        list.entries.reduce(0) { $0 + entryPoints($1) } + specialOrderPoints(list) + commandUpgradePoints(list)
     }
 
     // MARK: - Uniqueness

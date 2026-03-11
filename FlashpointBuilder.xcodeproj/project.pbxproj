@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0157EE9A324428C7482818FC /* ArmyEntryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F11D382DE65265CD1E90ED9 /* ArmyEntryRow.swift */; };
 		051B0C446637D2769B399EB0 /* UpgradeConfigForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02084F822AADC42EF041C5CF /* UpgradeConfigForm.swift */; };
+		0598413772A3832CB4180AD8 /* CommandUpgradesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881275A63E348E83019AB628 /* CommandUpgradesView.swift */; };
 		0796AB737F756BD6AD3EB8B8 /* FlashpointBuilderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576401E7BB2813DCCB2ABFB6 /* FlashpointBuilderApp.swift */; };
 		0ADBB70822EC4F36A8873653 /* UnitSelectRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1073212797A07C482D8D44 /* UnitSelectRow.swift */; };
 		15C2D98626A1B5486FCEAEA8 /* AddUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BDFB5918C8D113DE7EFC8 /* AddUnitView.swift */; };
@@ -48,6 +49,7 @@
 		7886E2B1AA7965B5E939083A /* SpecialOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOrdersView.swift; sourceTree = "<group>"; };
 		8375FDF5ABCA63C440B2A43E /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		83A6B0C050E201F4C256D7EB /* ArmyListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyListDetailView.swift; sourceTree = "<group>"; };
+		881275A63E348E83019AB628 /* CommandUpgradesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandUpgradesView.swift; sourceTree = "<group>"; };
 		90758195A02DF0211F6B6851 /* NewArmyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArmyListView.swift; sourceTree = "<group>"; };
 		9799F950E2E7BD2AC4BE42FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A5A91BE58A0C0A59F2C1B7A5 /* UnitBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitBrowserView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				354BDFB5918C8D113DE7EFC8 /* AddUnitView.swift */,
 				83A6B0C050E201F4C256D7EB /* ArmyListDetailView.swift */,
 				69324C72DF889665E0AE1452 /* ArmyListsView.swift */,
+				881275A63E348E83019AB628 /* CommandUpgradesView.swift */,
 				06EADEBE5972614B20EE135B /* EditUpgradesView.swift */,
 				90758195A02DF0211F6B6851 /* NewArmyListView.swift */,
 				7886E2B1AA7965B5E939083A /* SpecialOrdersView.swift */,
@@ -233,6 +236,7 @@
 				1FA3135173CB9DC3119D93C0 /* ArmyListStore.swift in Sources */,
 				FD08D1CED663B881F2FBD2B2 /* ArmyListsView.swift in Sources */,
 				9B23995CE9B48B31AFF5B783 /* Color+Hex.swift in Sources */,
+				0598413772A3832CB4180AD8 /* CommandUpgradesView.swift in Sources */,
 				777E3AE8AA0248085E3F312A /* ContentView.swift in Sources */,
 				2B71FFCFE88600F2379F19F7 /* EditUpgradesView.swift in Sources */,
 				0796AB737F756BD6AD3EB8B8 /* FlashpointBuilderApp.swift in Sources */,

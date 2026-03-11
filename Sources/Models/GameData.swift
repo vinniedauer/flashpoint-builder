@@ -3,6 +3,7 @@ import Foundation
 struct GameData: Codable {
     let factions: [Faction]
     let weaponUpgrades: [WeaponUpgrade]
+    let commandUpgrades: [CommandUpgrade]
 
     func faction(id: String) -> Faction? {
         factions.first { $0.id == id }
@@ -20,6 +21,13 @@ struct GameData: Codable {
     func weaponUpgrade(id: String) -> WeaponUpgrade? {
         weaponUpgrades.first { $0.id == id }
     }
+}
+
+struct CommandUpgrade: Codable, Identifiable {
+    let id: String
+    let name: String
+    let pointCost: Int
+    let detail: String
 }
 
 struct Faction: Codable, Identifiable {
