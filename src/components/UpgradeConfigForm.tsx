@@ -22,10 +22,8 @@ export default function UpgradeConfigForm({
     const isSelected = current.includes(optionId)
 
     if (slot.maxSelections === 1) {
-      // Radio style
-      if (isSelected) {
-        onChange(slot.id, [])
-      } else {
+      // True radio: selecting already-active option does nothing, switching replaces
+      if (!isSelected) {
         onChange(slot.id, [optionId])
       }
     } else {
