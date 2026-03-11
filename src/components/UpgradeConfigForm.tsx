@@ -89,7 +89,7 @@ export default function UpgradeConfigForm({
             <div className="space-y-1">
               {options.map((option) => {
                 const selected = current.includes(option.id)
-                const atMax = !selected && current.length >= slot.maxSelections
+                const atMax = slot.maxSelections > 1 && !selected && current.length >= slot.maxSelections
 
                 return (
                   <button
