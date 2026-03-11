@@ -56,7 +56,7 @@ export default function PrintView({ fireteam, gameData }: Props) {
 
   return (
     <div
-      className="print-only hidden"
+      className="print-only"
       style={{
         position: 'fixed',
         inset: 0,

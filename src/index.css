@@ -79,12 +79,23 @@ button:not(:disabled):active {
   transition: opacity 0.06s;
 }
 
+/* ── Screen: hide print-only content ─────────── */
+.print-only {
+  display: none;
+}
+
 /* ── Print ────────────────────────────────────── */
 @media print {
-  body > #root > * {
-    display: none !important;
+  body {
+    background: white !important;
+    background-image: none !important;
+    color: black !important;
+  }
+  #root > * {
+    visibility: hidden;
   }
   .print-only {
     display: block !important;
+    visibility: visible;
   }
 }
