@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import type { User } from '@supabase/supabase-js'
-import { supabase } from '../lib/supabase'
+import { supabase, supabaseConfigured } from '../lib/supabase'
 
 interface AuthStore {
   user: User | null
@@ -11,13 +11,17 @@ interface AuthStore {
 }
 
 export const useAuthStore = create<AuthStore>((set) => {
-  supabase.auth.getSession().then(({ data: { session } }) => {
-    set({ user: session?.user ?? null, loading: false })
-  })
-
-  supabase.auth.onAuthStateChange((_event, session) => {
-    set({ user: session?.user ?? null, loading: false })
-  })
+  if (supabaseConfigured) {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      set({ user: session?.user ?? null, loading: false })
+    })
+    supabase.auth.onAuthStateChange((_event, session) => {
+      set({ user: session?.user ?? null, loading: false })
+    })
+  } else {
+    // No Supabase config — run in guest-only mode
+    setTimeout(() => set({ loading: false }), 0)
+  }
 
   return {
     user: null,

@@ -1,12 +1,13 @@
 import { create } from 'zustand'
 import type { Fireteam } from '../types/game'
-import { supabase } from '../lib/supabase'
+import { supabase, supabaseConfigured } from '../lib/supabase'
 
 const LOCAL_KEY = 'flashpoint_fireteams'
 
 function loadLocal(): Fireteam[] {
   try {
-    return JSON.parse(localStorage.getItem(LOCAL_KEY) ?? '[]')
+    const parsed = JSON.parse(localStorage.getItem(LOCAL_KEY) ?? '[]')
+    return Array.isArray(parsed) ? parsed : []
   } catch {
     return []
   }
@@ -29,8 +30,7 @@ export const useFireteamStore = create<FireteamStore>((set, get) => ({
   fireteams: loadLocal(),
 
   syncWithAuth: async (userId) => {
-    if (!userId) {
-      // Guest: load from localStorage
+    if (!userId || !supabaseConfigured) {
       set({ fireteams: loadLocal() })
       return
     }
