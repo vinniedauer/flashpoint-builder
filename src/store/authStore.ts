@@ -5,18 +5,16 @@ import { supabase } from '../lib/supabase'
 interface AuthStore {
   user: User | null
   loading: boolean
-  signInWithGoogle: () => Promise<void>
-  signInWithGitHub: () => Promise<void>
+  signIn: (email: string, password: string) => Promise<string | null>
+  signUp: (email: string, password: string) => Promise<string | null>
   signOut: () => Promise<void>
 }
 
 export const useAuthStore = create<AuthStore>((set) => {
-  // Initialize session on store creation
   supabase.auth.getSession().then(({ data: { session } }) => {
     set({ user: session?.user ?? null, loading: false })
   })
 
-  // Listen for auth changes
   supabase.auth.onAuthStateChange((_event, session) => {
     set({ user: session?.user ?? null, loading: false })
   })
@@ -24,18 +22,17 @@ export const useAuthStore = create<AuthStore>((set) => {
   return {
     user: null,
     loading: true,
-    signInWithGoogle: async () => {
-      await supabase.auth.signInWithOAuth({
-        provider: 'google',
-        options: { redirectTo: window.location.origin + import.meta.env.BASE_URL },
-      })
+
+    signIn: async (email, password) => {
+      const { error } = await supabase.auth.signInWithPassword({ email, password })
+      return error?.message ?? null
     },
-    signInWithGitHub: async () => {
-      await supabase.auth.signInWithOAuth({
-        provider: 'github',
-        options: { redirectTo: window.location.origin + import.meta.env.BASE_URL },
-      })
+
+    signUp: async (email, password) => {
+      const { error } = await supabase.auth.signUp({ email, password })
+      return error?.message ?? null
     },
+
     signOut: async () => {
       await supabase.auth.signOut()
     },
