@@ -19,15 +19,9 @@
               "maxSelections": 1,
               "options": [
                 {
-                  "id": "mc_ma40",
-                  "name": "MA40 Assault Rifle",
+                  "id": "mc_power_sword",
+                  "name": "Power Sword",
                   "pointCost": 0,
-                  "description": ""
-                },
-                {
-                  "id": "mc_pulse_carbine",
-                  "name": "Pulse Carbine",
-                  "pointCost": 1,
                   "description": ""
                 }
               ]
@@ -1703,15 +1697,9 @@
               "maxSelections": 1,
               "options": [
                 {
-                  "id": "atriox_ravager",
-                  "name": "Ravager + Chainbreaker",
+                  "id": "atriox_chainbreaker",
+                  "name": "Chainbreaker + Power Gauntlet",
                   "pointCost": 0,
-                  "description": ""
-                },
-                {
-                  "id": "atriox_hydra",
-                  "name": "MRLS-2 Hydra + Chainbreaker",
-                  "pointCost": 2,
                   "description": ""
                 }
               ]
