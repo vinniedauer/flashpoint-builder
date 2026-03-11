@@ -66,15 +66,15 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
             return (
               <div
                 key={ft.id}
-                className="relative group anim-fade-up"
+                className="flex items-center gap-2 group anim-fade-up"
                 style={{ animationDelay: `${index * 55}ms` }}
               >
                 <button
                   onClick={() => onSelect(ft)}
-                  className="w-full text-left bg-surface border border-border rounded-xl px-4 py-4 hover:bg-surface-hover hover:border-text-muted transition-all"
+                  className="flex-1 text-left bg-surface border border-border rounded-xl px-4 py-4 hover:bg-surface-hover hover:border-text-muted transition-all min-w-0"
                 >
                   <div className="flex items-start justify-between mb-2">
-                    <div>
+                    <div className="min-w-0 mr-2">
                       <span className="font-display font-semibold text-base text-text-primary uppercase tracking-wide">
                         {ft.name}
                       </span>
@@ -88,7 +88,7 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
                       )}
                     </div>
                     <span
-                      className="font-mono text-sm"
+                      className="font-mono text-sm shrink-0"
                       style={{ color: over ? '#C0392B' : faction?.colorHex ?? '#D8DCF0' }}
                     >
                       {pts} / {ft.pointBudget}
@@ -110,35 +110,32 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
                 </button>
 
                 {confirmDelete === ft.id ? (
-                  <div className="absolute inset-0 bg-surface/95 border border-[#C0392B] rounded-xl flex items-center justify-center gap-3 z-10">
-                    <span className="text-text-secondary font-display text-sm uppercase tracking-wider">
-                      Delete?
-                    </span>
+                  <div className="flex items-center gap-2 shrink-0">
                     <button
                       onClick={() => { deleteFireteam(ft.id, userId); setConfirmDelete(null) }}
-                      className="px-3 py-1 rounded bg-[#C0392B] text-white font-display font-semibold uppercase tracking-wider text-xs"
+                      className="px-3 py-1.5 rounded bg-[#C0392B] text-white font-display font-semibold uppercase tracking-wider text-xs"
                     >
                       Delete
                     </button>
                     <button
                       onClick={() => setConfirmDelete(null)}
-                      className="px-3 py-1 rounded bg-surface-hi border border-border text-text-secondary font-display font-semibold uppercase tracking-wider text-xs"
+                      className="px-3 py-1.5 rounded bg-surface-hi border border-border text-text-secondary font-display font-semibold uppercase tracking-wider text-xs"
                     >
                       Cancel
                     </button>
                   </div>
                 ) : (
-                  <div className="absolute right-3 top-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all">
+                  <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all shrink-0">
                     <button
                       onClick={() => handleClone(ft)}
-                      className="text-text-muted hover:text-text-secondary text-xs font-display uppercase tracking-wider transition-colors"
+                      className="text-text-muted hover:text-text-secondary text-xs font-display uppercase tracking-wider transition-colors px-1"
                       title="Clone fireteam"
                     >
                       Clone
                     </button>
                     <button
                       onClick={() => setConfirmDelete(ft.id)}
-                      className="text-text-muted hover:text-[#C0392B] text-lg leading-none transition-colors"
+                      className="text-text-muted hover:text-[#C0392B] text-xl leading-none transition-colors px-1"
                       title="Delete fireteam"
                     >
                       ×
