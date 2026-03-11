@@ -17,17 +17,17 @@ export default function UpgradeConfigForm({
   totalPoints,
   onChange,
 }: Props) {
+  const isRadioSlot = (slot: UpgradeSlot) => slot.name === 'Loadout'
+
   const toggleOption = (slot: UpgradeSlot, optionId: string) => {
     const current = selectedUpgrades[slot.id] ?? []
     const isSelected = current.includes(optionId)
 
-    if (slot.maxSelections === 1) {
-      // True radio: selecting already-active option does nothing, switching replaces
-      if (!isSelected) {
-        onChange(slot.id, [optionId])
-      }
+    if (isRadioSlot(slot)) {
+      // Radio: can't deselect, only swap
+      if (!isSelected) onChange(slot.id, [optionId])
     } else {
-      // Checkbox style up to max
+      // Checkbox: toggle on/off, respect maxSelections
       if (isSelected) {
         onChange(slot.id, current.filter((id) => id !== optionId))
       } else if (current.length < slot.maxSelections) {
@@ -67,6 +67,7 @@ export default function UpgradeConfigForm({
         if (options.length === 0) return null
 
         const current = selectedUpgrades[slot.id] ?? []
+        const radio = isRadioSlot(slot)
 
         return (
           <div key={slot.id} className="mb-5">
@@ -89,7 +90,7 @@ export default function UpgradeConfigForm({
             <div className="space-y-1">
               {options.map((option) => {
                 const selected = current.includes(option.id)
-                const atMax = slot.maxSelections > 1 && !selected && current.length >= slot.maxSelections
+                const atMax = !radio && !selected && current.length >= slot.maxSelections
 
                 return (
                   <button
@@ -103,17 +104,33 @@ export default function UpgradeConfigForm({
                     }}
                   >
                     <div className="flex items-center gap-3">
-                      <div
-                        className="w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0"
-                        style={{
-                          borderColor: selected ? factionColor : '#40405A',
-                          backgroundColor: selected ? factionColor : 'transparent',
-                        }}
-                      >
-                        {selected && (
-                          <div className="w-1.5 h-1.5 rounded-full bg-white" />
-                        )}
-                      </div>
+                      {radio ? (
+                        /* Radio circle */
+                        <div
+                          className="w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0"
+                          style={{
+                            borderColor: selected ? factionColor : '#40405A',
+                            backgroundColor: selected ? factionColor : 'transparent',
+                          }}
+                        >
+                          {selected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+                        </div>
+                      ) : (
+                        /* Checkbox square */
+                        <div
+                          className="w-4 h-4 rounded border-2 flex items-center justify-center flex-shrink-0"
+                          style={{
+                            borderColor: selected ? factionColor : '#40405A',
+                            backgroundColor: selected ? factionColor : 'transparent',
+                          }}
+                        >
+                          {selected && (
+                            <svg width="9" height="7" viewBox="0 0 9 7" fill="none">
+                              <polyline points="1,3.5 3.5,6 8,1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          )}
+                        </div>
+                      )}
                       <span className="font-display text-sm text-text-primary text-left">
                         {option.name}
                       </span>
