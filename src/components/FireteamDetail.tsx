@@ -82,48 +82,52 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
     <div className="flex flex-col h-full">
       {/* Header */}
       <div className="px-4 pt-6 pb-4 border-b border-border flex-shrink-0">
-        <div className="flex items-center gap-3 mb-4">
+        {/* Row 1: back + faction */}
+        <div className="flex items-center gap-3 mb-3">
           <button
             onClick={onBack}
-            className="text-text-secondary hover:text-text-primary font-display text-sm uppercase tracking-wider transition-colors"
+            className="text-text-secondary hover:text-text-primary font-display text-sm uppercase tracking-wider transition-colors shrink-0"
           >
             ← Back
           </button>
-          <span className="text-text-muted">|</span>
+          <span className="text-text-muted shrink-0">|</span>
           <span
-            className="text-xs font-display uppercase tracking-wider font-semibold"
+            className="text-xs font-display uppercase tracking-wider font-semibold truncate"
             style={{ color: factionColor }}
           >
             {faction.name}
           </span>
-          <span className="flex-1" />
+        </div>
+
+        {/* Row 2: actions */}
+        <div className="flex items-center gap-2 mb-4">
           {confirmDeleteFireteam ? (
-            <div className="flex items-center gap-2">
-              <span className="text-text-secondary font-display text-xs uppercase tracking-wider">Delete?</span>
+            <>
+              <span className="text-text-secondary font-display text-xs uppercase tracking-wider shrink-0">Delete?</span>
               <button
                 onClick={() => { deleteFireteam(fireteam.id, userId); onBack() }}
-                className="px-3 py-1.5 rounded bg-[#C0392B] text-white font-display font-semibold uppercase tracking-wider text-xs"
+                className="px-3 py-1.5 rounded bg-[#C0392B] text-white font-display font-semibold uppercase tracking-wider text-xs shrink-0"
               >
                 Delete
               </button>
               <button
                 onClick={() => setConfirmDeleteFireteam(false)}
-                className="px-3 py-1.5 rounded border border-border bg-surface-hi text-text-secondary font-display font-semibold uppercase tracking-wider text-xs"
+                className="px-3 py-1.5 rounded border border-border bg-surface-hi text-text-secondary font-display font-semibold uppercase tracking-wider text-xs shrink-0"
               >
                 Cancel
               </button>
-            </div>
+            </>
           ) : (
             <button
               onClick={() => setConfirmDeleteFireteam(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded border border-border bg-surface-hi hover:border-[#C0392B] hover:text-[#C0392B] text-text-muted font-display text-xs uppercase tracking-wider transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded border border-border bg-surface-hi hover:border-[#C0392B] hover:text-[#C0392B] text-text-muted font-display text-xs uppercase tracking-wider transition-all shrink-0"
             >
               Delete
             </button>
           )}
           <button
             onClick={() => window.print()}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded border border-border bg-surface-hi hover:bg-surface-hover text-text-secondary hover:text-text-primary font-display text-xs uppercase tracking-wider transition-all"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded border border-border bg-surface-hi hover:bg-surface-hover text-text-secondary hover:text-text-primary font-display text-xs uppercase tracking-wider transition-all shrink-0"
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="6 9 6 2 18 2 18 9" />

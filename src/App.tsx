@@ -99,7 +99,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-bg flex flex-col max-w-2xl mx-auto">
+    <div className="min-h-screen bg-bg flex flex-col w-full max-w-2xl mx-auto">
       {/* Top header with auth */}
       <header className="flex items-center justify-between px-4 pt-4 pb-2 flex-shrink-0">
         <span className="text-xs font-display font-semibold uppercase tracking-widest text-text-muted">
