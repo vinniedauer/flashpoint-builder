@@ -42,6 +42,20 @@
               ]
             },
             {
+              "id": "spartan_mk7_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
               "id": "spartan_mk7_grenade",
               "name": "Grenade",
               "required": false,
@@ -189,6 +203,20 @@
                   "name": "Cindershot",
                   "pointCost": 1,
                   "description": "Explosive bolt launcher."
+                }
+              ]
+            },
+            {
+              "id": "spartan_zvezda_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
                 }
               ]
             },
@@ -344,6 +372,20 @@
               ]
             },
             {
+              "id": "spartan_deadeye_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
               "id": "deadeye_grenade",
               "name": "Grenade",
               "required": false,
@@ -491,6 +533,20 @@
                   "name": "Needler",
                   "pointCost": 0,
                   "description": "Crystal shards track and supercombine on targets."
+                }
+              ]
+            },
+            {
+              "id": "spartan_brawler_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
                 }
               ]
             },
@@ -646,6 +702,20 @@
               ]
             },
             {
+              "id": "spartan_cqb_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
               "id": "cqb_grenade",
               "name": "Grenade",
               "required": false,
@@ -797,6 +867,20 @@
               ]
             },
             {
+              "id": "spartan_hazop_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
               "id": "hazop_grenade",
               "name": "Grenade",
               "required": false,
@@ -944,6 +1028,20 @@
                   "name": "Grenade Launcher",
                   "pointCost": 0,
                   "description": "MRLS-2 Hydra grenade launcher."
+                }
+              ]
+            },
+            {
+              "id": "spartan_gungnir_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
                 }
               ]
             },
@@ -1266,6 +1364,20 @@
                   "name": "Target Locator",
                   "pointCost": 0,
                   "description": "Calls in orbital strike on marked targets."
+                }
+              ]
+            },
+            {
+              "id": "spartan_jfo_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
                 }
               ]
             },
