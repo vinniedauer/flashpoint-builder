@@ -11,7 +11,164 @@
           "pointCost": 117,
           "type": "hero",
           "description": "The legendary Spartan-II super-soldier. Master Chief Petty Officer John-117.",
-          "upgradeSlots": [],
+          "upgradeSlots": [
+            {
+              "id": "mc_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "mc_ma40",
+                  "name": "MA40 Assault Rifle",
+                  "pointCost": 0,
+                  "description": ""
+                },
+                {
+                  "id": "mc_pulse_carbine",
+                  "name": "Pulse Carbine",
+                  "pointCost": 1,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "mc_ccw",
+              "name": "Close Combat Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "ccw_combat_knife",
+                  "name": "M11 Combat Knife",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "mc_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_frag",
+                  "name": "Fragmentation Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "mc_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "mc_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "mc_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ],
           "unique": true
         },
         {
@@ -1538,7 +1695,144 @@
           "pointCost": 86,
           "type": "hero",
           "description": "Legendary Jiralhanae warlord who defied the Covenant and built the Banished from their survivors. Wields Chainbreaker.",
-          "upgradeSlots": [],
+          "upgradeSlots": [
+            {
+              "id": "atriox_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "atriox_ravager",
+                  "name": "Ravager + Chainbreaker",
+                  "pointCost": 0,
+                  "description": ""
+                },
+                {
+                  "id": "atriox_hydra",
+                  "name": "MRLS-2 Hydra + Chainbreaker",
+                  "pointCost": 2,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "atriox_grenade",
+              "name": "Grenade",
+              "required": false,
+              "maxSelections": 2,
+              "options": [
+                {
+                  "id": "g_plasma",
+                  "name": "Plasma Grenade",
+                  "pointCost": 6,
+                  "description": ""
+                },
+                {
+                  "id": "g_spike",
+                  "name": "Spike Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "g_dynamo",
+                  "name": "Dynamo Grenade",
+                  "pointCost": 3,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "atriox_equipment",
+              "name": "Equipment",
+              "required": false,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "eq_active_camo",
+                  "name": "Active Camouflage",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_drop_wall",
+                  "name": "Drop Wall",
+                  "pointCost": 5,
+                  "description": ""
+                },
+                {
+                  "id": "eq_explosive_ammo",
+                  "name": "Explosive Ammo",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_grappleshot",
+                  "name": "Grappleshot",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_hardlight_shield",
+                  "name": "Hardlight Shield",
+                  "pointCost": 7,
+                  "description": ""
+                },
+                {
+                  "id": "eq_health_pack",
+                  "name": "Health Pack",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_overshield",
+                  "name": "Overshield",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_quantum_translocator",
+                  "name": "Quantum Translocator",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_shroud_screen",
+                  "name": "Shroud Screen",
+                  "pointCost": 4,
+                  "description": ""
+                },
+                {
+                  "id": "eq_threat_sensor",
+                  "name": "Threat Sensor",
+                  "pointCost": 3,
+                  "description": ""
+                },
+                {
+                  "id": "eq_thruster",
+                  "name": "Thruster",
+                  "pointCost": 4,
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "id": "atriox_weapon_melee",
+              "name": "Melee Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_melee"
+            },
+            {
+              "id": "atriox_weapon_ranged",
+              "name": "Ranged Weapon",
+              "required": false,
+              "maxSelections": 1,
+              "options": [],
+              "slotType": "weapon_ranged"
+            }
+          ],
           "unique": true
         },
         {
