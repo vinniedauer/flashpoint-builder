@@ -76,7 +76,7 @@
               "id": "mc_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -242,7 +242,7 @@
               "id": "spartan_mk7_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -407,7 +407,7 @@
               "id": "zvezda_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -572,7 +572,7 @@
               "id": "deadeye_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -737,7 +737,7 @@
               "id": "brawler_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -902,7 +902,7 @@
               "id": "cqb_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -1067,7 +1067,7 @@
               "id": "hazop_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -1232,7 +1232,7 @@
               "id": "gungnir_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -1403,7 +1403,7 @@
               "id": "sg_unsc_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -1568,7 +1568,7 @@
               "id": "jfo_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -1734,7 +1734,7 @@
               "id": "atriox_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -1906,7 +1906,7 @@
               "id": "sangheili_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -2025,7 +2025,7 @@
               "id": "berserker_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -2170,7 +2170,7 @@
               "id": "captain_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -2269,7 +2269,7 @@
               "id": "warrior_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -2414,7 +2414,7 @@
               "id": "sniper_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
@@ -2513,7 +2513,7 @@
               "id": "chosen_equipment",
               "name": "Equipment",
               "required": false,
-              "maxSelections": 1,
+              "maxSelections": 99,
               "options": [
                 {
                   "id": "eq_active_camo",
