@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: #0C0C14;
+  color: #D8DCF0;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #14141F;
+}
+::-webkit-scrollbar-thumb {
+  background: #2C2C40;
+  border-radius: 2px;
+}

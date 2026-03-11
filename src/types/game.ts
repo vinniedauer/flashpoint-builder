@@ -1,0 +1,78 @@
+export interface GameData {
+  factions: Faction[]
+  weaponUpgrades: WeaponUpgrade[]
+  commandUpgrades: CommandUpgrade[]
+}
+
+export interface Faction {
+  id: string
+  name: string
+  colorHex: string
+  units: Unit[]
+  specialOrders: SpecialOrder[]
+}
+
+export interface Unit {
+  id: string
+  name: string
+  pointCost: number
+  type: 'hero' | 'infantry' | 'vehicle' | 'support'
+  description: string
+  upgradeSlots: UpgradeSlot[]
+  unique?: boolean
+}
+
+export interface UpgradeSlot {
+  id: string
+  name: string
+  required: boolean
+  maxSelections: number
+  options: Upgrade[]
+  slotType?: 'weapon_melee' | 'weapon_ranged'
+}
+
+export interface Upgrade {
+  id: string
+  name: string
+  pointCost: number
+  description: string
+}
+
+export interface WeaponUpgrade {
+  id: string
+  name: string
+  pointCost: number
+  category: 'melee' | 'ranged'
+}
+
+export interface CommandUpgrade {
+  id: string
+  name: string
+  pointCost: number
+  detail: string
+}
+
+export interface SpecialOrder {
+  id: string
+  name: string
+  pointCost: number
+  restriction: string
+}
+
+export interface Fireteam {
+  id: string
+  name: string
+  factionId: string
+  pointBudget: number
+  entries: FireteamEntry[]
+  selectedSpecialOrderIds: string[]
+  selectedCommandUpgradeIds: string[]
+  createdAt: string
+  modifiedAt: string
+}
+
+export interface FireteamEntry {
+  id: string
+  unitId: string
+  selectedUpgrades: Record<string, string[]>
+}
