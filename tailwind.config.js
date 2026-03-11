@@ -10,7 +10,7 @@ export default {
         'surface-hover': '#222230',
         border: '#2C2C40',
         'text-primary': '#D8DCF0',
-        'text-secondary': '#6870A0',
+        'text-secondary': '#9098C0',
         'text-muted': '#40405A',
       },
       fontFamily: {
