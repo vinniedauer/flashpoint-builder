@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import type { Fireteam, GameData } from '../types/game'
 import { useFireteamStore } from '../store/fireteamStore'
 import { fireteamPoints } from '../utils/points'
 import { v4 as uuidv4 } from 'uuid'
+import SwipeToDelete from './SwipeToDelete'
 
 interface Props {
   gameData: GameData
@@ -13,7 +13,6 @@ interface Props {
 
 export default function FireteamList({ gameData, userId, onSelect, onNew }: Props) {
   const { fireteams, deleteFireteam, addFireteam } = useFireteamStore()
-  const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
 
   const handleClone = (ft: Fireteam) => {
     const now = new Date().toISOString()
@@ -64,14 +63,15 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
             const over = pts > ft.pointBudget
 
             return (
-              <div
+              <SwipeToDelete
                 key={ft.id}
-                className="flex items-center gap-2 group anim-fade-up"
-                style={{ animationDelay: `${index * 55}ms` }}
+                onDelete={() => deleteFireteam(ft.id, userId)}
+                className="rounded-xl group anim-fade-up"
+                style={{ animationDelay: `${index * 55}ms` } as React.CSSProperties}
               >
                 <button
                   onClick={() => onSelect(ft)}
-                  className="flex-1 text-left bg-surface border border-border rounded-xl px-4 py-4 hover:bg-surface-hover hover:border-text-muted transition-all min-w-0"
+                  className="w-full text-left bg-surface border border-border rounded-xl px-4 py-4 hover:bg-surface-hover hover:border-text-muted transition-all"
                 >
                   <div className="flex items-start justify-between mb-2">
                     <div className="min-w-0 mr-2">
@@ -109,40 +109,24 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
                   </div>
                 </button>
 
-                {confirmDelete === ft.id ? (
-                  <div className="flex items-center gap-2 shrink-0">
-                    <button
-                      onClick={() => { deleteFireteam(ft.id, userId); setConfirmDelete(null) }}
-                      className="px-3 py-1.5 rounded bg-[#C0392B] text-white font-display font-semibold uppercase tracking-wider text-xs"
-                    >
-                      Delete
-                    </button>
-                    <button
-                      onClick={() => setConfirmDelete(null)}
-                      className="px-3 py-1.5 rounded bg-surface-hi border border-border text-text-secondary font-display font-semibold uppercase tracking-wider text-xs"
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all shrink-0">
-                    <button
-                      onClick={() => handleClone(ft)}
-                      className="text-text-muted hover:text-text-secondary text-xs font-display uppercase tracking-wider transition-colors px-1"
-                      title="Clone fireteam"
-                    >
-                      Clone
-                    </button>
-                    <button
-                      onClick={() => setConfirmDelete(ft.id)}
-                      className="text-text-muted hover:text-[#C0392B] text-xl leading-none transition-colors px-1"
-                      title="Delete fireteam"
-                    >
-                      ×
-                    </button>
-                  </div>
-                )}
-              </div>
+                {/* Desktop-only hover actions — hidden on touch devices */}
+                <div className="hover-only absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all z-20">
+                  <button
+                    onClick={() => handleClone(ft)}
+                    className="text-text-muted hover:text-text-secondary text-xs font-display uppercase tracking-wider transition-colors px-1"
+                    title="Clone fireteam"
+                  >
+                    Clone
+                  </button>
+                  <button
+                    onClick={() => deleteFireteam(ft.id, userId)}
+                    className="text-text-muted hover:text-[#C0392B] text-xl leading-none transition-colors px-1"
+                    title="Delete fireteam"
+                  >
+                    ×
+                  </button>
+                </div>
+              </SwipeToDelete>
             )
           })}
         </div>

@@ -79,6 +79,13 @@ button:not(:disabled):active {
   transition: opacity 0.06s;
 }
 
+/* ── Touch vs hover device distinction ───────── */
+@media (hover: none) {
+  .hover-only {
+    display: none !important;
+  }
+}
+
 /* ── Screen: hide print-only content ─────────── */
 .print-only {
   display: none;

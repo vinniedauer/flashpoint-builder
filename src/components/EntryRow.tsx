@@ -1,5 +1,6 @@
 import type { FireteamEntry, Unit, WeaponUpgrade } from '../types/game'
 import { entryPoints } from '../utils/points'
+import SwipeToDelete from './SwipeToDelete'
 
 interface Props {
   entry: FireteamEntry
@@ -13,7 +14,6 @@ interface Props {
 export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, onClick, onDelete }: Props) {
   const pts = entryPoints(entry, unit, weaponUpgrades)
 
-  // Collect all selected upgrade names for display
   const upgradeNames: string[] = []
   for (const slot of unit.upgradeSlots) {
     const selectedIds = entry.selectedUpgrades[slot.id] ?? []
@@ -32,16 +32,16 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, on
   }
 
   return (
-    <div className="flex items-center gap-2 group">
+    <SwipeToDelete onDelete={onDelete} className="rounded-lg group">
       <button
         onClick={onClick}
-        className="flex-1 text-left bg-surface-hi border border-border rounded-lg px-4 py-3 hover:bg-surface-hover hover:border-text-muted transition-all"
+        className="w-full text-left bg-surface-hi border border-border rounded-lg px-4 py-3 hover:bg-surface-hover hover:border-text-muted transition-all"
       >
         <div className="flex items-center justify-between">
           <span className="font-display font-semibold text-text-primary uppercase tracking-wide text-sm">
             {unit.name}
           </span>
-          <span className="font-mono text-sm" style={{ color: factionColor }}>
+          <span className="font-mono text-sm shrink-0 ml-2" style={{ color: factionColor }}>
             {pts} pts
           </span>
         </div>
@@ -51,13 +51,15 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, on
           </p>
         )}
       </button>
+
+      {/* Desktop-only hover × — hidden on touch devices */}
       <button
         onClick={onDelete}
-        className="opacity-0 group-hover:opacity-100 text-text-muted hover:text-[#C0392B] text-xl leading-none transition-all px-1"
+        className="hover-only absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 text-text-muted hover:text-[#C0392B] text-xl leading-none transition-all px-1 z-20"
         title="Remove"
       >
         ×
       </button>
-    </div>
+    </SwipeToDelete>
   )
 }

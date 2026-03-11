@@ -22,7 +22,6 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
   const [editingEntry, setEditingEntry] = useState<FireteamEntry | null>(null)
   const [showSpecialOrders, setShowSpecialOrders] = useState(false)
   const [showCommandUpgrades, setShowCommandUpgrades] = useState(false)
-  const [confirmDeleteEntry, setConfirmDeleteEntry] = useState<string | null>(null)
   const [confirmDeleteFireteam, setConfirmDeleteFireteam] = useState(false)
 
   const faction = gameData.factions.find((f) => f.id === fireteam.factionId)
@@ -65,7 +64,6 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
 
   const handleDeleteEntry = (id: string) => {
     save({ entries: fireteam.entries.filter((e) => e.id !== id) })
-    setConfirmDeleteEntry(null)
   }
 
   const handleSaveSpecialOrders = (ids: string[]) => {
@@ -279,34 +277,6 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
             {fireteam.entries.map((entry) => {
               const unit = faction.units.find((u) => u.id === entry.unitId)
               if (!unit) return null
-
-              if (confirmDeleteEntry === entry.id) {
-                return (
-                  <div
-                    key={entry.id}
-                    className="bg-surface-hi border border-[#C0392B] rounded-lg px-4 py-3 flex items-center justify-between gap-3"
-                  >
-                    <span className="text-text-secondary font-display text-sm uppercase tracking-wider">
-                      Remove {unit.name}?
-                    </span>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => handleDeleteEntry(entry.id)}
-                        className="px-3 py-1 rounded bg-[#C0392B] text-white font-display font-semibold uppercase tracking-wider text-xs"
-                      >
-                        Remove
-                      </button>
-                      <button
-                        onClick={() => setConfirmDeleteEntry(null)}
-                        className="px-3 py-1 rounded bg-surface border border-border text-text-secondary font-display font-semibold uppercase tracking-wider text-xs"
-                      >
-                        Cancel
-                      </button>
-                    </div>
-                  </div>
-                )
-              }
-
               return (
                 <EntryRow
                   key={entry.id}
@@ -315,7 +285,7 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
                   weaponUpgrades={gameData.weaponUpgrades}
                   factionColor={factionColor}
                   onClick={() => setEditingEntry(entry)}
-                  onDelete={() => setConfirmDeleteEntry(entry.id)}
+                  onDelete={() => handleDeleteEntry(entry.id)}
                 />
               )
             })}
