@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import type { GameData, Fireteam } from './types/game'
 import { useFireteamStore } from './store/fireteamStore'
+import { useAuthStore } from './store/authStore'
 import { v4 as uuidv4 } from 'uuid'
 import FireteamList from './components/FireteamList'
 import FireteamDetail from './components/FireteamDetail'
 import NewFireteamModal from './components/NewFireteamModal'
 import UnitBrowser from './components/UnitBrowser'
+import AuthButton from './components/AuthButton'
 
 type Tab = 'fireteams' | 'units'
 
@@ -17,7 +19,13 @@ export default function App() {
   const [selectedFireteam, setSelectedFireteam] = useState<Fireteam | null>(null)
   const [showNewModal, setShowNewModal] = useState(false)
 
-  const { addFireteam, fireteams } = useFireteamStore()
+  const { addFireteam, fireteams, syncWithAuth } = useFireteamStore()
+  const { user } = useAuthStore()
+
+  // Sync fireteam store when auth state changes
+  useEffect(() => {
+    syncWithAuth(user?.id ?? null)
+  }, [user?.id])
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}game_data.json`)
@@ -56,7 +64,7 @@ export default function App() {
       createdAt: now,
       modifiedAt: now,
     }
-    addFireteam(ft)
+    addFireteam(ft, user?.id ?? null)
     setShowNewModal(false)
     setSelectedFireteam(ft)
     setActiveTab('fireteams')
@@ -92,11 +100,20 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-bg flex flex-col max-w-2xl mx-auto">
+      {/* Top header with auth */}
+      <header className="flex items-center justify-between px-4 pt-4 pb-2 flex-shrink-0">
+        <span className="text-xs font-display font-semibold uppercase tracking-widest text-text-muted">
+          Flashpoint Builder
+        </span>
+        <AuthButton />
+      </header>
+
       {/* Main content */}
       <main className="flex-1 overflow-hidden flex flex-col pb-16">
         {activeTab === 'fireteams' && !selectedFireteam && (
           <FireteamList
             gameData={gameData}
+            userId={user?.id ?? null}
             onSelect={(ft) => setSelectedFireteam(ft)}
             onNew={() => setShowNewModal(true)}
           />
@@ -105,6 +122,7 @@ export default function App() {
           <FireteamDetail
             fireteam={selectedFireteam}
             gameData={gameData}
+            userId={user?.id ?? null}
             onBack={() => setSelectedFireteam(null)}
           />
         )}

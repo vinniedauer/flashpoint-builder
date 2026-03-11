@@ -3,3 +3,5 @@ dist/
 .DS_Store
 Sources/.DS_Store
 *.xcuserstate
+.env.local
+.env

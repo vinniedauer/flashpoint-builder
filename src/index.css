@@ -23,3 +23,12 @@ body {
   background: #2C2C40;
   border-radius: 2px;
 }
+
+@media print {
+  body > #root > * {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

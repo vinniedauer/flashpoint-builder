@@ -7,14 +7,16 @@ import AddUnitModal from './AddUnitModal'
 import EditUpgradesModal from './EditUpgradesModal'
 import SpecialOrdersModal from './SpecialOrdersModal'
 import CommandUpgradesModal from './CommandUpgradesModal'
+import PrintView from './PrintView'
 
 interface Props {
   fireteam: Fireteam
   gameData: GameData
+  userId: string | null
   onBack: () => void
 }
 
-export default function FireteamDetail({ fireteam, gameData, onBack }: Props) {
+export default function FireteamDetail({ fireteam, gameData, userId, onBack }: Props) {
   const { updateFireteam } = useFireteamStore()
   const [showAddUnit, setShowAddUnit] = useState(false)
   const [editingEntry, setEditingEntry] = useState<FireteamEntry | null>(null)
@@ -45,7 +47,7 @@ export default function FireteamDetail({ fireteam, gameData, onBack }: Props) {
       ...fireteam,
       ...updated,
       modifiedAt: new Date().toISOString(),
-    })
+    }, userId)
   }
 
   const handleAddEntry = (entry: FireteamEntry) => {
@@ -93,6 +95,18 @@ export default function FireteamDetail({ fireteam, gameData, onBack }: Props) {
           >
             {faction.name}
           </span>
+          <span className="flex-1" />
+          <button
+            onClick={() => window.print()}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded border border-border bg-surface-hi hover:bg-surface-hover text-text-secondary hover:text-text-primary font-display text-xs uppercase tracking-wider transition-all"
+          >
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+            Print
+          </button>
         </div>
 
         <h1 className="text-2xl font-display font-bold uppercase tracking-widest text-text-primary mb-3">
@@ -289,6 +303,9 @@ export default function FireteamDetail({ fireteam, gameData, onBack }: Props) {
           </button>
         </div>
       </div>
+
+      {/* Print view (hidden on screen, visible when printing) */}
+      <PrintView fireteam={fireteam} gameData={gameData} />
 
       {/* Modals */}
       {showAddUnit && (

@@ -5,11 +5,12 @@ import { fireteamPoints } from '../utils/points'
 
 interface Props {
   gameData: GameData
+  userId: string | null
   onSelect: (fireteam: Fireteam) => void
   onNew: () => void
 }
 
-export default function FireteamList({ gameData, onSelect, onNew }: Props) {
+export default function FireteamList({ gameData, userId, onSelect, onNew }: Props) {
   const { fireteams, deleteFireteam } = useFireteamStore()
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
 
@@ -103,7 +104,7 @@ export default function FireteamList({ gameData, onSelect, onNew }: Props) {
                       Delete?
                     </span>
                     <button
-                      onClick={() => { deleteFireteam(ft.id); setConfirmDelete(null) }}
+                      onClick={() => { deleteFireteam(ft.id, userId); setConfirmDelete(null) }}
                       className="px-3 py-1 rounded bg-[#C0392B] text-white font-display font-semibold uppercase tracking-wider text-xs"
                     >
                       Delete
