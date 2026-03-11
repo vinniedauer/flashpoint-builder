@@ -17,12 +17,13 @@ interface Props {
 }
 
 export default function FireteamDetail({ fireteam, gameData, userId, onBack }: Props) {
-  const { updateFireteam } = useFireteamStore()
+  const { updateFireteam, deleteFireteam } = useFireteamStore()
   const [showAddUnit, setShowAddUnit] = useState(false)
   const [editingEntry, setEditingEntry] = useState<FireteamEntry | null>(null)
   const [showSpecialOrders, setShowSpecialOrders] = useState(false)
   const [showCommandUpgrades, setShowCommandUpgrades] = useState(false)
   const [confirmDeleteEntry, setConfirmDeleteEntry] = useState<string | null>(null)
+  const [confirmDeleteFireteam, setConfirmDeleteFireteam] = useState(false)
 
   const faction = gameData.factions.find((f) => f.id === fireteam.factionId)
   if (!faction) return null
@@ -96,6 +97,30 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
             {faction.name}
           </span>
           <span className="flex-1" />
+          {confirmDeleteFireteam ? (
+            <div className="flex items-center gap-2">
+              <span className="text-text-secondary font-display text-xs uppercase tracking-wider">Delete?</span>
+              <button
+                onClick={() => { deleteFireteam(fireteam.id, userId); onBack() }}
+                className="px-3 py-1.5 rounded bg-[#C0392B] text-white font-display font-semibold uppercase tracking-wider text-xs"
+              >
+                Delete
+              </button>
+              <button
+                onClick={() => setConfirmDeleteFireteam(false)}
+                className="px-3 py-1.5 rounded border border-border bg-surface-hi text-text-secondary font-display font-semibold uppercase tracking-wider text-xs"
+              >
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() => setConfirmDeleteFireteam(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded border border-border bg-surface-hi hover:border-[#C0392B] hover:text-[#C0392B] text-text-muted font-display text-xs uppercase tracking-wider transition-all"
+            >
+              Delete
+            </button>
+          )}
           <button
             onClick={() => window.print()}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded border border-border bg-surface-hi hover:bg-surface-hover text-text-secondary hover:text-text-primary font-display text-xs uppercase tracking-wider transition-all"
