@@ -38,7 +38,7 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
       </div>
 
       {fireteams.length === 0 ? (
-        <div className="flex-1 flex flex-col items-center justify-center px-8 text-center">
+        <div className="flex-1 flex flex-col items-center justify-center px-8 text-center anim-fade-up">
           <div className="w-16 h-16 rounded-full bg-surface-hi border border-border flex items-center justify-center mb-4">
             <span className="text-2xl text-text-muted">⊕</span>
           </div>
@@ -57,14 +57,18 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
         </div>
       ) : (
         <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-2">
-          {fireteams.map((ft) => {
+          {fireteams.map((ft, index) => {
             const faction = getFaction(ft.factionId)
             const pts = fireteamPoints(ft, gameData)
             const pct = Math.min((pts / ft.pointBudget) * 100, 100)
             const over = pts > ft.pointBudget
 
             return (
-              <div key={ft.id} className="relative group">
+              <div
+                key={ft.id}
+                className="relative group anim-fade-up"
+                style={{ animationDelay: `${index * 55}ms` }}
+              >
                 <button
                   onClick={() => onSelect(ft)}
                   className="w-full text-left bg-surface border border-border rounded-xl px-4 py-4 hover:bg-surface-hover hover:border-text-muted transition-all"
@@ -92,10 +96,11 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
                   </div>
                   <div className="h-1 bg-border rounded-full overflow-hidden">
                     <div
-                      className="h-full rounded-full transition-all"
+                      className="h-full rounded-full transition-all duration-500"
                       style={{
                         width: `${pct}%`,
                         backgroundColor: over ? '#C0392B' : faction?.colorHex ?? '#3A7CA5',
+                        boxShadow: `0 0 6px ${over ? '#C0392B' : faction?.colorHex ?? '#3A7CA5'}`,
                       }}
                     />
                   </div>

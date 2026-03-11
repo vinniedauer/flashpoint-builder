@@ -29,8 +29,8 @@ export default function EditUpgradesModal({ entry, unit, gameData, factionColor,
 
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center">
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative w-full max-w-lg bg-surface border border-border rounded-t-2xl max-h-[90vh] flex flex-col">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm anim-fade-in" onClick={onClose} />
+      <div className="relative w-full max-w-lg bg-surface border border-border rounded-t-2xl max-h-[90vh] flex flex-col anim-slide-up">
         {/* Header */}
         <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-border flex-shrink-0">
           <h2 className="text-lg font-display font-semibold uppercase tracking-widest text-text-primary">

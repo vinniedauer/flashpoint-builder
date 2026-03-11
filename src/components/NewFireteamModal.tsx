@@ -27,8 +27,8 @@ export default function NewFireteamModal({ factions, onClose, onCreate }: Props)
 
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center">
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative w-full max-w-lg bg-surface border border-border rounded-t-2xl p-6 pb-8 max-h-[90vh] overflow-y-auto">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm anim-fade-in" onClick={onClose} />
+      <div className="relative w-full max-w-lg bg-surface border border-border rounded-t-2xl p-6 pb-8 max-h-[90vh] overflow-y-auto anim-slide-up">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-display font-semibold uppercase tracking-widest text-text-primary">
             New Fireteam

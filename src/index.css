@@ -9,6 +9,10 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   background-color: #0C0C14;
+  background-image:
+    linear-gradient(rgba(44, 44, 64, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 44, 64, 0.28) 1px, transparent 1px);
+  background-size: 40px 40px;
   color: #D8DCF0;
   min-height: 100vh;
 }
@@ -19,6 +23,7 @@ body {
   }
 }
 
+/* ── Scrollbar ────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -30,6 +35,47 @@ body {
   border-radius: 2px;
 }
 
+/* ── Keyframes ────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up-sheet {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scan-pulse {
+  0%, 100% { opacity: 0.25; transform: scaleX(0.35); }
+  50%       { opacity: 1;    transform: scaleX(1); }
+}
+
+/* ── Animation utilities ──────────────────────── */
+.anim-fade-up {
+  animation: fade-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-slide-up {
+  animation: slide-up-sheet 0.38s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+.anim-fade-in {
+  animation: fade-in 0.2s ease both;
+}
+
+/* ── Button press feedback ────────────────────── */
+button:not(:disabled):active {
+  opacity: 0.75;
+  transition: opacity 0.06s;
+}
+
+/* ── Print ────────────────────────────────────── */
 @media print {
   body > #root > * {
     display: none !important;

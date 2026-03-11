@@ -73,10 +73,22 @@ export default function App() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bg">
-        <div className="text-center">
-          <div className="w-8 h-8 border-2 border-text-muted border-t-text-secondary rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-text-muted font-display uppercase tracking-widest text-sm">
-            Loading...
+        <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-1.5">
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className="h-px rounded-full bg-text-secondary origin-left"
+                style={{
+                  width: '36px',
+                  animation: 'scan-pulse 1.2s ease-in-out infinite',
+                  animationDelay: `${i * 0.18}s`,
+                }}
+              />
+            ))}
+          </div>
+          <p className="text-text-muted font-mono text-xs uppercase tracking-widest mt-1">
+            Loading
           </p>
         </div>
       </div>
@@ -133,36 +145,55 @@ export default function App() {
 
       {/* Bottom tab bar */}
       <nav className="fixed bottom-0 left-0 right-0 max-w-2xl mx-auto bg-surface border-t border-border flex z-40">
-        <button
-          onClick={() => { setActiveTab('fireteams'); setSelectedFireteam(null) }}
-          className="flex-1 flex flex-col items-center justify-center py-3 gap-1 transition-colors"
-          style={{ color: activeTab === 'fireteams' ? '#3A7CA5' : '#6870A0' }}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-            <circle cx="9" cy="7" r="4" />
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-          </svg>
-          <span className="text-xs font-display font-semibold uppercase tracking-widest">
-            Fireteams
-          </span>
-        </button>
-        <button
-          onClick={() => setActiveTab('units')}
-          className="flex-1 flex flex-col items-center justify-center py-3 gap-1 transition-colors"
-          style={{ color: activeTab === 'units' ? '#3A7CA5' : '#6870A0' }}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="3" width="7" height="7" />
-            <rect x="14" y="3" width="7" height="7" />
-            <rect x="14" y="14" width="7" height="7" />
-            <rect x="3" y="14" width="7" height="7" />
-          </svg>
-          <span className="text-xs font-display font-semibold uppercase tracking-widest">
-            Units
-          </span>
-        </button>
+        {([
+          {
+            id: 'fireteams',
+            label: 'Fireteams',
+            onClick: () => { setActiveTab('fireteams'); setSelectedFireteam(null) },
+            icon: (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            ),
+          },
+          {
+            id: 'units',
+            label: 'Units',
+            onClick: () => setActiveTab('units'),
+            icon: (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+              </svg>
+            ),
+          },
+        ] as const).map((tab) => {
+          const active = activeTab === tab.id
+          return (
+            <button
+              key={tab.id}
+              onClick={tab.onClick}
+              className="flex-1 flex flex-col items-center justify-center py-3 gap-1 transition-colors relative"
+              style={{ color: active ? '#3A7CA5' : '#6870A0' }}
+            >
+              {active && (
+                <span
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-0.5 rounded-full"
+                  style={{ backgroundColor: '#3A7CA5' }}
+                />
+              )}
+              {tab.icon}
+              <span className="text-xs font-display font-semibold uppercase tracking-widest">
+                {tab.label}
+              </span>
+            </button>
+          )
+        })}
       </nav>
 
       {/* New Fireteam Modal */}

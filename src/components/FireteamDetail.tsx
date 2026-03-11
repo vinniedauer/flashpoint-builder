@@ -157,10 +157,11 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
         </div>
         <div className="h-1.5 bg-border rounded-full overflow-hidden">
           <div
-            className="h-full rounded-full transition-all"
+            className="h-full rounded-full transition-all duration-500"
             style={{
               width: `${pct}%`,
               backgroundColor: over ? '#C0392B' : factionColor,
+              boxShadow: `0 0 8px ${over ? '#C0392B' : factionColor}`,
             }}
           />
         </div>
@@ -174,7 +175,7 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
       {/* Scrollable content */}
       <div className="flex-1 overflow-y-auto px-4 pb-24">
         {/* Special Orders */}
-        <div className="mt-5">
+        <div className="mt-5 anim-fade-up" style={{ animationDelay: '60ms' }}>
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs uppercase tracking-widest text-text-secondary font-display">
               Special Orders
@@ -219,7 +220,7 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
         </div>
 
         {/* Command Upgrades */}
-        <div className="mt-5">
+        <div className="mt-5 anim-fade-up" style={{ animationDelay: '120ms' }}>
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs uppercase tracking-widest text-text-secondary font-display">
               Command Upgrades
@@ -264,7 +265,7 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
         </div>
 
         {/* Soldiers */}
-        <div className="mt-5">
+        <div className="mt-5 anim-fade-up" style={{ animationDelay: '180ms' }}>
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs uppercase tracking-widest text-text-secondary font-display">
               Soldiers

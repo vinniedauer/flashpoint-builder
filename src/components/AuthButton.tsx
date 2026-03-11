@@ -79,8 +79,8 @@ export default function AuthButton() {
 
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={() => setShowModal(false)} />
-          <div className="relative w-full max-w-sm mx-4 bg-surface border border-border rounded-2xl p-6">
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm anim-fade-in" onClick={() => setShowModal(false)} />
+          <div className="relative w-full max-w-sm mx-4 bg-surface border border-border rounded-2xl p-6 anim-fade-up">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-display font-bold uppercase tracking-widest text-text-primary">
