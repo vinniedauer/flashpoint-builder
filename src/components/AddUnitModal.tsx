@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { Unit, Faction, FireteamEntry, GameData } from '../types/game'
 import { entryPoints } from '../utils/points'
 import UpgradeConfigForm from './UpgradeConfigForm'
+import UnitStatPanel from './UnitStatPanel'
 
 interface Props {
   faction: Faction
@@ -24,6 +25,7 @@ const TYPE_LABELS: Record<UnitType, string> = {
 export default function AddUnitModal({ faction, gameData, existingEntries, factionColor, onClose, onAdd }: Props) {
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null)
   const [selectedUpgrades, setSelectedUpgrades] = useState<Record<string, string[]>>({})
+  const [expandedStatId, setExpandedStatId] = useState<string | null>(null)
 
   const isUniqueConflict = (unit: Unit) => {
     if (!unit.unique) return false
@@ -99,32 +101,66 @@ export default function AddUnitModal({ faction, gameData, existingEntries, facti
                   <div className="space-y-1">
                     {units.map((unit) => {
                       const conflict = isUniqueConflict(unit)
+                      const statsOpen = expandedStatId === unit.id
                       return (
-                        <button
+                        <div
                           key={unit.id}
-                          onClick={() => !conflict && handleSelectUnit(unit)}
-                          disabled={conflict}
-                          className="w-full flex items-center justify-between px-4 py-3 rounded-lg border border-border bg-surface-hi hover:bg-surface-hover hover:border-text-muted transition-all disabled:opacity-40 disabled:cursor-not-allowed text-left"
+                          className="rounded-lg border border-border bg-surface-hi overflow-hidden"
+                          style={{ opacity: conflict ? 0.4 : 1 }}
                         >
-                          <div>
-                            <span className="font-display font-semibold text-text-primary text-sm uppercase tracking-wide">
-                              {unit.name}
-                            </span>
-                            {unit.unique && (
-                              <span className="ml-2 text-xs text-text-muted font-display uppercase tracking-wider">
-                                Unique
+                          <div className="flex items-stretch">
+                            <button
+                              onClick={() => !conflict && handleSelectUnit(unit)}
+                              disabled={conflict}
+                              className="flex-1 flex items-center justify-between px-4 py-3 hover:bg-surface-hover transition-all disabled:cursor-not-allowed text-left"
+                            >
+                              <div>
+                                <span className="font-display font-semibold text-text-primary text-sm uppercase tracking-wide">
+                                  {unit.name}
+                                </span>
+                                {unit.unique && (
+                                  <span className="ml-2 text-xs text-text-muted font-display uppercase tracking-wider">
+                                    Unique
+                                  </span>
+                                )}
+                                {conflict && (
+                                  <span className="ml-2 text-xs text-[#C0392B] font-display uppercase tracking-wider">
+                                    Already in list
+                                  </span>
+                                )}
+                              </div>
+                              <span className="font-mono text-sm shrink-0 ml-2" style={{ color: factionColor }}>
+                                {unit.pointCost} pts
                               </span>
-                            )}
-                            {conflict && (
-                              <span className="ml-2 text-xs text-[#C0392B] font-display uppercase tracking-wider">
-                                Already in list
-                              </span>
+                            </button>
+
+                            {unit.stats && (
+                              <button
+                                onClick={() => setExpandedStatId(statsOpen ? null : unit.id)}
+                                className="px-3 border-l border-border flex items-center justify-center shrink-0 hover:bg-surface-hover transition-all"
+                                title="Unit stats"
+                              >
+                                <svg
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="1.5"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  style={{ transform: statsOpen ? 'rotate(180deg)' : 'none', color: statsOpen ? factionColor : '#60607A', transition: 'transform 0.2s, color 0.2s' }}
+                                >
+                                  <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                              </button>
                             )}
                           </div>
-                          <span className="font-mono text-sm" style={{ color: factionColor }}>
-                            {unit.pointCost} pts
-                          </span>
-                        </button>
+
+                          {unit.stats && statsOpen && (
+                            <UnitStatPanel stats={unit.stats} factionColor={factionColor} />
+                          )}
+                        </div>
                       )
                     })}
                   </div>
