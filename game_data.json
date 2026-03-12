@@ -183,13 +183,13 @@
               },
               {
                 "name": "Power Sword",
-                "range": "1",
+                "range": "CC or 1",
                 "attacks": "5",
                 "special": "Brutal, Cleave"
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "4"
               }
             ],
@@ -380,7 +380,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "3"
               }
             ],
@@ -571,7 +571,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "3"
               }
             ],
@@ -762,7 +762,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "3"
               }
             ],
@@ -952,7 +952,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "5",
                 "special": "Brutal"
               }
@@ -1144,7 +1144,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "3"
               }
             ],
@@ -1335,7 +1335,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "3"
               }
             ],
@@ -1528,7 +1528,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "3"
               }
             ],
@@ -1572,7 +1572,7 @@
                   "id": "sgu_energy_sword",
                   "name": "Energy Sword",
                   "pointCost": 5,
-                  "description": "Covenant plasma blade — devastating in close combat."
+                  "description": "Covenant plasma blade \u2014 devastating in close combat."
                 }
               ]
             },
@@ -1726,7 +1726,7 @@
               },
               {
                 "name": "Energy Sword",
-                "range": "1",
+                "range": "CC",
                 "attacks": "4",
                 "special": "Brutal, Cleave"
               }
@@ -1919,7 +1919,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "3"
               }
             ],
@@ -1949,7 +1949,7 @@
           "name": "Return to Sender",
           "pointCost": 5,
           "restriction": "Any Spartan",
-          "description": "When a grenade lands in a Spartan's cube, spend a Special Order result to attempt to catch and throw it back. Roll a 3-dice Survive test (2). On 2+ successes, throw the grenade as if making a Shoot action — it's your grenade now."
+          "description": "When a grenade lands in a Spartan's cube, spend a Special Order result to attempt to catch and throw it back. Roll a 3-dice Survive test (2). On 2+ successes, throw the grenade as if making a Shoot action \u2014 it's your grenade now."
         }
       ]
     },
@@ -2112,13 +2112,13 @@
             "weapons": [
               {
                 "name": "Chainbreaker",
-                "range": "1",
+                "range": "CC",
                 "attacks": "7",
                 "special": "Brutal, Cleave"
               },
               {
                 "name": "Power Gauntlet",
-                "range": "1",
+                "range": "CC",
                 "attacks": "6",
                 "special": "Brutal, Knockback"
               }
@@ -2163,7 +2163,7 @@
                   "id": "sg_energy_sword",
                   "name": "Energy Sword",
                   "pointCost": 5,
-                  "description": "Covenant plasma blade — devastating in close combat."
+                  "description": "Covenant plasma blade \u2014 devastating in close combat."
                 }
               ]
             },
@@ -2317,7 +2317,7 @@
               },
               {
                 "name": "Energy Sword",
-                "range": "1",
+                "range": "CC",
                 "attacks": "4",
                 "special": "Brutal, Cleave"
               }
@@ -2459,7 +2459,7 @@
             "weapons": [
               {
                 "name": "Gravity Hammer",
-                "range": "1",
+                "range": "CC",
                 "attacks": "5",
                 "special": "Brutal, Knockback, Blast(1)"
               },
@@ -2639,7 +2639,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "4",
                 "special": "Knockback"
               }
@@ -2765,7 +2765,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "4",
                 "special": "Knockback"
               }
@@ -2937,7 +2937,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "4",
                 "special": "Knockback"
               }
@@ -3065,7 +3065,7 @@
               },
               {
                 "name": "Fists",
-                "range": "1",
+                "range": "CC",
                 "attacks": "4",
                 "special": "Knockback"
               }
@@ -3355,7 +3355,7 @@
     },
     {
       "name": "Explosive",
-      "description": "Targets a cube in LOS. Roll 3 dice Ranged test (1). On failure, scatter to an adjacent cube. No opposed roll — resolve the explosive type keyword on the affected cube."
+      "description": "Targets a cube in LOS. Roll 3 dice Ranged test (1). On failure, scatter to an adjacent cube. No opposed roll \u2014 resolve the explosive type keyword on the affected cube."
     },
     {
       "name": "Fast Transition",
@@ -3379,7 +3379,7 @@
     },
     {
       "name": "Furious",
-      "description": "Atriox's unique ferocity — represents his unmatched savagery in close combat."
+      "description": "Atriox's unique ferocity \u2014 represents his unmatched savagery in close combat."
     },
     {
       "name": "Grenade",
@@ -3387,7 +3387,7 @@
     },
     {
       "name": "Guarded",
-      "description": "When targeted by a Shoot action using a Ranged test, 8s (or 7s) are successes but grant no extra dice — no Headshots."
+      "description": "When targeted by a Shoot action using a Ranged test, 8s (or 7s) are successes but grant no extra dice \u2014 no Headshots."
     },
     {
       "name": "Horde",
@@ -3487,7 +3487,7 @@
     },
     {
       "name": "Weight of Fire",
-      "description": "May reroll (n) dice when making Ranged tests. Cumulative — add together values from multiple sources."
+      "description": "May reroll (n) dice when making Ranged tests. Cumulative \u2014 add together values from multiple sources."
     }
   ]
 }
