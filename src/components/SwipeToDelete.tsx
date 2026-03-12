@@ -80,7 +80,7 @@ export default function SwipeToDelete({ onDelete, children, className = '', styl
         {/* Mobile: absolute delete zone behind content, revealed by translateX */}
         <div
           className="touch-only absolute right-0 top-0 bottom-0 flex flex-col items-center justify-center gap-1 select-none cursor-pointer"
-          style={{ width: revealWidth, background: 'linear-gradient(135deg, #C0392B, #96281b)' }}
+          style={{ width: revealWidth, background: 'linear-gradient(135deg, #C0392B, #96281b)', borderRadius: '0 8px 8px 0' }}
           onClick={handleDelete}
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

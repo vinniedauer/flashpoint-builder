@@ -64,9 +64,9 @@ export default function UnitStatPanel({ stats, factionColor, keywords }: Props) 
                   disabled={!hasDesc}
                   className="font-display text-xs uppercase tracking-wider px-1.5 py-0.5 rounded border transition-opacity"
                   style={{
-                    borderColor: factionColor + '60',
-                    color: factionColor,
-                    backgroundColor: factionColor + '1E',
+                    borderColor: factionColor + '90',
+                    color: '#FFFFFF',
+                    backgroundColor: factionColor + '55',
                     cursor: hasDesc ? 'pointer' : 'default',
                   }}
                 >

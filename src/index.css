@@ -54,16 +54,16 @@ body {
 }
 
 /* ── Font Size ─────────────────────────────────── */
-html { font-size: 108%; }
-html[data-size="small"] { font-size: 92%; }
-html[data-size="medium"] { font-size: 108%; }
-html[data-size="large"] { font-size: 124%; }
+html { font-size: 124%; }
+html[data-size="small"] { font-size: 108%; }
+html[data-size="medium"] { font-size: 124%; }
+html[data-size="large"] { font-size: 140%; }
 
 @media (min-width: 1200px) {
-  html { font-size: 120%; }
-  html[data-size="small"] { font-size: 105%; }
-  html[data-size="medium"] { font-size: 120%; }
-  html[data-size="large"] { font-size: 136%; }
+  html { font-size: 136%; }
+  html[data-size="small"] { font-size: 120%; }
+  html[data-size="medium"] { font-size: 136%; }
+  html[data-size="large"] { font-size: 152%; }
 }
 
 /* ── Scrollbar ────────────────────────────────── */
