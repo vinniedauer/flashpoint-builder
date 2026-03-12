@@ -17,13 +17,17 @@ function baseKeyword(kw: string): string {
 
 function WeaponProfileRow({ profile: p, factionColor }: { profile: WeaponProfile; factionColor: string }) {
   return (
-    <div className="flex items-baseline justify-between gap-2">
-      <span className="font-display text-sm truncate" style={{ color: factionColor }}>{p.name}</span>
-      <div className="flex items-baseline gap-2 shrink-0">
-        <span className="font-mono text-xs text-text-muted">{p.range}</span>
-        {p.ap !== '-' && <span className="font-mono text-xs text-text-muted">AP{p.ap}</span>}
-        {p.special && <span className="font-display text-xs text-text-muted italic">{p.special}</span>}
+    <div className="mb-1.5 last:mb-0">
+      <div className="flex items-baseline justify-between gap-2">
+        <span className="font-display text-sm" style={{ color: factionColor }}>{p.name}</span>
+        <div className="flex items-baseline gap-2 shrink-0">
+          <span className="font-mono text-xs text-text-muted">{p.range}</span>
+          {p.ap !== '-' && <span className="font-mono text-xs text-text-muted">AP{p.ap}</span>}
+        </div>
       </div>
+      {p.special && (
+        <p className="font-display text-xs text-text-muted italic">{p.special}</p>
+      )}
     </div>
   )
 }
