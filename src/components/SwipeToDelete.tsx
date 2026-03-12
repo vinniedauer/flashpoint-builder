@@ -8,24 +8,6 @@ interface Props {
   revealWidth?: number
 }
 
-const DeleteZoneContent = ({ onClick }: { onClick: () => void }) => (
-  <div
-    className="h-full flex flex-col items-center justify-center gap-1 select-none cursor-pointer"
-    style={{ background: 'linear-gradient(135deg, #C0392B, #96281b)' }}
-    onClick={onClick}
-  >
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="3 6 5 6 21 6" />
-      <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-      <path d="M10 11v6M14 11v6" />
-      <path d="M9 6V4h6v2" />
-    </svg>
-    <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '11px', fontFamily: 'inherit', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
-      Delete
-    </span>
-  </div>
-)
-
 export default function SwipeToDelete({ onDelete, children, className = '', style, revealWidth = 72 }: Props) {
   const [tx, setTx] = useState(0)
   const [transitioning, setTransitioning] = useState(false)
@@ -86,57 +68,80 @@ export default function SwipeToDelete({ onDelete, children, className = '', styl
   const showSwipeOverlay = tx < -8
 
   return (
+    // Outer wrapper: relative + overflow visible so the desktop button can sit outside
     <div
-      ref={containerRef}
-      className={`relative flex overflow-hidden ${className}`}
+      className={`relative ${className}`}
       style={style}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Mobile: absolute delete zone revealed by translateX swipe */}
-      <div
-        className="touch-only absolute right-0 top-0 bottom-0"
-        style={{ width: revealWidth }}
-      >
-        <DeleteZoneContent onClick={handleDelete} />
-      </div>
-
-      {/* Content — translateX only for mobile swipe */}
-      <div
-        className="flex-1 min-w-0"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-        style={{
-          transform: `translateX(${tx}px)`,
-          transition: transitioning ? 'transform 0.28s cubic-bezier(0.32, 0.72, 0, 1)' : 'none',
-          willChange: 'transform',
-        }}
-      >
-        {children}
-      </div>
-
-      {/* Desktop: flex-sibling delete zone that expands on hover, content shrinks naturally */}
-      <div
-        className="hover-only flex-shrink-0"
-        style={{
-          width: hovered ? revealWidth : 0,
-          overflow: 'hidden',
-          transition: 'width 0.28s cubic-bezier(0.32, 0.72, 0, 1)',
-        }}
-      >
-        <div style={{ width: revealWidth, height: '100%' }}>
-          <DeleteZoneContent onClick={handleDelete} />
-        </div>
-      </div>
-
-      {/* Mobile tap-to-close overlay when swiped open */}
-      {showSwipeOverlay && (
+      {/* Inner: overflow hidden clips the swipe animation */}
+      <div ref={containerRef} className="relative overflow-hidden">
+        {/* Mobile: absolute delete zone behind content, revealed by translateX */}
         <div
-          className="touch-only absolute inset-0 z-10"
-          style={{ right: revealWidth }}
-          onClick={close}
-        />
-      )}
+          className="touch-only absolute right-0 top-0 bottom-0 flex flex-col items-center justify-center gap-1 select-none cursor-pointer"
+          style={{ width: revealWidth, background: 'linear-gradient(135deg, #C0392B, #96281b)' }}
+          onClick={handleDelete}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="3 6 5 6 21 6" />
+            <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+            <path d="M10 11v6M14 11v6" />
+            <path d="M9 6V4h6v2" />
+          </svg>
+          <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '11px', fontFamily: 'inherit', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
+            Delete
+          </span>
+        </div>
+
+        {/* Sliding content */}
+        <div
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          style={{
+            transform: `translateX(${tx}px)`,
+            transition: transitioning ? 'transform 0.28s cubic-bezier(0.32, 0.72, 0, 1)' : 'none',
+            willChange: 'transform',
+          }}
+        >
+          {children}
+        </div>
+
+        {/* Mobile tap-to-close overlay when swiped open */}
+        {showSwipeOverlay && (
+          <div
+            className="touch-only absolute inset-0 z-10"
+            style={{ right: revealWidth }}
+            onClick={close}
+          />
+        )}
+      </div>
+
+      {/* Desktop: trash button floats outside the card to the right */}
+      <button
+        className="hover-only absolute top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-1 rounded-lg cursor-pointer"
+        style={{
+          left: 'calc(100% + 8px)',
+          width: 48,
+          height: 'calc(100% - 4px)',
+          background: 'linear-gradient(135deg, #C0392B, #96281b)',
+          opacity: hovered ? 1 : 0,
+          transform: `translateY(-50%) translateX(${hovered ? 0 : -6}px)`,
+          transition: 'opacity 0.2s, transform 0.2s',
+          pointerEvents: hovered ? 'auto' : 'none',
+        }}
+        onClick={handleDelete}
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="3 6 5 6 21 6" />
+          <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+          <path d="M10 11v6M14 11v6" />
+          <path d="M9 6V4h6v2" />
+        </svg>
+        <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: '10px', fontFamily: 'inherit', letterSpacing: '0.08em', textTransform: 'uppercase', fontWeight: 600 }}>
+          Del
+        </span>
+      </button>
     </div>
   )
 }
