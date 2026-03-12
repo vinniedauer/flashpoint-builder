@@ -36,7 +36,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -62,13 +70,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -235,7 +259,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -261,13 +293,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -426,7 +474,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -452,13 +508,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -617,7 +689,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -643,13 +723,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -808,7 +904,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -834,13 +938,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -979,13 +1099,41 @@
                   "id": "cqb_sword",
                   "name": "Energy Sword",
                   "pointCost": 0,
-                  "description": "Covenant plasma blade."
+                  "description": "Covenant plasma blade.",
+                  "weaponProfiles": [
+                    {
+                      "name": "Energy Sword",
+                      "range": "CC",
+                      "ap": "3",
+                      "special": "ESD(2), Lethal(1)"
+                    },
+                    {
+                      "name": "Energy Sword (Lunge)",
+                      "range": "R1",
+                      "ap": "3",
+                      "special": "ESD(1), Lunge"
+                    }
+                  ]
                 },
                 {
                   "id": "cqb_hammer",
                   "name": "Gravity Hammer",
                   "pointCost": 2,
-                  "description": "Jiralhanae gravity-enhanced melee weapon."
+                  "description": "Jiralhanae gravity-enhanced melee weapon.",
+                  "weaponProfiles": [
+                    {
+                      "name": "Gravity Hammer",
+                      "range": "CC",
+                      "ap": "1",
+                      "special": "ESD(1), Knockback, Lethal(1), Smash(1)"
+                    },
+                    {
+                      "name": "Gravity Hammer (Lunge)",
+                      "range": "R1",
+                      "ap": "-",
+                      "special": "Knockback, Lethal(1), Lunge"
+                    }
+                  ]
                 }
               ]
             },
@@ -999,7 +1147,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -1025,13 +1181,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -1190,7 +1362,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -1216,13 +1396,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -1381,7 +1577,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -1407,13 +1611,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -1586,7 +1806,15 @@
                   "id": "sgu_energy_dagger",
                   "name": "Energy Dagger",
                   "pointCost": 2,
-                  "description": "Short-range plasma blade for initial close combat."
+                  "description": "Short-range plasma blade for initial close combat.",
+                  "weaponProfiles": [
+                    {
+                      "name": "Energy Dagger",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "Lethal(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -1606,13 +1834,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -1773,7 +2017,15 @@
                   "id": "ccw_combat_knife",
                   "name": "M11 Combat Knife",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "M11 Combat Knife",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "ESD(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -1799,13 +2051,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -1995,13 +2263,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -2177,7 +2461,15 @@
                   "id": "sg_energy_dagger",
                   "name": "Energy Dagger",
                   "pointCost": 2,
-                  "description": "Short-range plasma blade for initial close combat."
+                  "description": "Short-range plasma blade for initial close combat.",
+                  "weaponProfiles": [
+                    {
+                      "name": "Energy Dagger",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "Lethal(1)"
+                    }
+                  ]
                 }
               ]
             },
@@ -2197,13 +2489,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -2344,13 +2652,41 @@
                   "id": "bk_spike",
                   "name": "Wrist Blades + Spike Grenade",
                   "pointCost": 0,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Wrist Blades",
+                      "range": "CC",
+                      "ap": "1",
+                      "special": "Knockback, Smash(1)"
+                    },
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "bk_dynamo",
                   "name": "Wrist Blades + Dynamo Grenade",
                   "pointCost": 19,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Wrist Blades",
+                      "range": "CC",
+                      "ap": "1",
+                      "special": "Knockback, Smash(1)"
+                    },
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -2492,7 +2828,21 @@
                   "id": "cp_ravager",
                   "name": "Ravager + Power Gauntlet",
                   "pointCost": 0,
-                  "description": "Three-round plasma burst launcher."
+                  "description": "Three-round plasma burst launcher.",
+                  "weaponProfiles": [
+                    {
+                      "name": "Ravager",
+                      "range": "R6",
+                      "ap": "1",
+                      "special": "Rapid Fire"
+                    },
+                    {
+                      "name": "Ravager (CC)",
+                      "range": "CC",
+                      "ap": "1",
+                      "special": "Lethal(1)"
+                    }
+                  ]
                 },
                 {
                   "id": "cp_hydra",
@@ -2518,13 +2868,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -2798,7 +3164,15 @@
                   "id": "sn_skewer_mangler",
                   "name": "Skewer + Mangler",
                   "pointCost": 7,
-                  "description": "Anti-vehicle spike launcher with sidearm."
+                  "description": "Anti-vehicle spike launcher with sidearm.",
+                  "weaponProfiles": [
+                    {
+                      "name": "Mangler",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Knockback"
+                    }
+                  ]
                 }
               ]
             },
@@ -2818,13 +3192,29 @@
                   "id": "g_spike",
                   "name": "Spike Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    }
+                  ]
                 },
                 {
                   "id": "g_dynamo",
                   "name": "Dynamo Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Dynamo Grenade",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "EMP, Grenade, Implosion(3), One-Use"
+                    }
+                  ]
                 }
               ]
             },
@@ -3271,7 +3661,15 @@
       "id": "wu_spike_rifle",
       "name": "Spike Rifle",
       "pointCost": 9,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Spike Rifle",
+          "range": "R3",
+          "ap": "-",
+          "special": "Knockback, Rapid Fire, Weight of Fire(1)"
+        }
+      ]
     },
     {
       "id": "wu_needle_rifle",
@@ -3291,19 +3689,43 @@
       "id": "wu_m45_shotgun",
       "name": "M45 Shotgun",
       "pointCost": 8,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "M45 Shotgun",
+          "range": "R3",
+          "ap": "1",
+          "special": "ESD(1), Knockback, Lethal(2)"
+        }
+      ]
     },
     {
       "id": "wu_plasma_launcher",
       "name": "Plasma Launcher",
       "pointCost": 8,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Plasma Launcher",
+          "range": "R5",
+          "ap": "1",
+          "special": "Frag(4), Grenade, Lethal(1), Sticky"
+        }
+      ]
     },
     {
       "id": "wu_dmr",
       "name": "M392 DMR",
       "pointCost": 8,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "M392 DMR",
+          "range": "R6",
+          "ap": "-",
+          "special": "Lethal(1), Optics"
+        }
+      ]
     },
     {
       "id": "wu_heatwave",
@@ -3323,13 +3745,29 @@
       "id": "wu_target_locator",
       "name": "H-165 Target Locator",
       "pointCost": 7,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "H-165 Target Locator",
+          "range": "R6",
+          "ap": "-",
+          "special": "Blast, Explosive, Frag(6), Lethal(1), Long, Two-Use"
+        }
+      ]
     },
     {
       "id": "wu_concussion_rifle",
       "name": "Concussion Rifle",
       "pointCost": 7,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Concussion Rifle",
+          "range": "R5",
+          "ap": "1",
+          "special": "Blast, ESD(1), Frag(4), Grenade"
+        }
+      ]
     },
     {
       "id": "wu_hydra",
@@ -3363,13 +3801,29 @@
       "id": "wu_vk78",
       "name": "VK78 Commando",
       "pointCost": 7,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "VK78 Commando",
+          "range": "R6",
+          "ap": "-",
+          "special": "Optics, Rapid Fire"
+        }
+      ]
     },
     {
       "id": "wu_plasma_repeater",
       "name": "Plasma Repeater",
       "pointCost": 7,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Plasma Repeater",
+          "range": "R5",
+          "ap": "1",
+          "special": "ESD(1), Weight of Fire(1)"
+        }
+      ]
     },
     {
       "id": "wu_plasma_rifle",
@@ -3381,7 +3835,15 @@
       "id": "wu_grenade_launcher",
       "name": "M339 Grenade Launcher",
       "pointCost": 6,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "M339 Grenade Launcher",
+          "range": "R4",
+          "ap": "-",
+          "special": "Blast, EMP, Frag(3), Grenade"
+        }
+      ]
     },
     {
       "id": "wu_cindershot",
@@ -3399,19 +3861,43 @@
       "id": "wu_needler",
       "name": "Needler",
       "pointCost": 5,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Needler",
+          "range": "R3",
+          "ap": "-",
+          "special": "Lethal(1), Rapid Fire, Weight of Fire(1)"
+        }
+      ]
     },
     {
       "id": "wu_m6g_magnum",
       "name": "M6G Magnum",
       "pointCost": 5,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "M6G Magnum",
+          "range": "R3",
+          "ap": "-",
+          "special": "Optics, Rapid Fire"
+        }
+      ]
     },
     {
       "id": "wu_ma40",
       "name": "MA40 Assault Rifle",
       "pointCost": 5,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "MA40 Assault Rifle",
+          "range": "R4",
+          "ap": "-",
+          "special": "Rapid Fire, Weight of Fire(2)"
+        }
+      ]
     }
   ],
   "commandUpgrades": [
