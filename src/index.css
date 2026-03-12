@@ -42,6 +42,12 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  overscroll-behavior: none;
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
   font-family: 'Rajdhani', sans-serif;
   background-color: var(--color-bg);
@@ -50,7 +56,9 @@ body {
     linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
   background-size: 40px 40px;
   color: var(--color-text-primary);
-  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 /* ── Font Size ─────────────────────────────────── */

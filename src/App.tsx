@@ -82,8 +82,20 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-bg">
-        <div className="flex flex-col items-center gap-3">
+      <div style={{ position: 'fixed', inset: 0, backgroundColor: '#0C0C14', overflow: 'hidden' }}>
+        {/* Banner: text is at ~41% from left — offset so it lands at ~5vw */}
+        <img
+          src={`${import.meta.env.BASE_URL}splash.webp`}
+          alt=""
+          style={{ position: 'absolute', top: 0, left: '-77vw', width: '200vw', maxWidth: 'none' }}
+        />
+        {/* Fade image into background */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(to bottom, rgba(12,12,20,0.05) 0%, rgba(12,12,20,0.6) 28%, #0C0C14 50%)',
+        }} />
+        {/* Loading indicator */}
+        <div style={{ position: 'absolute', bottom: '38%', left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
           <div className="flex flex-col items-center gap-1.5">
             {[0, 1, 2].map((i) => (
               <div
@@ -97,7 +109,7 @@ export default function App() {
               />
             ))}
           </div>
-          <p className="text-text-muted font-mono text-xs uppercase tracking-widest mt-1">
+          <p className="text-text-muted font-mono text-xs uppercase tracking-widest">
             Loading
           </p>
         </div>
@@ -107,7 +119,7 @@ export default function App() {
 
   if (error || !gameData) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-bg px-8">
+      <div className="h-screen flex items-center justify-center bg-bg px-8">
         <div className="text-center">
           <p className="text-[#C0392B] font-display uppercase tracking-widest text-sm mb-2">
             Error
@@ -121,7 +133,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-bg flex flex-col w-full max-w-2xl mx-auto">
+    <div className="h-screen bg-bg flex flex-col w-full max-w-2xl mx-auto overflow-hidden">
       {/* Top header with auth */}
       <header className="flex items-center justify-between px-4 pt-4 pb-2 flex-shrink-0">
         <span className="text-xs font-display font-semibold uppercase tracking-widest text-text-muted">
