@@ -3113,55 +3113,139 @@
       "id": "wu_spartan_laser",
       "name": "M6 Spartan Laser",
       "pointCost": 16,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "M6 Spartan Laser",
+          "range": "R7",
+          "ap": "4",
+          "special": "Lethal(2), Long, Optics, Weight of Fire(2)"
+        }
+      ]
     },
     {
       "id": "wu_energy_sword",
       "name": "Energy Sword",
       "pointCost": 14,
-      "category": "melee"
+      "category": "melee",
+      "profiles": [
+        {
+          "name": "Energy Sword",
+          "range": "CC",
+          "ap": "3",
+          "special": "ESD(2), Lethal(1)"
+        },
+        {
+          "name": "Energy Sword (Lunge)",
+          "range": "R1",
+          "ap": "3",
+          "special": "ESD(1), Lunge"
+        }
+      ]
     },
     {
       "id": "wu_gravity_hammer",
       "name": "Gravity Hammer",
       "pointCost": 13,
-      "category": "melee"
+      "category": "melee",
+      "profiles": [
+        {
+          "name": "Gravity Hammer",
+          "range": "CC",
+          "ap": "1",
+          "special": "ESD(1), Knockback, Lethal(1), Smash(1)"
+        },
+        {
+          "name": "Gravity Hammer (Lunge)",
+          "range": "R1",
+          "ap": "-",
+          "special": "Knockback, Lethal(1), Lunge"
+        }
+      ]
     },
     {
       "id": "wu_spnkr",
       "name": "M41 SPNKr",
       "pointCost": 11,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "M41 SPNKr",
+          "range": "R6",
+          "ap": "1",
+          "special": "Blast, ESD(2), Explosive, Frag(5), Lethal(1), Two-Uses"
+        }
+      ]
     },
     {
       "id": "wu_br75",
       "name": "BR75 Battle Rifle",
       "pointCost": 11,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "BR75 Battle Rifle",
+          "range": "R5",
+          "ap": "1",
+          "special": "Optics, Rapid Fire, Weight of Fire(1)"
+        }
+      ]
     },
     {
       "id": "wu_covenant_carbine",
       "name": "Covenant Carbine",
       "pointCost": 11,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Covenant Carbine",
+          "range": "R6",
+          "ap": "1",
+          "special": "Knockback, Lethal(1), Optics"
+        }
+      ]
     },
     {
       "id": "wu_focus_rifle",
       "name": "Focus Rifle",
       "pointCost": 11,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Focus Rifle",
+          "range": "R6",
+          "ap": "-",
+          "special": "Continuous Fire, ESD(2), Long, Lethal(1), Optics"
+        }
+      ]
     },
     {
       "id": "wu_s7_sniper",
       "name": "S7 Sniper Rifle",
       "pointCost": 10,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "S7 Sniper Rifle",
+          "range": "R7",
+          "ap": "1",
+          "special": "ESD(1), Lethal(1), Sniper Scope"
+        }
+      ]
     },
     {
       "id": "wu_fuel_rod_gun",
       "name": "Fuel Rod Gun",
       "pointCost": 10,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Fuel Rod Gun",
+          "range": "R4",
+          "ap": "2",
+          "special": "Blast, ESD(1), Explosive, Frag(5), Lethal(1)"
+        }
+      ]
     },
     {
       "id": "wu_bulldog",
@@ -3173,7 +3257,15 @@
       "id": "wu_shock_rifle",
       "name": "Shock Rifle",
       "pointCost": 9,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Shock Rifle",
+          "range": "R6",
+          "ap": "1",
+          "special": "ESD(2), Long, Optics, Suppression"
+        }
+      ]
     },
     {
       "id": "wu_spike_rifle",
@@ -3185,7 +3277,15 @@
       "id": "wu_needle_rifle",
       "name": "Needle Rifle",
       "pointCost": 8,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Needle Rifle",
+          "range": "R6",
+          "ap": "-",
+          "special": "Lethal(1), Optics, Rapid Fire"
+        }
+      ]
     },
     {
       "id": "wu_m45_shotgun",
@@ -3209,7 +3309,15 @@
       "id": "wu_heatwave",
       "name": "Heatwave",
       "pointCost": 8,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Heatwave",
+          "range": "R4",
+          "ap": "-",
+          "special": "ESD(2), Lethal(1)"
+        }
+      ]
     },
     {
       "id": "wu_target_locator",
@@ -3227,13 +3335,29 @@
       "id": "wu_hydra",
       "name": "MLRS-2 Hydra",
       "pointCost": 7,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "MLRS-2 Hydra",
+          "range": "R4",
+          "ap": "1",
+          "special": "ESD(2), Explosive, Frag(4), Lethal(1)"
+        }
+      ]
     },
     {
       "id": "wu_stalker_rifle",
       "name": "Stalker Rifle",
       "pointCost": 7,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        {
+          "name": "Stalker Rifle",
+          "range": "R6",
+          "ap": "-",
+          "special": "Sniper Scope"
+        }
+      ]
     },
     {
       "id": "wu_vk78",
