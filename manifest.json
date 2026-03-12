@@ -1,0 +1,23 @@
+{
+  "name": "Flashpoint Builder",
+  "short_name": "Flashpoint",
+  "description": "Army list builder for Halo Flashpoint by Mantic Games",
+  "start_url": "/flashpoint-builder/",
+  "scope": "/flashpoint-builder/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#14141F",
+  "background_color": "#0C0C14",
+  "icons": [
+    {
+      "src": "/flashpoint-builder/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/flashpoint-builder/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
