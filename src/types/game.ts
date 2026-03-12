@@ -65,11 +65,19 @@ export interface Upgrade {
   description: string
 }
 
+export interface WeaponProfile {
+  name: string
+  range: string
+  ap: string      // '-' or '1','2','3','4'
+  special?: string
+}
+
 export interface WeaponUpgrade {
   id: string
   name: string
   pointCost: number
   category: 'melee' | 'ranged'
+  profiles?: WeaponProfile[]
 }
 
 export interface CommandUpgrade {

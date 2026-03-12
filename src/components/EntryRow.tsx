@@ -37,6 +37,14 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, ke
 
   const stats = unit.stats
 
+  // Resolve which weapon upgrades are currently selected
+  const rangedSlot = unit.upgradeSlots.find((s) => s.slotType === 'weapon_ranged')
+  const meleeSlot = unit.upgradeSlots.find((s) => s.slotType === 'weapon_melee')
+  const selectedRangedId = rangedSlot ? (entry.selectedUpgrades[rangedSlot.id] ?? [])[0] : undefined
+  const selectedMeleeId = meleeSlot ? (entry.selectedUpgrades[meleeSlot.id] ?? [])[0] : undefined
+  const selectedRangedWeapon = selectedRangedId ? weaponUpgrades.find((w) => w.id === selectedRangedId) : undefined
+  const selectedMeleeWeapon = selectedMeleeId ? weaponUpgrades.find((w) => w.id === selectedMeleeId) : undefined
+
   return (
     <SwipeToDelete onDelete={onDelete} className="rounded-lg group">
       <div className="bg-surface-hi border border-border rounded-lg overflow-hidden">
@@ -86,7 +94,15 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, ke
         </div>
 
         {/* Stats panel */}
-        {stats && showStats && <UnitStatPanel stats={stats} factionColor={factionColor} keywords={keywords} />}
+        {stats && showStats && (
+          <UnitStatPanel
+            stats={stats}
+            factionColor={factionColor}
+            keywords={keywords}
+            selectedRangedWeapon={selectedRangedWeapon}
+            selectedMeleeWeapon={selectedMeleeWeapon}
+          />
+        )}
       </div>
     </SwipeToDelete>
   )
