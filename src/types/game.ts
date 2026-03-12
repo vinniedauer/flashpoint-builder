@@ -26,7 +26,8 @@ export interface UnitStats {
   fi: string
   sv: string
   courage: number
-  range: string
+  advance: number
+  sprint: number
   keywords: string[]
   weapons: UnitWeapon[]
 }
