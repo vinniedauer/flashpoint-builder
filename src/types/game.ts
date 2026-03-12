@@ -12,6 +12,25 @@ export interface Faction {
   specialOrders: SpecialOrder[]
 }
 
+export interface UnitWeapon {
+  name: string
+  range: string
+  attacks: string
+  piercing?: string
+  special?: string
+}
+
+export interface UnitStats {
+  hp: number
+  ra: string
+  fi: string
+  sv: string
+  courage: number
+  range: string
+  keywords: string[]
+  weapons: UnitWeapon[]
+}
+
 export interface Unit {
   id: string
   name: string
@@ -20,6 +39,7 @@ export interface Unit {
   description: string
   upgradeSlots: UpgradeSlot[]
   unique?: boolean
+  stats?: UnitStats
 }
 
 export interface UpgradeSlot {
