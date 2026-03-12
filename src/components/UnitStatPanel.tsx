@@ -36,7 +36,7 @@ export default function UnitStatPanel({ stats, factionColor }: Props) {
             <span
               key={kw}
               className="font-display text-xs uppercase tracking-wider px-1.5 py-0.5 rounded border"
-              style={{ borderColor: factionColor + '40', color: factionColor + 'CC', backgroundColor: factionColor + '10' }}
+              style={{ borderColor: factionColor + '60', color: factionColor, backgroundColor: factionColor + '1E' }}
             >
               {kw}
             </span>

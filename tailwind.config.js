@@ -11,7 +11,7 @@ export default {
         border: '#2C2C40',
         'text-primary': '#D8DCF0',
         'text-secondary': '#9098C0',
-        'text-muted': '#7078A8',
+        'text-muted': '#9098C0',
       },
       fontFamily: {
         display: ['Rajdhani', 'sans-serif'],
