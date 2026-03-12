@@ -63,6 +63,7 @@ export interface Upgrade {
   name: string
   pointCost: number
   description: string
+  weaponProfiles?: WeaponProfile[]
 }
 
 export interface WeaponProfile {

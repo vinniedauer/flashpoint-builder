@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { UnitStats, KeywordEntry, WeaponUpgrade } from '../types/game'
+import type { UnitStats, KeywordEntry, WeaponUpgrade, WeaponProfile } from '../types/game'
 import KeywordModal from './KeywordModal'
 
 interface Props {
@@ -8,13 +8,27 @@ interface Props {
   keywords?: KeywordEntry[]
   selectedRangedWeapon?: WeaponUpgrade
   selectedMeleeWeapon?: WeaponUpgrade
+  extraWeaponProfiles?: WeaponProfile[]
 }
 
 function baseKeyword(kw: string): string {
   return kw.replace(/\s*\(\d+\)$/, '').trim()
 }
 
-export default function UnitStatPanel({ stats, factionColor, keywords, selectedRangedWeapon, selectedMeleeWeapon }: Props) {
+function WeaponProfileRow({ profile: p, factionColor }: { profile: WeaponProfile; factionColor: string }) {
+  return (
+    <div className="flex items-baseline justify-between gap-2">
+      <span className="font-display text-sm truncate" style={{ color: factionColor }}>{p.name}</span>
+      <div className="flex items-baseline gap-2 shrink-0">
+        <span className="font-mono text-xs text-text-muted">{p.range}</span>
+        {p.ap !== '-' && <span className="font-mono text-xs text-text-muted">AP{p.ap}</span>}
+        {p.special && <span className="font-display text-xs text-text-muted italic">{p.special}</span>}
+      </div>
+    </div>
+  )
+}
+
+export default function UnitStatPanel({ stats, factionColor, keywords, selectedRangedWeapon, selectedMeleeWeapon, extraWeaponProfiles }: Props) {
   const [activeKeyword, setActiveKeyword] = useState<string | null>(null)
 
   const handleBadgeClick = (kw: string) => {
@@ -95,23 +109,16 @@ export default function UnitStatPanel({ stats, factionColor, keywords, selectedR
                 </div>
               </div>
             ))}
-          {/* Selected weapon upgrade profiles */}
+          {/* Selected weapon upgrade profiles (weapon_ranged / weapon_melee slots) */}
           {[selectedRangedWeapon, selectedMeleeWeapon].flatMap((wu) =>
             (wu?.profiles ?? []).map((p) => (
-              <div key={`${wu!.id}-${p.name}`} className="flex items-baseline justify-between gap-2">
-                <span className="font-display text-sm truncate" style={{ color: factionColor }}>{p.name}</span>
-                <div className="flex items-baseline gap-2 shrink-0">
-                  <span className="font-mono text-xs text-text-muted">{p.range}</span>
-                  {p.ap !== '-' && (
-                    <span className="font-mono text-xs text-text-muted">AP{p.ap}</span>
-                  )}
-                  {p.special && (
-                    <span className="font-display text-xs text-text-muted italic">{p.special}</span>
-                  )}
-                </div>
-              </div>
+              <WeaponProfileRow key={`${wu!.id}-${p.name}`} profile={p} factionColor={factionColor} />
             ))
           )}
+          {/* Extra profiles from loadout / CCW / grenade options */}
+          {(extraWeaponProfiles ?? []).map((p, i) => (
+            <WeaponProfileRow key={`extra-${i}-${p.name}`} profile={p} factionColor={factionColor} />
+          ))}
         </div>
       </div>
 
