@@ -124,7 +124,7 @@ export default function UnitBrowser({ gameData }: Props) {
                     </div>
 
                     {unit.stats && statsOpen && (
-                      <UnitStatPanel stats={unit.stats} factionColor={faction!.colorHex} />
+                      <UnitStatPanel stats={unit.stats} factionColor={faction!.colorHex} keywords={gameData.keywords} />
                     )}
                   </div>
                 )

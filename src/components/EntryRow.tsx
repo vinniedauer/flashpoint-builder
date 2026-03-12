@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { FireteamEntry, Unit, WeaponUpgrade } from '../types/game'
+import type { FireteamEntry, Unit, WeaponUpgrade, KeywordEntry } from '../types/game'
 import { entryPoints } from '../utils/points'
 import SwipeToDelete from './SwipeToDelete'
 import UnitStatPanel from './UnitStatPanel'
@@ -9,11 +9,12 @@ interface Props {
   unit: Unit
   weaponUpgrades: WeaponUpgrade[]
   factionColor: string
+  keywords?: KeywordEntry[]
   onClick: () => void
   onDelete: () => void
 }
 
-export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, onClick, onDelete }: Props) {
+export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, keywords, onClick, onDelete }: Props) {
   const [showStats, setShowStats] = useState(false)
   const pts = entryPoints(entry, unit, weaponUpgrades)
 
@@ -85,7 +86,7 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, on
         </div>
 
         {/* Stats panel */}
-        {stats && showStats && <UnitStatPanel stats={stats} factionColor={factionColor} />}
+        {stats && showStats && <UnitStatPanel stats={stats} factionColor={factionColor} keywords={keywords} />}
       </div>
     </SwipeToDelete>
   )

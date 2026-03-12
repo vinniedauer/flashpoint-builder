@@ -284,6 +284,7 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
                   unit={unit}
                   weaponUpgrades={gameData.weaponUpgrades}
                   factionColor={factionColor}
+                  keywords={gameData.keywords}
                   onClick={() => setEditingEntry(entry)}
                   onDelete={() => handleDeleteEntry(entry.id)}
                 />

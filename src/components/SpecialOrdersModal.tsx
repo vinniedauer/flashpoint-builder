@@ -95,8 +95,13 @@ export default function SpecialOrdersModal({ faction, selectedIds, factionColor,
                   </span>
                 </div>
                 {order.restriction && (
-                  <p className="text-text-muted font-display text-xs ml-7">
+                  <p className="text-text-muted font-display text-xs ml-7 mb-1">
                     {order.restriction}
+                  </p>
+                )}
+                {order.description && (
+                  <p className="text-text-secondary font-display text-xs ml-7 leading-relaxed">
+                    {order.description}
                   </p>
                 )}
               </button>

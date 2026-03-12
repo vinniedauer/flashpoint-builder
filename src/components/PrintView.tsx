@@ -52,6 +52,15 @@ export default function PrintView({ fireteam, gameData }: Props) {
       }
       lines.push(`    ${slot.name}: ${names.join(', ')}`)
     }
+    if (unit.stats) {
+      const s = unit.stats
+      lines.push(`    HP:${s.hp}  RA:${s.ra}  FI:${s.fi}  SV:${s.sv}  SH:${s.shields}  MV:${s.advance}-${s.sprint}`)
+      if (s.keywords.length > 0) lines.push(`    ${s.keywords.join(', ')}`)
+      for (const w of s.weapons) {
+        lines.push(`    ${w.name}  ${w.range}  A${w.attacks}${w.special ? `  ${w.special}` : ''}`)
+      }
+    }
+    lines.push('')
   }
 
   return (

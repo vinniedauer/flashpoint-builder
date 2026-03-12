@@ -1934,19 +1934,22 @@
           "id": "snap_shot",
           "name": "Snap Shot",
           "pointCost": 2,
-          "restriction": "Any Spartan"
+          "restriction": "Any Spartan",
+          "description": "When an opponent's model moves into a cube with one of your models using an Advance or Sprint action that would trigger a free Assault, spend a Special Order die to have your model make a free Shoot action against the attacker before the Assault. Cannot be used if your model is Pinned or shares the cube with another enemy."
         },
         {
           "id": "army_of_one",
           "name": "Army of One",
           "pointCost": 6,
-          "restriction": "Master Chief only"
+          "restriction": "Master Chief only",
+          "description": "At the start of Master Chief's activation, spend a Special Order result to use any number of Advance, Assault, or Command dice results during that activation. Master Chief may also use the Snap Shot special order."
         },
         {
           "id": "return_to_sender",
           "name": "Return to Sender",
           "pointCost": 5,
-          "restriction": "Any Spartan"
+          "restriction": "Any Spartan",
+          "description": "When a grenade lands in a Spartan's cube, spend a Special Order result to attempt to catch and throw it back. Roll a 3-dice Survive test (2). On 2+ successes, throw the grenade as if making a Shoot action — it's your grenade now."
         }
       ]
     },
@@ -3078,25 +3081,29 @@
           "id": "reinforcements_incoming",
           "name": "Reinforcements Incoming",
           "pointCost": 5,
-          "restriction": "Sangheili Mercenaries only"
+          "restriction": "Sangheili Mercenaries only",
+          "description": "After any activation, spend a Special Order result to remove the activation token from a friendly Sangheili Mercenary that is off the board (killed but not respawned). That model must then be activated before the end of the current round."
         },
         {
           "id": "alliance",
           "name": "Alliance",
           "pointCost": 3,
-          "restriction": "Any Banished"
+          "restriction": "Any Banished",
+          "description": "If a friendly Banished model is in the same or an adjacent cube at the start of this model's activation, the active model may take the same short action twice during its activation."
         },
         {
           "id": "rampage",
           "name": "Rampage",
           "pointCost": 4,
-          "restriction": "Jiralhanae only"
+          "restriction": "Jiralhanae only",
+          "description": "If the active Jiralhanae has 2 or more wounds, spend a Special Order result to add 1 to their Speed stat for a Sprint action this activation. The sprint must end in a cube with an enemy model. May reroll 1 die in the resulting Fight test."
         },
         {
           "id": "defiance",
           "name": "Defiance",
           "pointCost": 5,
-          "restriction": "Fireteam must include Atriox"
+          "restriction": "Fireteam must include Atriox",
+          "description": "If a friendly model begins their activation Pinned, spend a Special Order result to perform a free Stand Up action first, then continue with the model's normal 2 short / 1 long actions. Atriox may also use special orders available to Jiralhanae."
         }
       ]
     }
@@ -3307,6 +3314,180 @@
       "name": "Extra Recon Roll",
       "pointCost": 3,
       "detail": "Gain an extra roll on the Recon table (Winner or Loser table, as appropriate)."
+    }
+  ],
+  "keywords": [
+    {
+      "name": "Accurate",
+      "description": "Headshots occur on 7 and 8 (instead of 8 only)."
+    },
+    {
+      "name": "Active Camouflage",
+      "description": "If the model has fully charged Energy Shields, ranged attacks against it do not gain Clear Shot (+2), High Ground (+1), or Crouched (+1) modifiers."
+    },
+    {
+      "name": "Blast",
+      "description": "Before damage is resolved, all models in cubes adjacent to the explosion have 1 Energy Shield depleted."
+    },
+    {
+      "name": "Concussive",
+      "description": "If the attacker rolls more successes than the target, the target is Pinned in addition to any damage caused."
+    },
+    {
+      "name": "Continuous Fire",
+      "description": "Gains Weight of Fire (2). After shooting, the model must pass a 3-dice Survive test (2) or suffer 1 wound (bypasses shields and armour)."
+    },
+    {
+      "name": "EMP",
+      "description": "Depletes all Energy Shields on all models in the target cube, including the target."
+    },
+    {
+      "name": "Energy Shield",
+      "description": "Start with (n) Energy Shields that absorb Hits before armour. 1 shield regenerates at the start of each round (up to maximum n)."
+    },
+    {
+      "name": "Energy Shield Barrier",
+      "description": "Protects all models in a cube from ranged attacks only. Does not regenerate at round start."
+    },
+    {
+      "name": "Evade",
+      "description": "When targeted by a Shoot action but not killed, Pinned, or forcibly moved, may immediately make a free 1-cube Advance (which can trigger an Assault)."
+    },
+    {
+      "name": "Explosive",
+      "description": "Targets a cube in LOS. Roll 3 dice Ranged test (1). On failure, scatter to an adjacent cube. No opposed roll — resolve the explosive type keyword on the affected cube."
+    },
+    {
+      "name": "Fast Transition",
+      "description": "When taking a Shoot action, make attacks with two ranged weapons targeting the same or different models. Resolve each weapon separately. Cannot be used with long Shoot actions."
+    },
+    {
+      "name": "Fearless",
+      "description": "Can never be Pinned (even if caused by other keywords). Additional effects from attacks still apply."
+    },
+    {
+      "name": "Firing Platform",
+      "description": "Gains +(n) dice when performing a Shoot action."
+    },
+    {
+      "name": "Flight",
+      "description": "Can pass through cubes without walls or floors during movement and change levels without climbing. Does not take damage or get Pinned from falling."
+    },
+    {
+      "name": "Frag",
+      "description": "Roll (n) dice 4+ test for strength. Each model in the target cube rolls a 3-dice Survive test. Survivors are thrown one cube in a random direction and Pinned."
+    },
+    {
+      "name": "Furious",
+      "description": "Atriox's unique ferocity — represents his unmatched savagery in close combat."
+    },
+    {
+      "name": "Grenade",
+      "description": "Thrown using a Shoot action targeting a cube in LOS. Roll 3 dice Ranged test (1). On failure, Scatter determines where it lands. Bounces off solid walls."
+    },
+    {
+      "name": "Guarded",
+      "description": "When targeted by a Shoot action using a Ranged test, 8s (or 7s) are successes but grant no extra dice — no Headshots."
+    },
+    {
+      "name": "Horde",
+      "description": "During a Fight, gains the normal friendly model bonus plus +1 die for each additional friendly Horde model in the same cube."
+    },
+    {
+      "name": "Implosion",
+      "description": "Roll (n) dice 4+ test for strength. Each model in the target cube rolls a 3-dice Survive test. Difference in successes = Hits caused."
+    },
+    {
+      "name": "Imposing",
+      "description": "Receives a +1 die modifier in Fight or Survive dice tests during an Assault."
+    },
+    {
+      "name": "Jump Pack",
+      "description": "Takes no damage or pin from Falling. Can move up/down levels without climbing, jump over full-cube-height walls, and jump gaps up to 1 cube wide."
+    },
+    {
+      "name": "Knockback",
+      "description": "When rolling more successes than the target (regardless of wounds), force the target 1 cube directly away. In Assault, attacker chooses direction."
+    },
+    {
+      "name": "Lethal",
+      "description": "A model that suffers wounds from this weapon takes (n) additional wounds in total. Cumulative if multiple Lethal modifiers apply."
+    },
+    {
+      "name": "Life Support",
+      "description": "If the model suffers wounds but is not killed, it is immediately returned to an undamaged state. One-Use. Cannot resurrect models killed outright."
+    },
+    {
+      "name": "Long",
+      "description": "A normal Shoot action with this weapon is a long action (uses both short actions for the activation)."
+    },
+    {
+      "name": "Lunge",
+      "description": "Used with a Shoot action but only benefits from Clear Shot and High Ground modifiers. Uses the Fight stat instead of Ranged stat."
+    },
+    {
+      "name": "Medic",
+      "description": "May perform an Auxiliary action to remove 1 Wound Marker from a friendly model in the same cube."
+    },
+    {
+      "name": "Optics",
+      "description": "Adds +1 die to Shoot actions. Headshots occur on 7 and 8. Cannot be used during Blaze Away."
+    },
+    {
+      "name": "Pack Mule",
+      "description": "May carry up to 3 Items, 2 picked-up weapons, and 2 scenario objects."
+    },
+    {
+      "name": "Rapid Fire",
+      "description": "May 'Blaze Away' instead of shooting normally. Roll 4 dice Ranged vs. 3 dice Survive. If shooter wins: 1 Energy Shield depleted and target Pinned. No wounds caused."
+    },
+    {
+      "name": "Scout",
+      "description": "After deployment but before Round 1, make a free 1-cube Advance. May not enter a cube with an enemy. Can keep a Crouch token when advancing."
+    },
+    {
+      "name": "Smash",
+      "description": "Gains +(n) dice when performing a Fight test."
+    },
+    {
+      "name": "Sniper Scope",
+      "description": "Choose a normal short Shoot (no bonus) or a long action Shoot (+2 dice, Headshots on 7 or 8). Declare before rolling."
+    },
+    {
+      "name": "Stable",
+      "description": "May ignore the Long keyword on any weapon when making an Advance followed by a Shoot action in the same activation."
+    },
+    {
+      "name": "Stealthy",
+      "description": "When targeted by a Shoot action with Clear Shot, the opponent only gains +1 die (instead of +2) for that modifier."
+    },
+    {
+      "name": "Sticky",
+      "description": "If 3 or more successes are rolled on the Ranged test, all Energy Shields of 1 affected model are depleted."
+    },
+    {
+      "name": "Stoic",
+      "description": "Can never be Pinned (even from other keywords). Cannot take the Crouch action. Additional attack effects still apply."
+    },
+    {
+      "name": "Support Weapon",
+      "description": "Model may not Sprint, throw grenades, or make Fight tests in Assault. Advance actions only use Speed 1."
+    },
+    {
+      "name": "Suppression",
+      "description": "In addition to normal Hits and Wounds, all models in the same cube as the target (both sides) are Pinned."
+    },
+    {
+      "name": "Tactician",
+      "description": "Adds (n) Command Dice each round, allows (n) rerolls of Command Dice, and may carry over (n) unused Command Dice between rounds. Multiple Tacticians stack their values."
+    },
+    {
+      "name": "Unstoppable",
+      "description": "When triggering an Assault by moving into a cube, receives +3 dice to the Fight test instead of the normal +2."
+    },
+    {
+      "name": "Weight of Fire",
+      "description": "May reroll (n) dice when making Ranged tests. Cumulative — add together values from multiple sources."
     }
   ]
 }

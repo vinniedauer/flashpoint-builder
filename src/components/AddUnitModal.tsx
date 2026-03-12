@@ -158,7 +158,7 @@ export default function AddUnitModal({ faction, gameData, existingEntries, facti
                           </div>
 
                           {unit.stats && statsOpen && (
-                            <UnitStatPanel stats={unit.stats} factionColor={factionColor} />
+                            <UnitStatPanel stats={unit.stats} factionColor={factionColor} keywords={gameData.keywords} />
                           )}
                         </div>
                       )

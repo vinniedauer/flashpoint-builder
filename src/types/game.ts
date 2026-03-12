@@ -1,7 +1,13 @@
+export interface KeywordEntry {
+  name: string
+  description: string
+}
+
 export interface GameData {
   factions: Faction[]
   weaponUpgrades: WeaponUpgrade[]
   commandUpgrades: CommandUpgrade[]
+  keywords: KeywordEntry[]
 }
 
 export interface Faction {
@@ -78,6 +84,7 @@ export interface SpecialOrder {
   name: string
   pointCost: number
   restriction: string
+  description?: string
 }
 
 export interface Fireteam {
