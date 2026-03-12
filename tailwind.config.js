@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#0C0C14',
-        surface: '#14141F',
-        'surface-hi': '#1C1C2C',
-        'surface-hover': '#222230',
-        border: '#2C2C40',
-        'text-primary': '#D8DCF0',
-        'text-secondary': '#9098C0',
-        'text-muted': '#9098C0',
+        bg: 'var(--color-bg)',
+        surface: 'var(--color-surface)',
+        'surface-hi': 'var(--color-surface-hi)',
+        'surface-hover': 'var(--color-surface-hover)',
+        border: 'var(--color-border)',
+        'text-primary': 'var(--color-text-primary)',
+        'text-secondary': 'var(--color-text-secondary)',
+        'text-muted': 'var(--color-text-muted)',
       },
       fontFamily: {
         display: ['Rajdhani', 'sans-serif'],

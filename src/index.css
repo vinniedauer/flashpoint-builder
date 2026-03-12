@@ -2,29 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Theme Variables ──────────────────────────── */
+:root {
+  --color-bg: #0C0C14;
+  --color-surface: #14141F;
+  --color-surface-hi: #1C1C2C;
+  --color-surface-hover: #222230;
+  --color-border: #2C2C40;
+  --color-text-primary: #D8DCF0;
+  --color-text-secondary: #9098C0;
+  --color-text-muted: #B0B8D8;
+  /* Inline color tokens */
+  --color-input-bg: #1C1C2C;
+  --color-input-border: #2C2C40;
+  --color-radio-border: #40405A;
+  --color-inactive: #6870A0;
+  --color-chevron: #60607A;
+  --color-grid: rgba(44, 44, 64, 0.28);
+}
+
+[data-theme="light"] {
+  --color-bg: #F0F0F6;
+  --color-surface: #FFFFFF;
+  --color-surface-hi: #E8E8F2;
+  --color-surface-hover: #DCDCEC;
+  --color-border: #C8C8DC;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #4A4A6A;
+  --color-text-muted: #6A6A8A;
+  --color-input-bg: #E8E8F2;
+  --color-input-border: #C8C8DC;
+  --color-radio-border: #A8A8C0;
+  --color-inactive: #8080A0;
+  --color-chevron: #9090A8;
+  --color-grid: rgba(180, 180, 210, 0.3);
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
   font-family: 'Rajdhani', sans-serif;
-  background-color: #0C0C14;
+  background-color: var(--color-bg);
   background-image:
-    linear-gradient(rgba(44, 44, 64, 0.28) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(44, 44, 64, 0.28) 1px, transparent 1px);
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
   background-size: 40px 40px;
-  color: #D8DCF0;
+  color: var(--color-text-primary);
   min-height: 100vh;
 }
 
-html {
-  font-size: 108%;
-}
+/* ── Font Size ─────────────────────────────────── */
+html { font-size: 108%; }
+html[data-size="small"] { font-size: 92%; }
+html[data-size="medium"] { font-size: 108%; }
+html[data-size="large"] { font-size: 124%; }
 
 @media (min-width: 1200px) {
-  html {
-    font-size: 120%;
-  }
+  html { font-size: 120%; }
+  html[data-size="small"] { font-size: 105%; }
+  html[data-size="medium"] { font-size: 120%; }
+  html[data-size="large"] { font-size: 136%; }
 }
 
 /* ── Scrollbar ────────────────────────────────── */
@@ -32,10 +71,10 @@ html {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #14141F;
+  background: var(--color-surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2C2C40;
+  background: var(--color-border);
   border-radius: 2px;
 }
 

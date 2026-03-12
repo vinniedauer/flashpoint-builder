@@ -2,14 +2,16 @@ import { useState, useEffect } from 'react'
 import type { GameData, Fireteam } from './types/game'
 import { useFireteamStore } from './store/fireteamStore'
 import { useAuthStore } from './store/authStore'
+import { useSettingsStore } from './store/settingsStore'
 import { v4 as uuidv4 } from 'uuid'
 import FireteamList from './components/FireteamList'
 import FireteamDetail from './components/FireteamDetail'
 import NewFireteamModal from './components/NewFireteamModal'
 import UnitBrowser from './components/UnitBrowser'
+import SettingsPage from './components/SettingsPage'
 import AuthButton from './components/AuthButton'
 
-type Tab = 'fireteams' | 'units'
+type Tab = 'fireteams' | 'units' | 'settings'
 
 export default function App() {
   const [gameData, setGameData] = useState<GameData | null>(null)
@@ -21,6 +23,14 @@ export default function App() {
 
   const { addFireteam, fireteams, syncWithAuth } = useFireteamStore()
   const { user } = useAuthStore()
+  const { theme, fontSize } = useSettingsStore()
+
+  // Apply theme + font size to document
+  useEffect(() => {
+    const html = document.documentElement
+    html.setAttribute('data-theme', theme)
+    html.setAttribute('data-size', fontSize)
+  }, [theme, fontSize])
 
   // Sync fireteam store when auth state changes
   useEffect(() => {
@@ -141,6 +151,9 @@ export default function App() {
         {activeTab === 'units' && (
           <UnitBrowser gameData={gameData} />
         )}
+        {activeTab === 'settings' && (
+          <SettingsPage />
+        )}
       </main>
 
       {/* Bottom tab bar */}
@@ -172,6 +185,17 @@ export default function App() {
               </svg>
             ),
           },
+          {
+            id: 'settings',
+            label: 'Settings',
+            onClick: () => setActiveTab('settings'),
+            icon: (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            ),
+          },
         ] as const).map((tab) => {
           const active = activeTab === tab.id
           return (
@@ -179,7 +203,7 @@ export default function App() {
               key={tab.id}
               onClick={tab.onClick}
               className="flex-1 flex flex-col items-center justify-center py-3 gap-1 transition-colors relative"
-              style={{ color: active ? '#3A7CA5' : '#6870A0' }}
+              style={{ color: active ? '#3A7CA5' : 'var(--color-inactive)' }}
             >
               {active && (
                 <span

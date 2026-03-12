@@ -46,9 +46,9 @@ export default function UnitBrowser({ gameData }: Props) {
               onClick={() => { setSelectedFactionId(f.id); setExpandedStatId(null) }}
               className="flex-1 py-2.5 rounded-lg border font-display font-semibold uppercase tracking-wider text-sm transition-all"
               style={{
-                borderColor: selectedFactionId === f.id ? f.colorHex : '#2C2C40',
-                backgroundColor: selectedFactionId === f.id ? f.colorHex + '22' : '#1C1C2C',
-                color: selectedFactionId === f.id ? f.colorHex : '#6870A0',
+                borderColor: selectedFactionId === f.id ? f.colorHex : 'var(--color-input-border)',
+                backgroundColor: selectedFactionId === f.id ? f.colorHex + '22' : 'var(--color-input-bg)',
+                color: selectedFactionId === f.id ? f.colorHex : 'var(--color-inactive)',
               }}
             >
               {f.name}
@@ -115,7 +115,7 @@ export default function UnitBrowser({ gameData }: Props) {
                             strokeWidth="1.5"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            style={{ transform: statsOpen ? 'rotate(180deg)' : 'none', color: statsOpen ? faction?.colorHex : '#60607A', transition: 'transform 0.2s, color 0.2s' }}
+                            style={{ transform: statsOpen ? 'rotate(180deg)' : 'none', color: statsOpen ? faction?.colorHex : 'var(--color-chevron)', transition: 'transform 0.2s, color 0.2s' }}
                           >
                             <polyline points="6 9 12 15 18 9" />
                           </svg>

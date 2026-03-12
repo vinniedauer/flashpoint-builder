@@ -69,8 +69,8 @@ export default function SpecialOrdersModal({ faction, selectedIds, factionColor,
                 disabled={atMax}
                 className="w-full text-left px-4 py-4 rounded-lg border transition-all disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{
-                  borderColor: isSelected ? factionColor : '#2C2C40',
-                  backgroundColor: isSelected ? factionColor + '18' : '#1C1C2C',
+                  borderColor: isSelected ? factionColor : 'var(--color-input-border)',
+                  backgroundColor: isSelected ? factionColor + '18' : 'var(--color-input-bg)',
                 }}
               >
                 <div className="flex items-center justify-between mb-1">
@@ -78,7 +78,7 @@ export default function SpecialOrdersModal({ faction, selectedIds, factionColor,
                     <div
                       className="w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0"
                       style={{
-                        borderColor: isSelected ? factionColor : '#40405A',
+                        borderColor: isSelected ? factionColor : 'var(--color-radio-border)',
                         backgroundColor: isSelected ? factionColor : 'transparent',
                       }}
                     >

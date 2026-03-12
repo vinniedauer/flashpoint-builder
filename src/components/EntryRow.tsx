@@ -77,7 +77,7 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, ke
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                style={{ transform: showStats ? 'rotate(180deg)' : 'none', color: showStats ? factionColor : '#60607A', transition: 'transform 0.2s, color 0.2s' }}
+                style={{ transform: showStats ? 'rotate(180deg)' : 'none', color: showStats ? factionColor : 'var(--color-chevron)', transition: 'transform 0.2s, color 0.2s' }}
               >
                 <polyline points="6 9 12 15 18 9" />
               </svg>

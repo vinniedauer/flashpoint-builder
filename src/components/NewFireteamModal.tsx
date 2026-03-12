@@ -68,9 +68,9 @@ export default function NewFireteamModal({ factions, onClose, onCreate }: Props)
                 onClick={() => setFactionId(faction.id)}
                 className="flex-1 py-3 rounded-lg border font-display font-semibold uppercase tracking-wider text-sm transition-all"
                 style={{
-                  borderColor: factionId === faction.id ? faction.colorHex : '#2C2C40',
-                  backgroundColor: factionId === faction.id ? faction.colorHex + '22' : '#1C1C2C',
-                  color: factionId === faction.id ? faction.colorHex : '#6870A0',
+                  borderColor: factionId === faction.id ? faction.colorHex : 'var(--color-input-border)',
+                  backgroundColor: factionId === faction.id ? faction.colorHex + '22' : 'var(--color-input-bg)',
+                  color: factionId === faction.id ? faction.colorHex : 'var(--color-inactive)',
                 }}
               >
                 {faction.name}
@@ -91,9 +91,9 @@ export default function NewFireteamModal({ factions, onClose, onCreate }: Props)
                 onClick={() => { setPointBudget(p); setUseCustom(false) }}
                 className="flex-1 py-3 rounded-lg border font-mono text-sm transition-all"
                 style={{
-                  borderColor: !useCustom && pointBudget === p ? selectedFaction?.colorHex : '#2C2C40',
-                  backgroundColor: !useCustom && pointBudget === p ? (selectedFaction?.colorHex ?? '#3A7CA5') + '22' : '#1C1C2C',
-                  color: !useCustom && pointBudget === p ? selectedFaction?.colorHex : '#6870A0',
+                  borderColor: !useCustom && pointBudget === p ? selectedFaction?.colorHex : 'var(--color-input-border)',
+                  backgroundColor: !useCustom && pointBudget === p ? (selectedFaction?.colorHex ?? '#3A7CA5') + '22' : 'var(--color-input-bg)',
+                  color: !useCustom && pointBudget === p ? selectedFaction?.colorHex : 'var(--color-inactive)',
                 }}
               >
                 {p}
@@ -104,7 +104,7 @@ export default function NewFireteamModal({ factions, onClose, onCreate }: Props)
             <button
               onClick={() => setUseCustom(!useCustom)}
               className="text-xs uppercase tracking-widest font-display transition-colors"
-              style={{ color: useCustom ? selectedFaction?.colorHex : '#6870A0' }}
+              style={{ color: useCustom ? selectedFaction?.colorHex : 'var(--color-inactive)' }}
             >
               Custom
             </button>

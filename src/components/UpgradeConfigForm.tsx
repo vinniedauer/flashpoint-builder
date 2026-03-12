@@ -99,8 +99,8 @@ export default function UpgradeConfigForm({
                     disabled={atMax}
                     className="w-full flex items-center justify-between px-4 py-3 rounded-lg border transition-all disabled:opacity-40 disabled:cursor-not-allowed"
                     style={{
-                      borderColor: selected ? factionColor : '#2C2C40',
-                      backgroundColor: selected ? factionColor + '18' : '#1C1C2C',
+                      borderColor: selected ? factionColor : 'var(--color-input-border)',
+                      backgroundColor: selected ? factionColor + '18' : 'var(--color-input-bg)',
                     }}
                   >
                     <div className="flex items-center gap-3">
@@ -109,7 +109,7 @@ export default function UpgradeConfigForm({
                         <div
                           className="w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0"
                           style={{
-                            borderColor: selected ? factionColor : '#40405A',
+                            borderColor: selected ? factionColor : 'var(--color-radio-border)',
                             backgroundColor: selected ? factionColor : 'transparent',
                           }}
                         >
@@ -120,7 +120,7 @@ export default function UpgradeConfigForm({
                         <div
                           className="w-4 h-4 rounded border-2 flex items-center justify-center flex-shrink-0"
                           style={{
-                            borderColor: selected ? factionColor : '#40405A',
+                            borderColor: selected ? factionColor : 'var(--color-radio-border)',
                             backgroundColor: selected ? factionColor : 'transparent',
                           }}
                         >
@@ -137,7 +137,7 @@ export default function UpgradeConfigForm({
                     </div>
                     <span
                       className="font-mono text-xs ml-2 flex-shrink-0"
-                      style={{ color: option.pointCost > 0 ? factionColor : '#40405A' }}
+                      style={{ color: option.pointCost > 0 ? factionColor : 'var(--color-radio-border)' }}
                     >
                       {option.pointCost > 0 ? `+${option.pointCost}` : 'free'}
                     </span>

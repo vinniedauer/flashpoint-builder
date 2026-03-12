@@ -106,7 +106,7 @@ export default function UnitDetailModal({ unit, gameData, factionColor, onClose 
                         </div>
                         <span
                           className="font-mono text-xs ml-2 flex-shrink-0"
-                          style={{ color: option.pointCost > 0 ? factionColor : '#40405A' }}
+                          style={{ color: option.pointCost > 0 ? factionColor : 'var(--color-radio-border)' }}
                         >
                           {option.pointCost > 0 ? `+${option.pointCost}` : 'free'}
                         </span>
