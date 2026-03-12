@@ -144,6 +144,11 @@ button:not(:disabled):active {
 }
 
 /* ── Print ────────────────────────────────────── */
+@page {
+  size: letter landscape;
+  margin: 0;
+}
+
 @media print {
   body {
     background: white !important;
