@@ -81,14 +81,8 @@ export default function UnitStatPanel({ stats, factionColor, keywords, selectedR
 
         {/* Weapons */}
         <div className="space-y-1.5">
-          {/* Built-in weapons — hide ranged/melee if an upgrade replaces them */}
+          {/* Built-in weapons */}
           {stats.weapons
-            .filter((w) => {
-              const isMelee = w.range.startsWith('CC')
-              if (isMelee && selectedMeleeWeapon?.profiles?.length) return false
-              if (!isMelee && selectedRangedWeapon?.profiles?.length) return false
-              return true
-            })
             .map((w) => (
               <div key={w.name} className="flex items-baseline justify-between gap-2">
                 <span className="font-display text-sm text-text-secondary truncate">{w.name}</span>
