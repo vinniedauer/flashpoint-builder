@@ -58,7 +58,7 @@ export default function UnitBrowser({ gameData }: Props) {
       </div>
 
       {/* Units list */}
-      <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-5">
+      <div className="flex-1 overflow-y-auto pl-4 pr-4 md:pr-16 pb-4 space-y-5">
         {Object.entries(grouped).map(([type, units]) => (
           <div key={type}>
             <div className="text-xs uppercase tracking-widest text-text-secondary font-display mb-2">

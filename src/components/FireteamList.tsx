@@ -55,7 +55,7 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
           </button>
         </div>
       ) : (
-        <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-2">
+        <div className="flex-1 overflow-y-auto pl-4 pr-4 md:pr-16 pb-4 space-y-2">
           {fireteams.map((ft, index) => {
             const faction = getFaction(ft.factionId)
             const pts = fireteamPoints(ft, gameData)

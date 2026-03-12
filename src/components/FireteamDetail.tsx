@@ -171,7 +171,7 @@ export default function FireteamDetail({ fireteam, gameData, userId, onBack }: P
       </div>
 
       {/* Scrollable content */}
-      <div className="flex-1 overflow-y-auto px-4 pb-24">
+      <div className="flex-1 overflow-y-auto pl-4 pr-4 md:pr-16 pb-24">
         {/* Special Orders */}
         <div className="mt-5 anim-fade-up" style={{ animationDelay: '60ms' }}>
           <div className="flex items-center justify-between mb-2">
