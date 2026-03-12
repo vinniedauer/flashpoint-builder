@@ -109,21 +109,14 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
                   </div>
                 </button>
 
-                {/* Desktop-only hover actions — hidden on touch devices */}
-                <div className="hover-only absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-all z-20">
+                {/* Desktop-only clone button on hover */}
+                <div className="hover-only absolute right-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all z-20">
                   <button
                     onClick={() => handleClone(ft)}
                     className="text-text-muted hover:text-text-secondary text-xs font-display uppercase tracking-wider transition-colors px-1"
                     title="Clone fireteam"
                   >
                     Clone
-                  </button>
-                  <button
-                    onClick={() => deleteFireteam(ft.id, userId)}
-                    className="text-text-muted hover:text-[#C0392B] text-xl leading-none transition-colors px-1"
-                    title="Delete fireteam"
-                  >
-                    ×
                   </button>
                 </div>
               </SwipeToDelete>
