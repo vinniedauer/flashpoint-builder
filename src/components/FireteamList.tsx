@@ -68,6 +68,7 @@ export default function FireteamList({ gameData, userId, onSelect, onNew }: Prop
                 onDelete={() => deleteFireteam(ft.id, userId)}
                 className="rounded-xl group anim-fade-up"
                 style={{ animationDelay: `${index * 55}ms` } as React.CSSProperties}
+                cornerRadius={12}
               >
                 <button
                   onClick={() => onSelect(ft)}

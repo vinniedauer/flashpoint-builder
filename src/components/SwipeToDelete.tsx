@@ -6,9 +6,10 @@ interface Props {
   className?: string
   style?: React.CSSProperties
   revealWidth?: number
+  cornerRadius?: number
 }
 
-export default function SwipeToDelete({ onDelete, children, className = '', style, revealWidth = 72 }: Props) {
+export default function SwipeToDelete({ onDelete, children, className = '', style, revealWidth = 72, cornerRadius = 8 }: Props) {
   const [tx, setTx] = useState(0)
   const [transitioning, setTransitioning] = useState(false)
   const [hovered, setHovered] = useState(false)
@@ -75,12 +76,12 @@ export default function SwipeToDelete({ onDelete, children, className = '', styl
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Inner: overflow hidden clips the swipe animation */}
-      <div ref={containerRef} className="relative overflow-hidden">
+      {/* Inner: overflow hidden clips the swipe animation — must match card's border radius */}
+      <div ref={containerRef} className="relative overflow-hidden" style={{ borderRadius: cornerRadius }}>
         {/* Mobile: absolute delete zone behind content, revealed by translateX */}
         <div
           className="touch-only absolute right-0 top-0 bottom-0 flex flex-col items-center justify-center gap-1 select-none cursor-pointer"
-          style={{ width: revealWidth, background: 'linear-gradient(135deg, #C0392B, #96281b)', borderRadius: '0 8px 8px 0' }}
+          style={{ width: revealWidth, background: 'linear-gradient(135deg, #C0392B, #96281b)', borderRadius: `0 ${cornerRadius}px ${cornerRadius}px 0` }}
           onClick={handleDelete}
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

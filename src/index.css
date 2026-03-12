@@ -11,13 +11,13 @@
   --color-border: #2C2C40;
   --color-text-primary: #D8DCF0;
   --color-text-secondary: #9098C0;
-  --color-text-muted: #B0B8D8;
+  --color-text-muted: #C8D0E8;
   /* Inline color tokens */
   --color-input-bg: #1C1C2C;
   --color-input-border: #2C2C40;
   --color-radio-border: #40405A;
   --color-inactive: #6870A0;
-  --color-chevron: #60607A;
+  --color-chevron: #8890B8;
   --color-grid: rgba(44, 44, 64, 0.28);
 }
 
