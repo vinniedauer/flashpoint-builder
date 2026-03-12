@@ -89,12 +89,13 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, on
         {stats && showStats && (
           <div className="border-t border-border px-4 py-3" style={{ backgroundColor: factionColor + '0C' }}>
             {/* Stat grid */}
-            <div className="grid grid-cols-6 gap-1 mb-3">
+            <div className="grid grid-cols-7 gap-1 mb-3">
               {[
                 { label: 'HP', value: stats.hp },
                 { label: 'RA', value: stats.ra },
                 { label: 'FI', value: stats.fi },
                 { label: 'SV', value: stats.sv },
+                { label: 'SH', value: (() => { const m = stats.keywords.find(k => k.startsWith('Energy Shield')); return m ? m.match(/\((\d+)\)/)?.[1] ?? '—' : '—' })() },
                 { label: 'CR', value: stats.courage },
                 { label: 'RNG', value: stats.range },
               ].map(({ label, value }) => (
