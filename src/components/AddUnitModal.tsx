@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { Unit, Faction, FireteamEntry, GameData } from '../types/game'
 import { entryPoints } from '../utils/points'
+import { getDefaultUpgrades, resolveWeapons } from '../utils/upgrades'
 import UpgradeConfigForm from './UpgradeConfigForm'
 import UnitStatPanel from './UnitStatPanel'
 
@@ -34,7 +35,7 @@ export default function AddUnitModal({ faction, gameData, existingEntries, facti
 
   const handleSelectUnit = (unit: Unit) => {
     setSelectedUnit(unit)
-    setSelectedUpgrades({})
+    setSelectedUpgrades(getDefaultUpgrades(unit))
   }
 
   const handleAdd = () => {
@@ -157,9 +158,21 @@ export default function AddUnitModal({ faction, gameData, existingEntries, facti
                             )}
                           </div>
 
-                          {unit.stats && statsOpen && (
-                            <UnitStatPanel stats={unit.stats} factionColor={factionColor} keywords={gameData.keywords} />
-                          )}
+                          {unit.stats && statsOpen && (() => {
+                            const defaults = getDefaultUpgrades(unit)
+                            const { selectedRangedWeapon, selectedMeleeWeapon, extraWeaponProfiles } =
+                              resolveWeapons(unit, defaults, gameData.weaponUpgrades)
+                            return (
+                              <UnitStatPanel
+                                stats={unit.stats}
+                                factionColor={factionColor}
+                                keywords={gameData.keywords}
+                                selectedRangedWeapon={selectedRangedWeapon}
+                                selectedMeleeWeapon={selectedMeleeWeapon}
+                                extraWeaponProfiles={extraWeaponProfiles}
+                              />
+                            )
+                          })()}
                         </div>
                       )
                     })}

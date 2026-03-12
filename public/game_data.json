@@ -20,9 +20,13 @@
               "options": [
                 {
                   "id": "mc_power_sword",
-                  "name": "Power Sword",
+                  "name": "Energy Sword",
                   "pointCost": 0,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Energy Sword", "range": "CC", "ap": "3", "special": "ESD(2), Lethal(1)" },
+                    { "name": "Energy Sword (Lunge)", "range": "R1", "ap": "3", "special": "ESD(1), Lunge" }
+                  ]
                 }
               ]
             },
@@ -64,7 +68,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -239,13 +246,19 @@
                   "id": "mk7_ma40",
                   "name": "MA40 Assault Rifle",
                   "pointCost": 0,
-                  "description": "Reliable automatic rifle."
+                  "description": "Reliable automatic rifle.",
+                  "weaponProfiles": [
+                    { "name": "MA40 Assault Rifle", "range": "R4", "ap": "-", "special": "Rapid Fire, Weight of Fire(2)" }
+                  ]
                 },
                 {
                   "id": "mk7_pulse_carbine",
                   "name": "Pulse Carbine",
                   "pointCost": 1,
-                  "description": "Banished burst-fire plasma weapon."
+                  "description": "Banished burst-fire plasma weapon.",
+                  "weaponProfiles": [
+                    { "name": "Pulse Carbine", "range": "R4", "ap": "1", "special": "ESD(1), Weight of Fire(1)" }
+                  ]
                 }
               ]
             },
@@ -287,7 +300,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -454,13 +470,19 @@
                   "id": "zv_vk78",
                   "name": "VK78 Commando",
                   "pointCost": 0,
-                  "description": "Precision semi-automatic rifle."
+                  "description": "Precision semi-automatic rifle.",
+                  "weaponProfiles": [
+                    { "name": "VK78 Commando", "range": "R6", "ap": "-", "special": "Optics, Rapid Fire" }
+                  ]
                 },
                 {
                   "id": "zv_cindershot",
                   "name": "Cindershot",
                   "pointCost": 1,
-                  "description": "Explosive bolt launcher."
+                  "description": "Explosive bolt launcher.",
+                  "weaponProfiles": [
+                    { "name": "Cindershot", "range": "R4", "ap": "-", "special": "ESD(1), Grenade, Implosion(5), Lethal(1)" }
+                  ]
                 }
               ]
             },
@@ -502,7 +524,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -669,13 +694,19 @@
                   "id": "de_dmr",
                   "name": "M392 DMR",
                   "pointCost": 0,
-                  "description": "Designated marksman rifle."
+                  "description": "Designated marksman rifle.",
+                  "weaponProfiles": [
+                    { "name": "M392 DMR", "range": "R6", "ap": "-", "special": "Lethal(1), Optics" }
+                  ]
                 },
                 {
                   "id": "de_stalker",
                   "name": "Stalker Rifle",
                   "pointCost": 0,
-                  "description": "Banished long-range energy rifle."
+                  "description": "Banished long-range energy rifle.",
+                  "weaponProfiles": [
+                    { "name": "Stalker Rifle", "range": "R6", "ap": "-", "special": "Sniper Scope" }
+                  ]
                 }
               ]
             },
@@ -717,7 +748,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -884,13 +918,19 @@
                   "id": "br_bulldog",
                   "name": "CQS48 Bulldog Shotgun",
                   "pointCost": 0,
-                  "description": "High-capacity pump-action shotgun."
+                  "description": "High-capacity pump-action shotgun.",
+                  "weaponProfiles": [
+                    { "name": "CQS48 Bulldog", "range": "R2", "ap": "2", "special": "Knockback, Lethal(1)" }
+                  ]
                 },
                 {
                   "id": "br_needler",
                   "name": "Needler",
                   "pointCost": 0,
-                  "description": "Crystal shards track and supercombine on targets."
+                  "description": "Crystal shards track and supercombine on targets.",
+                  "weaponProfiles": [
+                    { "name": "Needler", "range": "R3", "ap": "-", "special": "Lethal(1), Rapid Fire, Weight of Fire(1)" }
+                  ]
                 }
               ]
             },
@@ -932,7 +972,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -1175,7 +1218,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -1342,13 +1388,19 @@
                   "id": "hz_m45",
                   "name": "M45 Shotgun",
                   "pointCost": 0,
-                  "description": "Classic UNSC combat shotgun."
+                  "description": "Classic UNSC combat shotgun.",
+                  "weaponProfiles": [
+                    { "name": "M45 Shotgun", "range": "R3", "ap": "1", "special": "ESD(1), Knockback, Lethal(2)" }
+                  ]
                 },
                 {
                   "id": "hz_spike_rifle",
                   "name": "Spike Rifle",
                   "pointCost": 0,
-                  "description": "Banished full-auto spike weapon."
+                  "description": "Banished full-auto spike weapon.",
+                  "weaponProfiles": [
+                    { "name": "Spike Rifle", "range": "R3", "ap": "-", "special": "Knockback, Rapid Fire, Weight of Fire(1)" }
+                  ]
                 }
               ]
             },
@@ -1390,7 +1442,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -1557,13 +1612,19 @@
                   "id": "gn_plasma_launcher",
                   "name": "Plasma Launcher",
                   "pointCost": 0,
-                  "description": "Tracking plasma bolts."
+                  "description": "Tracking plasma bolts.",
+                  "weaponProfiles": [
+                    { "name": "Plasma Launcher", "range": "R5", "ap": "1", "special": "Frag(4), Grenade, Lethal(1), Sticky" }
+                  ]
                 },
                 {
                   "id": "gn_grenade_launcher",
                   "name": "Grenade Launcher",
                   "pointCost": 0,
-                  "description": "MRLS-2 Hydra grenade launcher."
+                  "description": "MRLS-2 Hydra grenade launcher.",
+                  "weaponProfiles": [
+                    { "name": "M339 Grenade Launcher", "range": "R4", "ap": "-", "special": "Blast, EMP, Frag(3), Grenade" }
+                  ]
                 }
               ]
             },
@@ -1605,7 +1666,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -1774,25 +1838,38 @@
                   "id": "sgu_needler",
                   "name": "Needler",
                   "pointCost": 0,
-                  "description": "Crystal shards track and supercombine on targets."
+                  "description": "Crystal shards track and supercombine on targets.",
+                  "weaponProfiles": [
+                    { "name": "Needler", "range": "R3", "ap": "-", "special": "Lethal(1), Rapid Fire, Weight of Fire(1)" }
+                  ]
                 },
                 {
                   "id": "sgu_pulse_carbine",
                   "name": "Pulse Carbine",
                   "pointCost": 0,
-                  "description": "Banished burst-fire plasma weapon."
+                  "description": "Banished burst-fire plasma weapon.",
+                  "weaponProfiles": [
+                    { "name": "Pulse Carbine", "range": "R4", "ap": "1", "special": "ESD(1), Weight of Fire(1)" }
+                  ]
                 },
                 {
                   "id": "sgu_plasma_rifle",
                   "name": "Plasma Rifle",
                   "pointCost": 1,
-                  "description": "Rapid-fire plasma weapon."
+                  "description": "Rapid-fire plasma weapon.",
+                  "weaponProfiles": [
+                    { "name": "Plasma Rifle", "range": "R4", "ap": "1", "special": "Continuous Fire, ESD(1), Rapid Fire" }
+                  ]
                 },
                 {
                   "id": "sgu_energy_sword",
                   "name": "Energy Sword",
                   "pointCost": 5,
-                  "description": "Covenant plasma blade \u2014 devastating in close combat."
+                  "description": "Covenant plasma blade \u2014 devastating in close combat.",
+                  "weaponProfiles": [
+                    { "name": "Energy Sword", "range": "CC", "ap": "3", "special": "ESD(2), Lethal(1)" },
+                    { "name": "Energy Sword (Lunge)", "range": "R1", "ap": "3", "special": "ESD(1), Lunge" }
+                  ]
                 }
               ]
             },
@@ -1828,7 +1905,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -1997,13 +2077,19 @@
                   "id": "jfo_concussion",
                   "name": "Concussion Rifle",
                   "pointCost": 0,
-                  "description": "Plasma bolt burst weapon."
+                  "description": "Plasma bolt burst weapon.",
+                  "weaponProfiles": [
+                    { "name": "Concussion Rifle", "range": "R5", "ap": "1", "special": "Blast, ESD(1), Frag(4), Grenade" }
+                  ]
                 },
                 {
                   "id": "jfo_target_locator",
                   "name": "Target Locator",
                   "pointCost": 0,
-                  "description": "Calls in orbital strike on marked targets."
+                  "description": "Calls in orbital strike on marked targets.",
+                  "weaponProfiles": [
+                    { "name": "H-165 Target Locator", "range": "R6", "ap": "-", "special": "Blast, Explosive, Frag(6), Lethal(1), Long, Two-Use" }
+                  ]
                 }
               ]
             },
@@ -2045,7 +2131,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -2243,7 +2332,12 @@
                   "id": "atriox_chainbreaker",
                   "name": "Chainbreaker + Power Gauntlet",
                   "pointCost": 0,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Chainbreaker", "range": "CC", "ap": "1", "special": "Concussive, ESD(1), Lethal(1), Smash(1)" },
+                    { "name": "Chainbreaker (Lunge)", "range": "R1", "ap": "-", "special": "Concussive, Lethal(1), Lunge" },
+                    { "name": "Power Gauntlet", "range": "CC", "ap": "2", "special": "Lethal(2)" }
+                  ]
                 }
               ]
             },
@@ -2257,7 +2351,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -2429,25 +2526,38 @@
                   "id": "sg_needler",
                   "name": "Needler",
                   "pointCost": 0,
-                  "description": "Crystal shards track and supercombine on targets."
+                  "description": "Crystal shards track and supercombine on targets.",
+                  "weaponProfiles": [
+                    { "name": "Needler", "range": "R3", "ap": "-", "special": "Lethal(1), Rapid Fire, Weight of Fire(1)" }
+                  ]
                 },
                 {
                   "id": "sg_pulse_carbine",
                   "name": "Pulse Carbine",
                   "pointCost": 0,
-                  "description": "Banished burst-fire plasma weapon."
+                  "description": "Banished burst-fire plasma weapon.",
+                  "weaponProfiles": [
+                    { "name": "Pulse Carbine", "range": "R4", "ap": "1", "special": "ESD(1), Weight of Fire(1)" }
+                  ]
                 },
                 {
                   "id": "sg_plasma_rifle",
                   "name": "Plasma Rifle",
                   "pointCost": 1,
-                  "description": "Rapid-fire plasma weapon."
+                  "description": "Rapid-fire plasma weapon.",
+                  "weaponProfiles": [
+                    { "name": "Plasma Rifle", "range": "R4", "ap": "1", "special": "Continuous Fire, ESD(1), Rapid Fire" }
+                  ]
                 },
                 {
                   "id": "sg_energy_sword",
                   "name": "Energy Sword",
                   "pointCost": 5,
-                  "description": "Covenant plasma blade \u2014 devastating in close combat."
+                  "description": "Covenant plasma blade \u2014 devastating in close combat.",
+                  "weaponProfiles": [
+                    { "name": "Energy Sword", "range": "CC", "ap": "3", "special": "ESD(2), Lethal(1)" },
+                    { "name": "Energy Sword (Lunge)", "range": "R1", "ap": "3", "special": "ESD(1), Lunge" }
+                  ]
                 }
               ]
             },
@@ -2483,7 +2593,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -2794,16 +2907,10 @@
             ],
             "weapons": [
               {
-                "name": "Gravity Hammer",
+                "name": "Wrist Blades",
                 "range": "CC",
-                "attacks": "5",
-                "special": "Brutal, Knockback, Blast(1)"
-              },
-              {
-                "name": "Brute Shot",
-                "range": "2-3",
-                "attacks": "3",
-                "special": "Blast(1)"
+                "attacks": "4",
+                "special": "Knockback, Smash(1)"
               }
             ],
             "advance": 1,
@@ -2848,7 +2955,10 @@
                   "id": "cp_hydra",
                   "name": "MRLS-2 Hydra + Power Gauntlet",
                   "pointCost": 2,
-                  "description": "Multi-lock missile system."
+                  "description": "Multi-lock missile system.",
+                  "weaponProfiles": [
+                    { "name": "MLRS-2 Hydra", "range": "R4", "ap": "1", "special": "ESD(2), Explosive, Frag(4), Lethal(1)" }
+                  ]
                 }
               ]
             },
@@ -2862,7 +2972,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -3020,8 +3133,27 @@
           "name": "Jiralhanae Warrior",
           "pointCost": 33,
           "type": "infantry",
-          "description": "Standard Banished Jiralhanae trooper. Armed with a scavenged VK78 Commando, spike grenade, and fists.",
+          "description": "Standard Banished Jiralhanae trooper. Armed with a VK78 Commando, spike grenade, and fists.",
           "upgradeSlots": [
+            {
+              "id": "warrior_loadout",
+              "name": "Loadout",
+              "required": true,
+              "maxSelections": 1,
+              "options": [
+                {
+                  "id": "wl_vk78_fists",
+                  "name": "VK78 Commando + Spike Grenade + Fists",
+                  "pointCost": 0,
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "VK78 Commando", "range": "R6", "ap": "-", "special": "Optics, Rapid Fire" },
+                    { "name": "Spike Grenade", "range": "R3", "ap": "1", "special": "Frag(4), Grenade, One-Use, Sticky" },
+                    { "name": "Fists", "range": "CC", "ap": "-", "special": "Knockback" }
+                  ]
+                }
+              ]
+            },
             {
               "id": "warrior_equipment",
               "name": "Equipment",
@@ -3124,7 +3256,7 @@
             ],
             "weapons": [
               {
-                "name": "Spiker",
+                "name": "VK78 Commando",
                 "range": "2-3",
                 "attacks": "4",
                 "special": "Rapid Fire"
@@ -3156,9 +3288,12 @@
               "options": [
                 {
                   "id": "sn_shock_disruptor",
-                  "name": "Shock Rifle + Disruptor + Fists",
+                  "name": "Shock Rifle + Fists",
                   "pointCost": 0,
-                  "description": "Shock damage disrupts electronics and chaining bolts."
+                  "description": "Shock damage disrupts electronics and chaining bolts.",
+                  "weaponProfiles": [
+                    { "name": "Shock Rifle", "range": "R6", "ap": "1", "special": "ESD(2), Long, Optics, Suppression" }
+                  ]
                 },
                 {
                   "id": "sn_skewer_mangler",
@@ -3186,7 +3321,10 @@
                   "id": "g_plasma",
                   "name": "Plasma Grenade",
                   "pointCost": 6,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                  ]
                 },
                 {
                   "id": "g_spike",
@@ -3320,10 +3458,10 @@
             ],
             "weapons": [
               {
-                "name": "Beam Rifle",
-                "range": "2-3",
+                "name": "Shock Rifle",
+                "range": "R6",
                 "attacks": "3",
-                "special": "Accurate, Lethal, Piercing(2)"
+                "special": "ESD(2), Long, Optics, Suppression"
               },
               {
                 "name": "Fists",
@@ -3641,7 +3779,10 @@
       "id": "wu_bulldog",
       "name": "CQS48 Bulldog",
       "pointCost": 10,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        { "name": "CQS48 Bulldog", "range": "R2", "ap": "2", "special": "Knockback, Lethal(1)" }
+      ]
     },
     {
       "id": "wu_shock_rifle",
@@ -3829,7 +3970,10 @@
       "id": "wu_plasma_rifle",
       "name": "Plasma Rifle",
       "pointCost": 6,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        { "name": "Plasma Rifle", "range": "R4", "ap": "1", "special": "Continuous Fire, ESD(1), Rapid Fire" }
+      ]
     },
     {
       "id": "wu_grenade_launcher",
@@ -3849,13 +3993,19 @@
       "id": "wu_cindershot",
       "name": "Cindershot",
       "pointCost": 6,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        { "name": "Cindershot", "range": "R4", "ap": "-", "special": "ESD(1), Grenade, Implosion(5), Lethal(1)" }
+      ]
     },
     {
       "id": "wu_pulse_carbine",
       "name": "Pulse Carbine",
       "pointCost": 5,
-      "category": "ranged"
+      "category": "ranged",
+      "profiles": [
+        { "name": "Pulse Carbine", "range": "R4", "ap": "1", "special": "ESD(1), Weight of Fire(1)" }
+      ]
     },
     {
       "id": "wu_needler",

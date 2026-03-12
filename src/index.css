@@ -150,16 +150,34 @@ button:not(:disabled):active {
 }
 
 @media print {
-  body {
+  html, body {
     background: white !important;
     background-image: none !important;
     color: black !important;
+    overflow: visible !important;
+    height: auto !important;
   }
-  #root > * {
+  #root {
     visibility: hidden;
+    height: auto;
+    overflow: visible;
   }
   .print-only {
     display: block !important;
     visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  /* Collapse to single column on portrait (mobile browsers ignoring @page landscape) */
+  .print-two-col {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+@media print and (orientation: portrait) {
+  .print-two-col {
+    grid-template-columns: 1fr !important;
   }
 }

@@ -1,5 +1,6 @@
-import type { Fireteam, GameData } from '../types/game'
+import type { Fireteam, GameData, WeaponProfile } from '../types/game'
 import { fireteamPoints, entryPoints } from '../utils/points'
+import { getDefaultUpgrades, resolveWeapons } from '../utils/upgrades'
 
 interface Props {
   fireteam: Fireteam
@@ -8,6 +9,10 @@ interface Props {
 
 function baseKeyword(kw: string): string {
   return kw.replace(/\s*\(\d+\)$/, '').trim()
+}
+
+function parseSpecialKeywords(special: string): string[] {
+  return special.split(',').map((s) => baseKeyword(s.trim())).filter(Boolean)
 }
 
 const mono: React.CSSProperties = { fontFamily: 'Courier New, Courier, monospace' }
@@ -26,12 +31,29 @@ export default function PrintView({ fireteam, gameData }: Props) {
     .map((id) => gameData.commandUpgrades.find((c) => c.id === id))
     .filter(Boolean) as typeof gameData.commandUpgrades
 
-  // Collect unique base keywords used across all units in this fireteam
+  // Collect unique base keywords from unit stats AND all active weapon profiles
   const usedBaseNames = new Set<string>()
   for (const entry of fireteam.entries) {
     const unit = gameData.factions.flatMap((f) => f.units).find((u) => u.id === entry.unitId)
-    for (const kw of unit?.stats?.keywords ?? []) usedBaseNames.add(baseKeyword(kw))
+    if (!unit) continue
+    // Unit stat keywords
+    for (const kw of unit.stats?.keywords ?? []) usedBaseNames.add(baseKeyword(kw))
+    // Weapon profile keywords
+    const effectiveUpgrades = { ...getDefaultUpgrades(unit), ...entry.selectedUpgrades }
+    const { selectedRangedWeapon, selectedMeleeWeapon, extraWeaponProfiles } =
+      resolveWeapons(unit, effectiveUpgrades, gameData.weaponUpgrades)
+    const allProfiles: WeaponProfile[] = [
+      ...(selectedRangedWeapon?.profiles ?? []),
+      ...(selectedMeleeWeapon?.profiles ?? []),
+      ...extraWeaponProfiles,
+    ]
+    for (const p of allProfiles) {
+      if (p.special) {
+        for (const kw of parseSpecialKeywords(p.special)) usedBaseNames.add(kw)
+      }
+    }
   }
+
   const glossary = gameData.keywords
     .filter((k) => usedBaseNames.has(k.name))
     .sort((a, b) => a.name.localeCompare(b.name))
@@ -40,16 +62,14 @@ export default function PrintView({ fireteam, gameData }: Props) {
     <div
       className="print-only"
       style={{
-        position: 'fixed',
-        inset: 0,
         background: 'white',
         color: '#000',
-        padding: '1in',
+        padding: '0.6in',
         fontFamily: 'Arial, Helvetica, sans-serif',
         fontSize: '9px',
         lineHeight: 1.45,
-        zIndex: 9999,
         boxSizing: 'border-box',
+        width: '100%',
       }}
     >
       {/* ── Header ── */}
@@ -68,7 +88,10 @@ export default function PrintView({ fireteam, gameData }: Props) {
       </div>
 
       {/* ── Two-column body ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: glossary.length > 0 ? '3fr 2fr' : '1fr', gap: '0.35in', alignItems: 'start' }}>
+      <div
+        className={glossary.length > 0 ? 'print-two-col' : undefined}
+        style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.35in', alignItems: 'start' }}
+      >
 
         {/* ── Left: orders + soldiers ── */}
         <div>
@@ -121,6 +144,16 @@ export default function PrintView({ fireteam, gameData }: Props) {
 
               const s = unit.stats
 
+              // Resolve weapon profiles using the same logic as the screen view
+              const effectiveUpgrades = { ...getDefaultUpgrades(unit), ...entry.selectedUpgrades }
+              const { selectedRangedWeapon, selectedMeleeWeapon, extraWeaponProfiles } =
+                resolveWeapons(unit, effectiveUpgrades, gameData.weaponUpgrades)
+              const allWeaponProfiles: WeaponProfile[] = [
+                ...(selectedRangedWeapon?.profiles ?? []),
+                ...(selectedMeleeWeapon?.profiles ?? []),
+                ...extraWeaponProfiles,
+              ]
+
               return (
                 <div key={entry.id} style={{ border: '1.5px solid #999', borderRadius: 4, overflow: 'hidden', breakInside: 'avoid' }}>
 
@@ -158,24 +191,24 @@ export default function PrintView({ fireteam, gameData }: Props) {
                       </div>
                     )}
 
-                    {/* Weapons */}
-                    {(s?.weapons.length ?? 0) > 0 && (
+                    {/* Weapon profiles */}
+                    {allWeaponProfiles.length > 0 && (
                       <div style={{ marginBottom: (s?.keywords.length ?? 0) > 0 ? 4 : 0 }}>
                         <div style={{ fontSize: '6px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#888', marginBottom: 2 }}>Weapons</div>
-                        {s!.weapons.map((w) => (
-                          <div key={w.name} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', fontSize: '8px', marginBottom: 1 }}>
-                            <span style={{ fontWeight: 600 }}>{w.name}</span>
+                        {allWeaponProfiles.map((p, i) => (
+                          <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', fontSize: '8px', marginBottom: 1 }}>
+                            <span style={{ fontWeight: 600 }}>{p.name}</span>
                             <span style={{ ...mono, color: '#333', fontSize: '7.5px', whiteSpace: 'nowrap', marginLeft: 4 }}>
-                              {w.range} · A{w.attacks}{w.special ? ` · ${w.special}` : ''}
+                              {p.range}{p.ap !== '-' ? ` · AP${p.ap}` : ''}{p.special ? ` · ${p.special}` : ''}
                             </span>
                           </div>
                         ))}
                       </div>
                     )}
 
-                    {/* Keywords */}
+                    {/* Unit keywords */}
                     {(s?.keywords.length ?? 0) > 0 && (
-                      <div style={{ fontSize: '7px', color: '#555', fontStyle: 'italic', borderTop: '1px solid #e8e8e8', paddingTop: 3 }}>
+                      <div style={{ fontSize: '7px', color: '#555', fontStyle: 'italic', borderTop: allWeaponProfiles.length > 0 ? '1px solid #e8e8e8' : 'none', paddingTop: allWeaponProfiles.length > 0 ? 3 : 0 }}>
                         {s!.keywords.join(', ')}
                       </div>
                     )}

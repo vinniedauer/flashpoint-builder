@@ -17,7 +17,8 @@ export default function UpgradeConfigForm({
   totalPoints,
   onChange,
 }: Props) {
-  const isRadioSlot = (slot: UpgradeSlot) => slot.name === 'Loadout'
+  const isRadioSlot = (slot: UpgradeSlot) =>
+    slot.required && slot.maxSelections === 1 && !slot.slotType
 
   const toggleOption = (slot: UpgradeSlot, optionId: string) => {
     const current = selectedUpgrades[slot.id] ?? []

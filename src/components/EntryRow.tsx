@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FireteamEntry, Unit, WeaponUpgrade, KeywordEntry } from '../types/game'
 import { entryPoints } from '../utils/points'
+import { getDefaultUpgrades, resolveWeapons } from '../utils/upgrades'
 import SwipeToDelete from './SwipeToDelete'
 import UnitStatPanel from './UnitStatPanel'
 
@@ -37,20 +38,10 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, ke
 
   const stats = unit.stats
 
-  // Resolve weapon_ranged / weapon_melee slot selections
-  const rangedSlot = unit.upgradeSlots.find((s) => s.slotType === 'weapon_ranged')
-  const meleeSlot = unit.upgradeSlots.find((s) => s.slotType === 'weapon_melee')
-  const selectedRangedId = rangedSlot ? (entry.selectedUpgrades[rangedSlot.id] ?? [])[0] : undefined
-  const selectedMeleeId = meleeSlot ? (entry.selectedUpgrades[meleeSlot.id] ?? [])[0] : undefined
-  const selectedRangedWeapon = selectedRangedId ? weaponUpgrades.find((w) => w.id === selectedRangedId) : undefined
-  const selectedMeleeWeapon = selectedMeleeId ? weaponUpgrades.find((w) => w.id === selectedMeleeId) : undefined
-
-  // Collect weapon profiles from all other slot options (loadout, CCW, grenade, etc.)
-  const extraWeaponProfiles = unit.upgradeSlots
-    .filter((s) => s.slotType !== 'weapon_ranged' && s.slotType !== 'weapon_melee')
-    .flatMap((s) => (entry.selectedUpgrades[s.id] ?? [])
-      .flatMap((id) => s.options.find((o) => o.id === id)?.weaponProfiles ?? [])
-    )
+  // Merge default selections (single-option required slots) with explicit selections
+  const effectiveUpgrades = { ...getDefaultUpgrades(unit), ...entry.selectedUpgrades }
+  const { selectedRangedWeapon, selectedMeleeWeapon, extraWeaponProfiles } =
+    resolveWeapons(unit, effectiveUpgrades, weaponUpgrades)
 
   return (
     <SwipeToDelete onDelete={onDelete} className="rounded-lg group">

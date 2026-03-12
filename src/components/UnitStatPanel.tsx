@@ -93,22 +93,8 @@ export default function UnitStatPanel({ stats, factionColor, keywords, selectedR
           </div>
         )}
 
-        {/* Weapons */}
+        {/* Weapons — only from selections, never from default stats.weapons */}
         <div className="space-y-1.5">
-          {/* Built-in weapons */}
-          {stats.weapons
-            .map((w) => (
-              <div key={w.name} className="flex items-baseline justify-between gap-2">
-                <span className="font-display text-sm text-text-secondary truncate">{w.name}</span>
-                <div className="flex items-baseline gap-2 shrink-0">
-                  <span className="font-mono text-xs text-text-muted">{w.range}</span>
-                  <span className="font-mono text-xs text-text-muted">A{w.attacks}</span>
-                  {w.special && (
-                    <span className="font-display text-xs text-text-muted italic">{w.special}</span>
-                  )}
-                </div>
-              </div>
-            ))}
           {/* Selected weapon upgrade profiles (weapon_ranged / weapon_melee slots) */}
           {[selectedRangedWeapon, selectedMeleeWeapon].flatMap((wu) =>
             (wu?.profiles ?? []).map((p) => (
