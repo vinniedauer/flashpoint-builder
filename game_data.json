@@ -163,7 +163,39 @@
               "slotType": "weapon_ranged"
             }
           ],
-          "unique": true
+          "unique": true,
+          "stats": {
+            "hp": 5,
+            "ra": "3+",
+            "fi": "3+",
+            "sv": "3+",
+            "courage": 2,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(3)",
+              "Stoic",
+              "Tactician(3)"
+            ],
+            "weapons": [
+              {
+                "name": "MA40 Assault Rifle",
+                "range": "2-3",
+                "attacks": "5",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Power Sword",
+                "range": "1",
+                "attacks": "5",
+                "special": "Brutal, Cleave"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "4"
+              }
+            ]
+          }
         },
         {
           "id": "spartan_mk7",
@@ -328,7 +360,32 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 4,
+            "ra": "4+",
+            "fi": "4+",
+            "sv": "5+",
+            "courage": 2,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(2)",
+              "Tactician(1)"
+            ],
+            "weapons": [
+              {
+                "name": "MA40 Assault Rifle",
+                "range": "2-3",
+                "attacks": "5",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "3"
+              }
+            ]
+          }
         },
         {
           "id": "spartan_zvezda",
@@ -493,7 +550,32 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 4,
+            "ra": "4+",
+            "fi": "5+",
+            "sv": "4+",
+            "courage": 2,
+            "range": "1-3",
+            "keywords": [
+              "Energy Shield(2)",
+              "Scout"
+            ],
+            "weapons": [
+              {
+                "name": "MA40 Assault Rifle",
+                "range": "2-3",
+                "attacks": "5",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "3"
+              }
+            ]
+          }
         },
         {
           "id": "spartan_deadeye",
@@ -658,7 +740,32 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 4,
+            "ra": "3+",
+            "fi": "5+",
+            "sv": "5+",
+            "courage": 2,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(2)",
+              "Fast Transition"
+            ],
+            "weapons": [
+              {
+                "name": "BR75 Battle Rifle",
+                "range": "2-3",
+                "attacks": "4",
+                "special": "Burst Fire, Accurate"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "3"
+              }
+            ]
+          }
         },
         {
           "id": "spartan_brawler",
@@ -823,7 +930,32 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 4,
+            "ra": "5+",
+            "fi": "3+",
+            "sv": "5+",
+            "courage": 2,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(2)"
+            ],
+            "weapons": [
+              {
+                "name": "MA40 Assault Rifle",
+                "range": "2-3",
+                "attacks": "5",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "5",
+                "special": "Brutal"
+              }
+            ]
+          }
         },
         {
           "id": "spartan_cqb",
@@ -988,7 +1120,32 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 5,
+            "ra": "5+",
+            "fi": "4+",
+            "sv": "6+",
+            "courage": 3,
+            "range": "1-3",
+            "keywords": [
+              "Energy Shield(2)",
+              "Imposing"
+            ],
+            "weapons": [
+              {
+                "name": "MA40 Assault Rifle",
+                "range": "2-3",
+                "attacks": "5",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "3"
+              }
+            ]
+          }
         },
         {
           "id": "spartan_hazop",
@@ -1153,7 +1310,32 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 4,
+            "ra": "5+",
+            "fi": "5+",
+            "sv": "5+",
+            "courage": 2,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(2)",
+              "Flight"
+            ],
+            "weapons": [
+              {
+                "name": "MA40 Assault Rifle",
+                "range": "2-3",
+                "attacks": "5",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "3"
+              }
+            ]
+          }
         },
         {
           "id": "spartan_gungnir",
@@ -1318,7 +1500,34 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 4,
+            "ra": "4+",
+            "fi": "5+",
+            "sv": "5+",
+            "courage": 2,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(2)",
+              "Guarded",
+              "Stable",
+              "Tactician(1)"
+            ],
+            "weapons": [
+              {
+                "name": "M41 SPNKr Rocket Launcher",
+                "range": "2-3",
+                "attacks": "3",
+                "special": "Blast(3), Lethal"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "3"
+              }
+            ]
+          }
         },
         {
           "id": "sangheili_mercenary_unsc",
@@ -1355,7 +1564,7 @@
                   "id": "sgu_energy_sword",
                   "name": "Energy Sword",
                   "pointCost": 5,
-                  "description": "Covenant plasma blade \u2014 devastating in close combat."
+                  "description": "Covenant plasma blade — devastating in close combat."
                 }
               ]
             },
@@ -1489,7 +1698,34 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 3,
+            "ra": "4+",
+            "fi": "4+",
+            "sv": "4+",
+            "courage": 1,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(3)",
+              "Evade",
+              "Smash(1)"
+            ],
+            "weapons": [
+              {
+                "name": "Plasma Rifle",
+                "range": "2-3",
+                "attacks": "4",
+                "special": "Overheat"
+              },
+              {
+                "name": "Energy Sword",
+                "range": "1",
+                "attacks": "4",
+                "special": "Brutal, Cleave"
+              }
+            ]
+          }
         },
         {
           "id": "spartan_jfo",
@@ -1654,7 +1890,33 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 4,
+            "ra": "5+",
+            "fi": "5+",
+            "sv": "5+",
+            "courage": 3,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(2)",
+              "Scout",
+              "Tactician(1)"
+            ],
+            "weapons": [
+              {
+                "name": "MA40 Assault Rifle",
+                "range": "2-3",
+                "attacks": "5",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "3"
+              }
+            ]
+          }
         }
       ],
       "specialOrders": [
@@ -1821,7 +2083,36 @@
               "slotType": "weapon_ranged"
             }
           ],
-          "unique": true
+          "unique": true,
+          "stats": {
+            "hp": 8,
+            "ra": "5+",
+            "fi": "3+",
+            "sv": "4+",
+            "courage": 1,
+            "range": "1-2",
+            "keywords": [
+              "Energy Shield(2)",
+              "Furious",
+              "Imposing",
+              "Tactician(2)",
+              "Unstoppable"
+            ],
+            "weapons": [
+              {
+                "name": "Chainbreaker",
+                "range": "1",
+                "attacks": "7",
+                "special": "Brutal, Cleave"
+              },
+              {
+                "name": "Power Gauntlet",
+                "range": "1",
+                "attacks": "6",
+                "special": "Brutal, Knockback"
+              }
+            ]
+          }
         },
         {
           "id": "sangheili_mercenary",
@@ -1858,7 +2149,7 @@
                   "id": "sg_energy_sword",
                   "name": "Energy Sword",
                   "pointCost": 5,
-                  "description": "Covenant plasma blade \u2014 devastating in close combat."
+                  "description": "Covenant plasma blade — devastating in close combat."
                 }
               ]
             },
@@ -1992,7 +2283,34 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 3,
+            "ra": "4+",
+            "fi": "4+",
+            "sv": "4+",
+            "courage": 1,
+            "range": "2-3",
+            "keywords": [
+              "Energy Shield(3)",
+              "Evade",
+              "Smash(1)"
+            ],
+            "weapons": [
+              {
+                "name": "Plasma Rifle",
+                "range": "2-3",
+                "attacks": "4",
+                "special": "Overheat"
+              },
+              {
+                "name": "Energy Sword",
+                "range": "1",
+                "attacks": "4",
+                "special": "Brutal, Cleave"
+              }
+            ]
+          }
         },
         {
           "id": "brute_berserker",
@@ -2111,7 +2429,35 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 6,
+            "ra": "6+",
+            "fi": "4+",
+            "sv": "6+",
+            "courage": 1,
+            "range": "1-3",
+            "keywords": [
+              "Energy Shield(1)",
+              "Imposing",
+              "Knockback",
+              "Smash(1)"
+            ],
+            "weapons": [
+              {
+                "name": "Gravity Hammer",
+                "range": "1",
+                "attacks": "5",
+                "special": "Brutal, Knockback, Blast(1)"
+              },
+              {
+                "name": "Brute Shot",
+                "range": "2-3",
+                "attacks": "3",
+                "special": "Blast(1)"
+              }
+            ]
+          }
         },
         {
           "id": "brute_captain",
@@ -2256,7 +2602,35 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 6,
+            "ra": "4+",
+            "fi": "4+",
+            "sv": "5+",
+            "courage": 2,
+            "range": "1-3",
+            "keywords": [
+              "Energy Shield(2)",
+              "Imposing",
+              "Jump Pack",
+              "Tactician(1)"
+            ],
+            "weapons": [
+              {
+                "name": "Spiker",
+                "range": "2-3",
+                "attacks": "4",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "4",
+                "special": "Knockback"
+              }
+            ]
+          }
         },
         {
           "id": "brute_warrior",
@@ -2355,7 +2729,33 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 5,
+            "ra": "5+",
+            "fi": "4+",
+            "sv": "5+",
+            "courage": 1,
+            "range": "1-2",
+            "keywords": [
+              "Imposing",
+              "Knockback"
+            ],
+            "weapons": [
+              {
+                "name": "Spiker",
+                "range": "2-3",
+                "attacks": "4",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "4",
+                "special": "Knockback"
+              }
+            ]
+          }
         },
         {
           "id": "brute_sniper",
@@ -2500,7 +2900,33 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 5,
+            "ra": "4+",
+            "fi": "5+",
+            "sv": "5+",
+            "courage": 1,
+            "range": "1-2",
+            "keywords": [
+              "Energy Shield(2)",
+              "Imposing"
+            ],
+            "weapons": [
+              {
+                "name": "Beam Rifle",
+                "range": "2-3",
+                "attacks": "3",
+                "special": "Accurate, Lethal, Piercing(2)"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "4",
+                "special": "Knockback"
+              }
+            ]
+          }
         },
         {
           "id": "brute_chosen",
@@ -2599,7 +3025,35 @@
               "options": [],
               "slotType": "weapon_ranged"
             }
-          ]
+          ],
+          "stats": {
+            "hp": 5,
+            "ra": "5+",
+            "fi": "4+",
+            "sv": "5+",
+            "courage": 1,
+            "range": "1-2",
+            "keywords": [
+              "Energy Shield(1)",
+              "Guarded",
+              "Imposing",
+              "Tactician(1)"
+            ],
+            "weapons": [
+              {
+                "name": "Spiker",
+                "range": "2-3",
+                "attacks": "4",
+                "special": "Rapid Fire"
+              },
+              {
+                "name": "Fists",
+                "range": "1",
+                "attacks": "4",
+                "special": "Knockback"
+              }
+            ]
+          }
         }
       ],
       "specialOrders": [
