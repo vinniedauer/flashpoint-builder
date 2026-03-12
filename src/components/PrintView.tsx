@@ -100,7 +100,7 @@ export default function PrintView({ fireteam, gameData }: Props) {
 
           {/* Soldiers */}
           <div style={label}>Soldiers ({fireteam.entries.length})</div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '6px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(210px, 1fr))', gap: '7px' }}>
             {fireteam.entries.map((entry) => {
               const unit = gameData.factions.flatMap((f) => f.units).find((u) => u.id === entry.unitId)
               if (!unit) return null
@@ -122,38 +122,65 @@ export default function PrintView({ fireteam, gameData }: Props) {
               const s = unit.stats
 
               return (
-                <div key={entry.id} style={{ border: '1px solid #bbb', borderRadius: 3, padding: '4px 6px', breakInside: 'avoid' }}>
-                  {/* Name + pts */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 700, fontSize: '9.5px', borderBottom: '1px solid #ddd', paddingBottom: 2, marginBottom: 3 }}>
-                    <span style={{ textTransform: 'uppercase', letterSpacing: '0.04em' }}>{unit.name}</span>
-                    <span style={mono}>{pts} pts</span>
+                <div key={entry.id} style={{ border: '1.5px solid #999', borderRadius: 4, overflow: 'hidden', breakInside: 'avoid' }}>
+
+                  {/* Name bar */}
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', background: '#111', color: '#fff', padding: '4px 7px' }}>
+                    <span style={{ fontWeight: 800, fontSize: '9.5px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{unit.name}</span>
+                    <span style={{ ...mono, fontSize: '9px', fontWeight: 700 }}>{pts} pts</span>
                   </div>
 
-                  {/* Upgrades */}
-                  {upgradeLines.map((line) => (
-                    <div key={line} style={{ color: '#444', fontSize: '8px', marginBottom: 1 }}>{line}</div>
-                  ))}
+                  <div style={{ padding: '5px 7px' }}>
 
-                  {/* Stats */}
-                  {s && (
-                    <div style={{ ...mono, fontSize: '8px', color: '#222', marginTop: upgradeLines.length > 0 ? 3 : 0, letterSpacing: '0.02em' }}>
-                      HP:{s.hp} RA:{s.ra} FI:{s.fi} SV:{s.sv} SH:{s.shields} MV:{s.advance}-{s.sprint}
-                    </div>
-                  )}
+                    {/* Upgrades */}
+                    {upgradeLines.length > 0 && (
+                      <div style={{ fontSize: '7.5px', color: '#444', marginBottom: 5, paddingBottom: 4, borderBottom: '1px solid #e0e0e0' }}>
+                        {upgradeLines.join(' · ')}
+                      </div>
+                    )}
 
-                  {/* Weapons */}
-                  {s?.weapons.map((w) => (
-                    <div key={w.name} style={{ ...mono, fontSize: '8px', color: '#333', marginTop: 1 }}>
-                      {w.name} · {w.range} · A{w.attacks}{w.special ? ` · ${w.special}` : ''}
-                    </div>
-                  ))}
+                    {/* Stats grid */}
+                    {s && (
+                      <div style={{ display: 'flex', marginBottom: 5, border: '1px solid #ddd', borderRadius: 3, overflow: 'hidden' }}>
+                        {[
+                          { l: 'HP', v: String(s.hp) },
+                          { l: 'RA', v: s.ra },
+                          { l: 'FI', v: s.fi },
+                          { l: 'SV', v: s.sv },
+                          { l: 'SH', v: String(s.shields) },
+                          { l: 'MV', v: `${s.advance}-${s.sprint}` },
+                        ].map(({ l, v }, i) => (
+                          <div key={l} style={{ flex: 1, textAlign: 'center', padding: '2px 0', borderLeft: i > 0 ? '1px solid #ddd' : 'none' }}>
+                            <div style={{ fontSize: '6px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#888' }}>{l}</div>
+                            <div style={{ ...mono, fontSize: '10px', fontWeight: 800, color: '#000' }}>{v}</div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
 
-                  {/* Keywords */}
-                  {(s?.keywords.length ?? 0) > 0 && (
-                    <div style={{ fontSize: '7.5px', color: '#555', fontStyle: 'italic', marginTop: 2 }}>
-                      {s!.keywords.join(', ')}
-                    </div>
-                  )}
+                    {/* Weapons */}
+                    {(s?.weapons.length ?? 0) > 0 && (
+                      <div style={{ marginBottom: (s?.keywords.length ?? 0) > 0 ? 4 : 0 }}>
+                        <div style={{ fontSize: '6px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#888', marginBottom: 2 }}>Weapons</div>
+                        {s!.weapons.map((w) => (
+                          <div key={w.name} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', fontSize: '8px', marginBottom: 1 }}>
+                            <span style={{ fontWeight: 600 }}>{w.name}</span>
+                            <span style={{ ...mono, color: '#333', fontSize: '7.5px', whiteSpace: 'nowrap', marginLeft: 4 }}>
+                              {w.range} · A{w.attacks}{w.special ? ` · ${w.special}` : ''}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Keywords */}
+                    {(s?.keywords.length ?? 0) > 0 && (
+                      <div style={{ fontSize: '7px', color: '#555', fontStyle: 'italic', borderTop: '1px solid #e8e8e8', paddingTop: 3 }}>
+                        {s!.keywords.join(', ')}
+                      </div>
+                    )}
+
+                  </div>
                 </div>
               )
             })}
