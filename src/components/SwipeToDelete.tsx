@@ -11,7 +11,7 @@ interface Props {
 export default function SwipeToDelete({ onDelete, children, className = '', style, revealWidth = 72 }: Props) {
   const [tx, setTx] = useState(0)
   const [transitioning, setTransitioning] = useState(false)
-  const showOverlay = tx < -8
+  const [hovered, setHovered] = useState(false)
 
   const containerRef = useRef<HTMLDivElement>(null)
   const startX = useRef(0)
@@ -46,6 +46,7 @@ export default function SwipeToDelete({ onDelete, children, className = '', styl
     active.current = true
     horizontal.current = null
     setTransitioning(false)
+    setHovered(false)
   }
 
   const handleTouchEnd = () => {
@@ -65,8 +66,18 @@ export default function SwipeToDelete({ onDelete, children, className = '', styl
     onDelete()
   }
 
+  // Desktop hover reveals the zone; touch tx overrides
+  const effectiveTx = tx !== 0 ? tx : (hovered ? -revealWidth : 0)
+  const showOverlay = effectiveTx < -8
+
   return (
-    <div ref={containerRef} className={`relative overflow-hidden ${className}`} style={style}>
+    <div
+      ref={containerRef}
+      className={`relative overflow-hidden ${className}`}
+      style={style}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       {/* Red trash zone revealed behind */}
       <div
         className="absolute right-0 top-0 bottom-0 flex flex-col items-center justify-center gap-1 select-none cursor-pointer"
@@ -79,7 +90,7 @@ export default function SwipeToDelete({ onDelete, children, className = '', styl
           <path d="M10 11v6M14 11v6" />
           <path d="M9 6V4h6v2" />
         </svg>
-        <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '9px', fontFamily: 'inherit', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '11px', fontFamily: 'inherit', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
           Delete
         </span>
       </div>
@@ -89,15 +100,15 @@ export default function SwipeToDelete({ onDelete, children, className = '', styl
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         style={{
-          transform: `translateX(${tx}px)`,
-          transition: transitioning ? 'transform 0.28s cubic-bezier(0.32, 0.72, 0, 1)' : 'none',
+          transform: `translateX(${effectiveTx}px)`,
+          transition: (transitioning || hovered) ? 'transform 0.28s cubic-bezier(0.32, 0.72, 0, 1)' : 'none',
           willChange: 'transform',
         }}
       >
         {children}
       </div>
 
-      {/* Tap-to-close when open */}
+      {/* Click-to-close when open (touch tap-away or desktop click-away) */}
       {showOverlay && (
         <div
           className="absolute inset-0 z-10"

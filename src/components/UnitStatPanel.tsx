@@ -22,7 +22,7 @@ export default function UnitStatPanel({ stats, factionColor }: Props) {
             <span className="font-mono text-sm font-bold" style={{ color: factionColor }}>
               {value}
             </span>
-            <span className="font-display text-[12px] uppercase tracking-widest text-text-muted mt-0.5">
+            <span className="font-display text-xs uppercase tracking-widest text-text-muted mt-0.5">
               {label}
             </span>
           </div>
@@ -35,7 +35,7 @@ export default function UnitStatPanel({ stats, factionColor }: Props) {
           {stats.keywords.map((kw) => (
             <span
               key={kw}
-              className="font-display text-[11px] uppercase tracking-wider px-1.5 py-0.5 rounded border"
+              className="font-display text-xs uppercase tracking-wider px-1.5 py-0.5 rounded border"
               style={{ borderColor: factionColor + '40', color: factionColor + 'CC', backgroundColor: factionColor + '10' }}
             >
               {kw}
@@ -45,15 +45,15 @@ export default function UnitStatPanel({ stats, factionColor }: Props) {
       )}
 
       {/* Weapons */}
-      <div className="space-y-1">
+      <div className="space-y-1.5">
         {stats.weapons.map((w) => (
           <div key={w.name} className="flex items-baseline justify-between gap-2">
-            <span className="font-display text-[13px] text-text-secondary truncate">{w.name}</span>
+            <span className="font-display text-sm text-text-secondary truncate">{w.name}</span>
             <div className="flex items-baseline gap-2 shrink-0">
-              <span className="font-mono text-[11px] text-text-muted">{w.range}</span>
-              <span className="font-mono text-[11px] text-text-muted">A{w.attacks}</span>
+              <span className="font-mono text-xs text-text-muted">{w.range}</span>
+              <span className="font-mono text-xs text-text-muted">A{w.attacks}</span>
               {w.special && (
-                <span className="font-display text-[11px] text-text-muted italic">{w.special}</span>
+                <span className="font-display text-xs text-text-muted italic">{w.special}</span>
               )}
             </div>
           </div>

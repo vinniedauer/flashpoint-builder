@@ -41,17 +41,7 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, on
       <div className="bg-surface-hi border border-border rounded-lg overflow-hidden">
         {/* Main row */}
         <div className="flex items-stretch">
-          {/* Desktop × — left of chevron so they don't overlap */}
-          <button
-            onClick={onDelete}
-            className="hover-only absolute opacity-0 group-hover:opacity-100 text-text-muted hover:text-[#C0392B] text-2xl leading-none transition-all z-20 px-2 py-1 rounded hover:bg-[#C0392B]/10"
-            style={{ right: stats ? '44px' : '6px', top: '6px' }}
-            title="Remove"
-          >
-            ×
-          </button>
-
-          <button
+            <button
             onClick={onClick}
             className="flex-1 text-left px-4 py-3 hover:bg-surface-hover transition-all min-w-0"
           >
