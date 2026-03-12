@@ -159,8 +159,8 @@ button:not(:disabled):active {
   }
   #root {
     visibility: hidden;
-    height: auto;
-    overflow: visible;
+    height: 0;
+    overflow: hidden;
   }
   .print-only {
     display: block !important;
