@@ -85,6 +85,11 @@ button:not(:disabled):active {
     display: none !important;
   }
 }
+@media (hover: hover) {
+  .touch-only {
+    display: none !important;
+  }
+}
 
 /* ── Screen: hide print-only content ─────────── */
 .print-only {
