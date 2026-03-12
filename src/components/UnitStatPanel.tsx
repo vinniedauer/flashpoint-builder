@@ -9,15 +9,14 @@ export default function UnitStatPanel({ stats, factionColor }: Props) {
   return (
     <div className="border-t border-border px-4 py-3" style={{ backgroundColor: factionColor + '0C' }}>
       {/* Stat grid */}
-      <div className="grid grid-cols-7 gap-1 mb-3">
+      <div className="grid grid-cols-6 gap-1 mb-3">
         {[
           { label: 'HP', value: stats.hp },
           { label: 'RA', value: stats.ra },
           { label: 'FI', value: stats.fi },
           { label: 'SV', value: stats.sv },
-          { label: 'CR', value: stats.courage },
-          { label: 'ADV', value: stats.advance },
-          { label: 'SPR', value: stats.sprint },
+          { label: 'SH', value: stats.shields },
+          { label: 'MV', value: `${stats.advance}-${stats.sprint}` },
         ].map(({ label, value }) => (
           <div key={label} className="flex flex-col items-center">
             <span className="font-mono text-sm font-bold" style={{ color: factionColor }}>

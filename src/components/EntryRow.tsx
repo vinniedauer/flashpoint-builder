@@ -44,8 +44,8 @@ export default function EntryRow({ entry, unit, weaponUpgrades, factionColor, on
           {/* Desktop × — left of chevron so they don't overlap */}
           <button
             onClick={onDelete}
-            className="hover-only absolute opacity-0 group-hover:opacity-100 text-text-muted hover:text-[#C0392B] text-xl leading-none transition-all z-20 px-1"
-            style={{ right: stats ? '44px' : '8px', top: '10px' }}
+            className="hover-only absolute opacity-0 group-hover:opacity-100 text-text-muted hover:text-[#C0392B] text-2xl leading-none transition-all z-20 px-2 py-1 rounded hover:bg-[#C0392B]/10"
+            style={{ right: stats ? '44px' : '6px', top: '6px' }}
             title="Remove"
           >
             ×

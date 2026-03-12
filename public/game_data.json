@@ -169,7 +169,6 @@
             "ra": "3+",
             "fi": "3+",
             "sv": "3+",
-            "courage": 2,
             "keywords": [
               "Energy Shield(3)",
               "Stoic",
@@ -195,7 +194,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 2
           }
         },
         {
@@ -367,7 +367,6 @@
             "ra": "4+",
             "fi": "4+",
             "sv": "5+",
-            "courage": 2,
             "keywords": [
               "Energy Shield(2)",
               "Tactician(1)"
@@ -386,7 +385,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 2
           }
         },
         {
@@ -558,7 +558,6 @@
             "ra": "4+",
             "fi": "5+",
             "sv": "4+",
-            "courage": 2,
             "keywords": [
               "Energy Shield(2)",
               "Scout"
@@ -577,7 +576,8 @@
               }
             ],
             "advance": 1,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 2
           }
         },
         {
@@ -749,7 +749,6 @@
             "ra": "3+",
             "fi": "5+",
             "sv": "5+",
-            "courage": 2,
             "keywords": [
               "Energy Shield(2)",
               "Fast Transition"
@@ -768,7 +767,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 2
           }
         },
         {
@@ -940,7 +940,6 @@
             "ra": "5+",
             "fi": "3+",
             "sv": "5+",
-            "courage": 2,
             "keywords": [
               "Energy Shield(2)"
             ],
@@ -959,7 +958,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 2
           }
         },
         {
@@ -1131,7 +1131,6 @@
             "ra": "5+",
             "fi": "4+",
             "sv": "6+",
-            "courage": 3,
             "keywords": [
               "Energy Shield(2)",
               "Imposing"
@@ -1150,7 +1149,8 @@
               }
             ],
             "advance": 1,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 3
           }
         },
         {
@@ -1322,7 +1322,6 @@
             "ra": "5+",
             "fi": "5+",
             "sv": "5+",
-            "courage": 2,
             "keywords": [
               "Energy Shield(2)",
               "Flight"
@@ -1341,7 +1340,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 2
           }
         },
         {
@@ -1513,7 +1513,6 @@
             "ra": "4+",
             "fi": "5+",
             "sv": "5+",
-            "courage": 2,
             "keywords": [
               "Energy Shield(2)",
               "Guarded",
@@ -1534,7 +1533,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 2
           }
         },
         {
@@ -1712,7 +1712,6 @@
             "ra": "4+",
             "fi": "4+",
             "sv": "4+",
-            "courage": 1,
             "keywords": [
               "Energy Shield(3)",
               "Evade",
@@ -1733,7 +1732,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 1
           }
         },
         {
@@ -1905,7 +1905,6 @@
             "ra": "5+",
             "fi": "5+",
             "sv": "5+",
-            "courage": 3,
             "keywords": [
               "Energy Shield(2)",
               "Scout",
@@ -1925,7 +1924,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 3
           }
         }
       ],
@@ -2099,7 +2099,6 @@
             "ra": "5+",
             "fi": "3+",
             "sv": "4+",
-            "courage": 1,
             "keywords": [
               "Energy Shield(2)",
               "Furious",
@@ -2122,7 +2121,8 @@
               }
             ],
             "advance": 1,
-            "sprint": 2
+            "sprint": 2,
+            "shields": 1
           }
         },
         {
@@ -2300,7 +2300,6 @@
             "ra": "4+",
             "fi": "4+",
             "sv": "4+",
-            "courage": 1,
             "keywords": [
               "Energy Shield(3)",
               "Evade",
@@ -2321,7 +2320,8 @@
               }
             ],
             "advance": 2,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 1
           }
         },
         {
@@ -2447,7 +2447,6 @@
             "ra": "6+",
             "fi": "4+",
             "sv": "6+",
-            "courage": 1,
             "keywords": [
               "Energy Shield(1)",
               "Imposing",
@@ -2469,7 +2468,8 @@
               }
             ],
             "advance": 1,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 1
           }
         },
         {
@@ -2621,7 +2621,6 @@
             "ra": "4+",
             "fi": "4+",
             "sv": "5+",
-            "courage": 2,
             "keywords": [
               "Energy Shield(2)",
               "Imposing",
@@ -2643,7 +2642,8 @@
               }
             ],
             "advance": 1,
-            "sprint": 3
+            "sprint": 3,
+            "shields": 2
           }
         },
         {
@@ -2749,7 +2749,6 @@
             "ra": "5+",
             "fi": "4+",
             "sv": "5+",
-            "courage": 1,
             "keywords": [
               "Imposing",
               "Knockback"
@@ -2769,7 +2768,8 @@
               }
             ],
             "advance": 1,
-            "sprint": 2
+            "sprint": 2,
+            "shields": 1
           }
         },
         {
@@ -2921,7 +2921,6 @@
             "ra": "4+",
             "fi": "5+",
             "sv": "5+",
-            "courage": 1,
             "keywords": [
               "Energy Shield(2)",
               "Imposing"
@@ -2941,7 +2940,8 @@
               }
             ],
             "advance": 1,
-            "sprint": 2
+            "sprint": 2,
+            "shields": 1
           }
         },
         {
@@ -3047,7 +3047,6 @@
             "ra": "5+",
             "fi": "4+",
             "sv": "5+",
-            "courage": 1,
             "keywords": [
               "Energy Shield(1)",
               "Guarded",
@@ -3069,7 +3068,8 @@
               }
             ],
             "advance": 1,
-            "sprint": 2
+            "sprint": 2,
+            "shields": 1
           }
         }
       ],
