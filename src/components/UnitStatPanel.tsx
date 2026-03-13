@@ -15,7 +15,18 @@ function baseKeyword(kw: string): string {
   return kw.replace(/\s*\(\d+\)$/, '').trim()
 }
 
-function WeaponProfileRow({ profile: p, factionColor }: { profile: WeaponProfile; factionColor: string }) {
+function WeaponProfileRow({
+  profile: p,
+  factionColor,
+  keywords,
+  onKeywordClick,
+}: {
+  profile: WeaponProfile
+  factionColor: string
+  keywords?: KeywordEntry[]
+  onKeywordClick?: (kw: string) => void
+}) {
+  const specialKeywords = p.special ? p.special.split(',').map((s) => s.trim()) : []
   return (
     <div className="mb-1.5 last:mb-0">
       <div className="flex items-baseline justify-between gap-2">
@@ -25,8 +36,29 @@ function WeaponProfileRow({ profile: p, factionColor }: { profile: WeaponProfile
           {p.ap !== '-' && <span className="font-mono text-xs text-text-muted">AP{p.ap}</span>}
         </div>
       </div>
-      {p.special && (
-        <p className="font-display text-xs text-text-muted italic">{p.special}</p>
+      {specialKeywords.length > 0 && (
+        <p className="font-display text-xs text-text-muted italic">
+          {specialKeywords.map((kw, i) => {
+            const hasDesc = keywords?.some(
+              (k) => k.name.toLowerCase() === baseKeyword(kw).toLowerCase()
+            )
+            return (
+              <span key={kw}>
+                {i > 0 && ', '}
+                {hasDesc && onKeywordClick ? (
+                  <button
+                    onClick={() => onKeywordClick(kw)}
+                    className="italic underline decoration-dotted underline-offset-2 hover:opacity-80 transition-opacity"
+                  >
+                    {kw}
+                  </button>
+                ) : (
+                  <span>{kw}</span>
+                )}
+              </span>
+            )
+          })}
+        </p>
       )}
     </div>
   )
@@ -102,12 +134,24 @@ export default function UnitStatPanel({ stats, factionColor, keywords, selectedR
           {/* Selected weapon upgrade profiles (weapon_ranged / weapon_melee slots) */}
           {[selectedRangedWeapon, selectedMeleeWeapon].flatMap((wu) =>
             (wu?.profiles ?? []).map((p) => (
-              <WeaponProfileRow key={`${wu!.id}-${p.name}`} profile={p} factionColor={factionColor} />
+              <WeaponProfileRow
+                key={`${wu!.id}-${p.name}`}
+                profile={p}
+                factionColor={factionColor}
+                keywords={keywords}
+                onKeywordClick={handleBadgeClick}
+              />
             ))
           )}
           {/* Extra profiles from loadout / CCW / grenade options */}
           {(extraWeaponProfiles ?? []).map((p, i) => (
-            <WeaponProfileRow key={`extra-${i}-${p.name}`} profile={p} factionColor={factionColor} />
+            <WeaponProfileRow
+              key={`extra-${i}-${p.name}`}
+              profile={p}
+              factionColor={factionColor}
+              keywords={keywords}
+              onKeywordClick={handleBadgeClick}
+            />
           ))}
         </div>
       </div>

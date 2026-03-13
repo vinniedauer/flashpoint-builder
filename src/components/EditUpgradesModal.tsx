@@ -52,6 +52,7 @@ export default function EditUpgradesModal({ entry, unit, gameData, factionColor,
             selectedUpgrades={selectedUpgrades}
             factionColor={factionColor}
             totalPoints={totalPoints}
+            keywords={gameData.keywords}
             onChange={(slotId, ids) =>
               setSelectedUpgrades((prev) => ({ ...prev, [slotId]: ids }))
             }

@@ -80,42 +80,18 @@ export default function App() {
     setActiveTab('fireteams')
   }
 
-  if (loading) {
-    return (
-      <div style={{ position: 'fixed', inset: 0, backgroundColor: '#0C0C14', overflow: 'hidden' }}>
-        {/* Banner: text is at ~41% from left — offset so it lands at ~5vw */}
-        <img
-          src={`${import.meta.env.BASE_URL}splash.webp`}
-          alt=""
-          style={{ position: 'absolute', top: 0, left: '-77vw', width: '200vw', maxWidth: 'none' }}
-        />
-        {/* Fade image into background */}
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(to bottom, rgba(12,12,20,0.05) 0%, rgba(12,12,20,0.6) 28%, #0C0C14 50%)',
-        }} />
-        {/* Loading indicator */}
-        <div style={{ position: 'absolute', bottom: '38%', left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-          <div className="flex flex-col items-center gap-1.5">
-            {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                className="h-px rounded-full bg-text-secondary origin-left"
-                style={{
-                  width: '36px',
-                  animation: 'scan-pulse 1.2s ease-in-out infinite',
-                  animationDelay: `${i * 0.18}s`,
-                }}
-              />
-            ))}
-          </div>
-          <p className="text-text-muted font-mono text-xs uppercase tracking-widest">
-            Loading
-          </p>
-        </div>
-      </div>
-    )
-  }
+  // Fade out the HTML splash once data is ready
+  useEffect(() => {
+    if (!loading) {
+      const splash = document.getElementById('app-splash')
+      if (splash) {
+        splash.style.opacity = '0'
+        setTimeout(() => { splash.style.display = 'none' }, 400)
+      }
+    }
+  }, [loading])
+
+  if (loading) return null
 
   if (error || !gameData) {
     return (

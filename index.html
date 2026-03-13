@@ -18,7 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   </head>
-  <body class="bg-bg">
+  <body class="bg-bg" style="margin:0;background-color:#0C0C14;">
+    <!-- Splash shown immediately before React loads, faded out once app is ready -->
+    <div id="app-splash" style="position:fixed;inset:0;background-color:#0C0C14;background-image:url('/flashpoint-builder/splash.webp');background-size:cover;background-position:54% 20%;z-index:9999;transition:opacity 0.4s ease;"></div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

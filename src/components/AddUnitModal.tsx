@@ -188,6 +188,7 @@ export default function AddUnitModal({ faction, gameData, existingEntries, facti
               selectedUpgrades={selectedUpgrades}
               factionColor={factionColor}
               totalPoints={totalPoints}
+              keywords={gameData.keywords}
               onChange={(slotId, ids) =>
                 setSelectedUpgrades((prev) => ({ ...prev, [slotId]: ids }))
               }
