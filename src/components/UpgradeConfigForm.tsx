@@ -261,9 +261,9 @@ export default function UpgradeConfigForm({
                   const selected = current.includes(option.id)
                   const atMax = !radio && !selected && current.length >= slot.maxSelections
                   const expanded = expandedIds.has(option.id)
-                  const hasProfiles = (option.weaponProfiles?.length ?? 0) > 0
+                  const hasExpandable = !!(option.description || (option.weaponProfiles?.length ?? 0) > 0)
 
-                  if (hasProfiles) {
+                  if (hasExpandable) {
                     /* Split layout: selection button + chevron */
                     return (
                       <div key={option.id}>
@@ -339,13 +339,18 @@ export default function UpgradeConfigForm({
                           </button>
                         </div>
 
-                        {/* Expanded profiles */}
+                        {/* Expanded content: description and/or weapon profiles */}
                         {expanded && (
                           <div
                             className="mt-1 px-4 py-2.5 rounded-lg"
                             style={{ backgroundColor: factionColor + '0C', border: `1px solid ${factionColor}30` }}
                           >
-                            {option.weaponProfiles!.map((p, i) => (
+                            {option.description && (
+                              <p className="font-display text-xs text-text-secondary leading-relaxed mb-2 last:mb-0">
+                                {option.description}
+                              </p>
+                            )}
+                            {(option.weaponProfiles ?? []).map((p, i) => (
                               <WeaponProfileRow
                                 key={i}
                                 profile={p}
