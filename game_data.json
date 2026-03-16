@@ -24,8 +24,18 @@
                   "pointCost": 0,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Energy Sword", "range": "CC", "ap": "3", "special": "ESD(2), Lethal(1)" },
-                    { "name": "Energy Sword (Lunge)", "range": "R1", "ap": "3", "special": "ESD(1), Lunge" }
+                    {
+                      "name": "Energy Sword",
+                      "range": "CC",
+                      "ap": "3",
+                      "special": "ESD(2), Lethal(1)"
+                    },
+                    {
+                      "name": "Energy Sword (Lunge)",
+                      "range": "R1",
+                      "ap": "3",
+                      "special": "ESD(1), Lunge"
+                    }
                   ]
                 }
               ]
@@ -62,7 +72,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -70,7 +88,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -113,67 +136,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -248,7 +271,12 @@
                   "pointCost": 0,
                   "description": "Reliable automatic rifle.",
                   "weaponProfiles": [
-                    { "name": "MA40 Assault Rifle", "range": "R4", "ap": "-", "special": "Rapid Fire, Weight of Fire(2)" }
+                    {
+                      "name": "MA40 Assault Rifle",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "Rapid Fire, Weight of Fire(2)"
+                    }
                   ]
                 },
                 {
@@ -257,7 +285,12 @@
                   "pointCost": 1,
                   "description": "Banished burst-fire plasma weapon.",
                   "weaponProfiles": [
-                    { "name": "Pulse Carbine", "range": "R4", "ap": "1", "special": "ESD(1), Weight of Fire(1)" }
+                    {
+                      "name": "Pulse Carbine",
+                      "range": "R4",
+                      "ap": "1",
+                      "special": "ESD(1), Weight of Fire(1)"
+                    }
                   ]
                 }
               ]
@@ -294,7 +327,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -302,7 +343,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -345,67 +391,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -472,7 +518,12 @@
                   "pointCost": 0,
                   "description": "Precision semi-automatic rifle.",
                   "weaponProfiles": [
-                    { "name": "VK78 Commando", "range": "R6", "ap": "-", "special": "Optics, Rapid Fire" }
+                    {
+                      "name": "VK78 Commando",
+                      "range": "R6",
+                      "ap": "-",
+                      "special": "Optics, Rapid Fire"
+                    }
                   ]
                 },
                 {
@@ -481,7 +532,12 @@
                   "pointCost": 1,
                   "description": "Explosive bolt launcher.",
                   "weaponProfiles": [
-                    { "name": "Cindershot", "range": "R4", "ap": "-", "special": "ESD(1), Grenade, Implosion(5), Lethal(1)" }
+                    {
+                      "name": "Cindershot",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "ESD(1), Grenade, Implosion(5), Lethal(1)"
+                    }
                   ]
                 }
               ]
@@ -518,7 +574,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -526,7 +590,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -569,67 +638,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -696,7 +765,12 @@
                   "pointCost": 0,
                   "description": "Designated marksman rifle.",
                   "weaponProfiles": [
-                    { "name": "M392 DMR", "range": "R6", "ap": "-", "special": "Lethal(1), Optics" }
+                    {
+                      "name": "M392 DMR",
+                      "range": "R6",
+                      "ap": "-",
+                      "special": "Lethal(1), Optics"
+                    }
                   ]
                 },
                 {
@@ -705,7 +779,12 @@
                   "pointCost": 0,
                   "description": "Banished long-range energy rifle.",
                   "weaponProfiles": [
-                    { "name": "Stalker Rifle", "range": "R6", "ap": "-", "special": "Sniper Scope" }
+                    {
+                      "name": "Stalker Rifle",
+                      "range": "R6",
+                      "ap": "-",
+                      "special": "Sniper Scope"
+                    }
                   ]
                 }
               ]
@@ -742,7 +821,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -750,7 +837,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -793,67 +885,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -920,7 +1012,12 @@
                   "pointCost": 0,
                   "description": "High-capacity pump-action shotgun.",
                   "weaponProfiles": [
-                    { "name": "CQS48 Bulldog", "range": "R2", "ap": "2", "special": "Knockback, Lethal(1)" }
+                    {
+                      "name": "CQS48 Bulldog",
+                      "range": "R2",
+                      "ap": "2",
+                      "special": "Knockback, Lethal(1)"
+                    }
                   ]
                 },
                 {
@@ -929,7 +1026,12 @@
                   "pointCost": 0,
                   "description": "Crystal shards track and supercombine on targets.",
                   "weaponProfiles": [
-                    { "name": "Needler", "range": "R3", "ap": "-", "special": "Lethal(1), Rapid Fire, Weight of Fire(1)" }
+                    {
+                      "name": "Needler",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Lethal(1), Rapid Fire, Weight of Fire(1)"
+                    }
                   ]
                 }
               ]
@@ -966,7 +1068,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -974,7 +1084,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -1017,67 +1132,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -1212,7 +1327,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -1220,7 +1343,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -1263,67 +1391,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -1390,7 +1518,12 @@
                   "pointCost": 0,
                   "description": "Classic UNSC combat shotgun.",
                   "weaponProfiles": [
-                    { "name": "M45 Shotgun", "range": "R3", "ap": "1", "special": "ESD(1), Knockback, Lethal(2)" }
+                    {
+                      "name": "M45 Shotgun",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "ESD(1), Knockback, Lethal(2)"
+                    }
                   ]
                 },
                 {
@@ -1399,7 +1532,12 @@
                   "pointCost": 0,
                   "description": "Banished full-auto spike weapon.",
                   "weaponProfiles": [
-                    { "name": "Spike Rifle", "range": "R3", "ap": "-", "special": "Knockback, Rapid Fire, Weight of Fire(1)" }
+                    {
+                      "name": "Spike Rifle",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Knockback, Rapid Fire, Weight of Fire(1)"
+                    }
                   ]
                 }
               ]
@@ -1436,7 +1574,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -1444,7 +1590,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -1487,67 +1638,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -1614,7 +1765,12 @@
                   "pointCost": 0,
                   "description": "Tracking plasma bolts.",
                   "weaponProfiles": [
-                    { "name": "Plasma Launcher", "range": "R5", "ap": "1", "special": "Frag(4), Grenade, Lethal(1), Sticky" }
+                    {
+                      "name": "Plasma Launcher",
+                      "range": "R5",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, Lethal(1), Sticky"
+                    }
                   ]
                 },
                 {
@@ -1623,7 +1779,12 @@
                   "pointCost": 0,
                   "description": "MRLS-2 Hydra grenade launcher.",
                   "weaponProfiles": [
-                    { "name": "M339 Grenade Launcher", "range": "R4", "ap": "-", "special": "Blast, EMP, Frag(3), Grenade" }
+                    {
+                      "name": "M339 Grenade Launcher",
+                      "range": "R4",
+                      "ap": "-",
+                      "special": "Blast, EMP, Frag(3), Grenade"
+                    }
                   ]
                 }
               ]
@@ -1660,7 +1821,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -1668,7 +1837,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -1711,67 +1885,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -1840,7 +2014,12 @@
                   "pointCost": 0,
                   "description": "Crystal shards track and supercombine on targets.",
                   "weaponProfiles": [
-                    { "name": "Needler", "range": "R3", "ap": "-", "special": "Lethal(1), Rapid Fire, Weight of Fire(1)" }
+                    {
+                      "name": "Needler",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Lethal(1), Rapid Fire, Weight of Fire(1)"
+                    }
                   ]
                 },
                 {
@@ -1849,7 +2028,12 @@
                   "pointCost": 0,
                   "description": "Banished burst-fire plasma weapon.",
                   "weaponProfiles": [
-                    { "name": "Pulse Carbine", "range": "R4", "ap": "1", "special": "ESD(1), Weight of Fire(1)" }
+                    {
+                      "name": "Pulse Carbine",
+                      "range": "R4",
+                      "ap": "1",
+                      "special": "ESD(1), Weight of Fire(1)"
+                    }
                   ]
                 },
                 {
@@ -1858,7 +2042,12 @@
                   "pointCost": 1,
                   "description": "Rapid-fire plasma weapon.",
                   "weaponProfiles": [
-                    { "name": "Plasma Rifle", "range": "R4", "ap": "1", "special": "Continuous Fire, ESD(1), Rapid Fire" }
+                    {
+                      "name": "Plasma Rifle",
+                      "range": "R4",
+                      "ap": "1",
+                      "special": "Continuous Fire, ESD(1), Rapid Fire"
+                    }
                   ]
                 },
                 {
@@ -1867,8 +2056,18 @@
                   "pointCost": 5,
                   "description": "Covenant plasma blade \u2014 devastating in close combat.",
                   "weaponProfiles": [
-                    { "name": "Energy Sword", "range": "CC", "ap": "3", "special": "ESD(2), Lethal(1)" },
-                    { "name": "Energy Sword (Lunge)", "range": "R1", "ap": "3", "special": "ESD(1), Lunge" }
+                    {
+                      "name": "Energy Sword",
+                      "range": "CC",
+                      "ap": "3",
+                      "special": "ESD(2), Lethal(1)"
+                    },
+                    {
+                      "name": "Energy Sword (Lunge)",
+                      "range": "R1",
+                      "ap": "3",
+                      "special": "ESD(1), Lunge"
+                    }
                   ]
                 }
               ]
@@ -1907,7 +2106,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -1950,67 +2154,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -2079,7 +2283,12 @@
                   "pointCost": 0,
                   "description": "Plasma bolt burst weapon.",
                   "weaponProfiles": [
-                    { "name": "Concussion Rifle", "range": "R5", "ap": "1", "special": "Blast, ESD(1), Frag(4), Grenade" }
+                    {
+                      "name": "Concussion Rifle",
+                      "range": "R5",
+                      "ap": "1",
+                      "special": "Blast, ESD(1), Frag(4), Grenade"
+                    }
                   ]
                 },
                 {
@@ -2088,7 +2297,12 @@
                   "pointCost": 0,
                   "description": "Calls in orbital strike on marked targets.",
                   "weaponProfiles": [
-                    { "name": "H-165 Target Locator", "range": "R6", "ap": "-", "special": "Blast, Explosive, Frag(6), Lethal(1), Long, Two-Use" }
+                    {
+                      "name": "H-165 Target Locator",
+                      "range": "R6",
+                      "ap": "-",
+                      "special": "Blast, Explosive, Frag(6), Lethal(1), Long, Two-Use"
+                    }
                   ]
                 }
               ]
@@ -2125,7 +2339,15 @@
                   "id": "g_frag",
                   "name": "Fragmentation Grenade",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "",
+                  "weaponProfiles": [
+                    {
+                      "name": "Fragmentation Grenade",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Blast, Frag(4), Grenade, One-Use"
+                    }
+                  ]
                 },
                 {
                   "id": "g_plasma",
@@ -2133,7 +2355,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -2176,67 +2403,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -2334,9 +2561,24 @@
                   "pointCost": 0,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Chainbreaker", "range": "CC", "ap": "1", "special": "Concussive, ESD(1), Lethal(1), Smash(1)" },
-                    { "name": "Chainbreaker (Lunge)", "range": "R1", "ap": "-", "special": "Concussive, Lethal(1), Lunge" },
-                    { "name": "Power Gauntlet", "range": "CC", "ap": "2", "special": "Lethal(2)" }
+                    {
+                      "name": "Chainbreaker",
+                      "range": "CC",
+                      "ap": "1",
+                      "special": "Concussive, ESD(1), Lethal(1), Smash(1)"
+                    },
+                    {
+                      "name": "Chainbreaker (Lunge)",
+                      "range": "R1",
+                      "ap": "-",
+                      "special": "Concussive, Lethal(1), Lunge"
+                    },
+                    {
+                      "name": "Power Gauntlet",
+                      "range": "CC",
+                      "ap": "2",
+                      "special": "Lethal(2)"
+                    }
                   ]
                 }
               ]
@@ -2353,7 +2595,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -2396,67 +2643,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -2528,7 +2775,12 @@
                   "pointCost": 0,
                   "description": "Crystal shards track and supercombine on targets.",
                   "weaponProfiles": [
-                    { "name": "Needler", "range": "R3", "ap": "-", "special": "Lethal(1), Rapid Fire, Weight of Fire(1)" }
+                    {
+                      "name": "Needler",
+                      "range": "R3",
+                      "ap": "-",
+                      "special": "Lethal(1), Rapid Fire, Weight of Fire(1)"
+                    }
                   ]
                 },
                 {
@@ -2537,7 +2789,12 @@
                   "pointCost": 0,
                   "description": "Banished burst-fire plasma weapon.",
                   "weaponProfiles": [
-                    { "name": "Pulse Carbine", "range": "R4", "ap": "1", "special": "ESD(1), Weight of Fire(1)" }
+                    {
+                      "name": "Pulse Carbine",
+                      "range": "R4",
+                      "ap": "1",
+                      "special": "ESD(1), Weight of Fire(1)"
+                    }
                   ]
                 },
                 {
@@ -2546,7 +2803,12 @@
                   "pointCost": 1,
                   "description": "Rapid-fire plasma weapon.",
                   "weaponProfiles": [
-                    { "name": "Plasma Rifle", "range": "R4", "ap": "1", "special": "Continuous Fire, ESD(1), Rapid Fire" }
+                    {
+                      "name": "Plasma Rifle",
+                      "range": "R4",
+                      "ap": "1",
+                      "special": "Continuous Fire, ESD(1), Rapid Fire"
+                    }
                   ]
                 },
                 {
@@ -2555,8 +2817,18 @@
                   "pointCost": 5,
                   "description": "Covenant plasma blade \u2014 devastating in close combat.",
                   "weaponProfiles": [
-                    { "name": "Energy Sword", "range": "CC", "ap": "3", "special": "ESD(2), Lethal(1)" },
-                    { "name": "Energy Sword (Lunge)", "range": "R1", "ap": "3", "special": "ESD(1), Lunge" }
+                    {
+                      "name": "Energy Sword",
+                      "range": "CC",
+                      "ap": "3",
+                      "special": "ESD(2), Lethal(1)"
+                    },
+                    {
+                      "name": "Energy Sword (Lunge)",
+                      "range": "R1",
+                      "ap": "3",
+                      "special": "ESD(1), Lunge"
+                    }
                   ]
                 }
               ]
@@ -2595,7 +2867,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -2638,67 +2915,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -2813,67 +3090,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -2957,7 +3234,12 @@
                   "pointCost": 2,
                   "description": "Multi-lock missile system.",
                   "weaponProfiles": [
-                    { "name": "MLRS-2 Hydra", "range": "R4", "ap": "1", "special": "ESD(2), Explosive, Frag(4), Lethal(1)" }
+                    {
+                      "name": "MLRS-2 Hydra",
+                      "range": "R4",
+                      "ap": "1",
+                      "special": "ESD(2), Explosive, Frag(4), Lethal(1)"
+                    }
                   ]
                 }
               ]
@@ -2974,7 +3256,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -3017,67 +3304,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -3147,9 +3434,24 @@
                   "pointCost": 0,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "VK78 Commando", "range": "R6", "ap": "-", "special": "Optics, Rapid Fire" },
-                    { "name": "Spike Grenade", "range": "R3", "ap": "1", "special": "Frag(4), Grenade, One-Use, Sticky" },
-                    { "name": "Fists", "range": "CC", "ap": "-", "special": "Knockback" }
+                    {
+                      "name": "VK78 Commando",
+                      "range": "R6",
+                      "ap": "-",
+                      "special": "Optics, Rapid Fire"
+                    },
+                    {
+                      "name": "Spike Grenade",
+                      "range": "R3",
+                      "ap": "1",
+                      "special": "Frag(4), Grenade, One-Use, Sticky"
+                    },
+                    {
+                      "name": "Fists",
+                      "range": "CC",
+                      "ap": "-",
+                      "special": "Knockback"
+                    }
                   ]
                 }
               ]
@@ -3164,67 +3466,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -3292,7 +3594,12 @@
                   "pointCost": 0,
                   "description": "Shock damage disrupts electronics and chaining bolts.",
                   "weaponProfiles": [
-                    { "name": "Shock Rifle", "range": "R6", "ap": "1", "special": "ESD(2), Long, Optics, Suppression" }
+                    {
+                      "name": "Shock Rifle",
+                      "range": "R6",
+                      "ap": "1",
+                      "special": "ESD(2), Long, Optics, Suppression"
+                    }
                   ]
                 },
                 {
@@ -3323,7 +3630,12 @@
                   "pointCost": 6,
                   "description": "",
                   "weaponProfiles": [
-                    { "name": "Plasma Grenade", "range": "R3", "ap": "2", "special": "Frag(4), Lethal(1), One-Use, Sticky" }
+                    {
+                      "name": "Plasma Grenade",
+                      "range": "R3",
+                      "ap": "2",
+                      "special": "Frag(4), Lethal(1), One-Use, Sticky"
+                    }
                   ]
                 },
                 {
@@ -3366,67 +3678,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -3492,67 +3804,67 @@
                   "id": "eq_active_camo",
                   "name": "Active Camouflage",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "This model becomes invisible. Enemies beyond R1 cannot target it unless they take an action to reveal it."
                 },
                 {
                   "id": "eq_drop_wall",
                   "name": "Drop Wall",
                   "pointCost": 5,
-                  "description": ""
+                  "description": "Deploy a directional energy barrier. Ranged attacks that cross it from one side are blocked."
                 },
                 {
                   "id": "eq_explosive_ammo",
                   "name": "Explosive Ammo",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "This model's ranged attacks gain Blast and Frag(2) for the rest of the game."
                 },
                 {
                   "id": "eq_grappleshot",
                   "name": "Grappleshot",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "One-use: perform an additional move action, ignoring terrain and obstacles."
                 },
                 {
                   "id": "eq_hardlight_shield",
                   "name": "Hardlight Shield",
                   "pointCost": 7,
-                  "description": ""
+                  "description": "Reaction: add +2 to this model's SV against a single incoming attack."
                 },
                 {
                   "id": "eq_health_pack",
                   "name": "Health Pack",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Restore lost Hit Points to this model."
                 },
                 {
                   "id": "eq_overshield",
                   "name": "Overshield",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Gain temporary Shield points that absorb damage before HP."
                 },
                 {
                   "id": "eq_quantum_translocator",
                   "name": "Quantum Translocator",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Place a marker token. Later, activate to instantly teleport back to the marker."
                 },
                 {
                   "id": "eq_shroud_screen",
                   "name": "Shroud Screen",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Deploy a small dome that blocks line of sight through it for both sides."
                 },
                 {
                   "id": "eq_threat_sensor",
                   "name": "Threat Sensor",
                   "pointCost": 3,
-                  "description": ""
+                  "description": "Reveal all invisible and cloaked enemy models within range."
                 },
                 {
                   "id": "eq_thruster",
                   "name": "Thruster",
                   "pointCost": 4,
-                  "description": ""
+                  "description": "Bonus movement action. Can also be used to disengage from close combat."
                 }
               ]
             },
@@ -3781,7 +4093,12 @@
       "pointCost": 10,
       "category": "ranged",
       "profiles": [
-        { "name": "CQS48 Bulldog", "range": "R2", "ap": "2", "special": "Knockback, Lethal(1)" }
+        {
+          "name": "CQS48 Bulldog",
+          "range": "R2",
+          "ap": "2",
+          "special": "Knockback, Lethal(1)"
+        }
       ]
     },
     {
@@ -3972,7 +4289,12 @@
       "pointCost": 6,
       "category": "ranged",
       "profiles": [
-        { "name": "Plasma Rifle", "range": "R4", "ap": "1", "special": "Continuous Fire, ESD(1), Rapid Fire" }
+        {
+          "name": "Plasma Rifle",
+          "range": "R4",
+          "ap": "1",
+          "special": "Continuous Fire, ESD(1), Rapid Fire"
+        }
       ]
     },
     {
@@ -3995,7 +4317,12 @@
       "pointCost": 6,
       "category": "ranged",
       "profiles": [
-        { "name": "Cindershot", "range": "R4", "ap": "-", "special": "ESD(1), Grenade, Implosion(5), Lethal(1)" }
+        {
+          "name": "Cindershot",
+          "range": "R4",
+          "ap": "-",
+          "special": "ESD(1), Grenade, Implosion(5), Lethal(1)"
+        }
       ]
     },
     {
@@ -4004,7 +4331,12 @@
       "pointCost": 5,
       "category": "ranged",
       "profiles": [
-        { "name": "Pulse Carbine", "range": "R4", "ap": "1", "special": "ESD(1), Weight of Fire(1)" }
+        {
+          "name": "Pulse Carbine",
+          "range": "R4",
+          "ap": "1",
+          "special": "ESD(1), Weight of Fire(1)"
+        }
       ]
     },
     {
