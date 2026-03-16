@@ -77,8 +77,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
@@ -332,8 +332,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
@@ -579,8 +579,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
@@ -826,8 +826,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
@@ -1073,8 +1073,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
@@ -1332,8 +1332,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
@@ -1579,8 +1579,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
@@ -1826,8 +1826,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
@@ -2344,8 +2344,8 @@
                     {
                       "name": "Fragmentation Grenade",
                       "range": "R3",
-                      "ap": "-",
-                      "special": "Blast, Frag(4), Grenade, One-Use"
+                      "ap": "1",
+                      "special": "Frag(5), Grenade, One-Use"
                     }
                   ]
                 },
