@@ -4434,6 +4434,10 @@
       "description": "Depletes all Energy Shields on all models in the target cube, including the target."
     },
     {
+      "name": "ESD",
+      "description": "Energy Shield Damage. This attack inflicts X additional hits against Energy Shields before other hits are resolved."
+    },
+    {
       "name": "Energy Shield",
       "description": "Start with (n) Energy Shields that absorb Hits before armour. 1 shield regenerates at the start of each round (up to maximum n)."
     },
