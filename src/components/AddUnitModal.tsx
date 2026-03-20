@@ -1,9 +1,20 @@
 import { useState } from 'react'
-import type { Unit, Faction, FireteamEntry, GameData } from '../types/game'
+import type { Unit, Faction, FireteamEntry, GameData, UpgradeSlot } from '../types/game'
 import { entryPoints } from '../utils/points'
 import { getDefaultUpgrades, resolveWeapons } from '../utils/upgrades'
 import UpgradeConfigForm from './UpgradeConfigForm'
 import UnitStatPanel from './UnitStatPanel'
+
+/** Returns the first required single-select slot that has 2+ options with weapon profiles — used for loadout tabs. */
+function getLoadoutTabSlot(unit: Unit): UpgradeSlot | null {
+  return unit.upgradeSlots.find(
+    (slot) =>
+      slot.required &&
+      slot.maxSelections === 1 &&
+      !slot.slotType &&
+      slot.options.filter((o) => (o.weaponProfiles?.length ?? 0) > 0).length > 1
+  ) ?? null
+}
 
 interface Props {
   faction: Faction
@@ -27,6 +38,7 @@ export default function AddUnitModal({ faction, gameData, existingEntries, facti
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null)
   const [selectedUpgrades, setSelectedUpgrades] = useState<Record<string, string[]>>({})
   const [expandedStatId, setExpandedStatId] = useState<string | null>(null)
+  const [previewOptionIds, setPreviewOptionIds] = useState<Record<string, string>>({})
 
   const isUniqueConflict = (unit: Unit) => {
     if (!unit.unique) return false
@@ -159,18 +171,47 @@ export default function AddUnitModal({ faction, gameData, existingEntries, facti
                           </div>
 
                           {unit.stats && statsOpen && (() => {
-                            const defaults = getDefaultUpgrades(unit)
+                            const tabSlot = getLoadoutTabSlot(unit)
+                            const tabOptions = tabSlot?.options.filter((o) => (o.weaponProfiles?.length ?? 0) > 0) ?? []
+                            const activeTabId = previewOptionIds[unit.id] ?? tabOptions[0]?.id
+                            const previewUpgrades = {
+                              ...getDefaultUpgrades(unit),
+                              ...(tabSlot && activeTabId ? { [tabSlot.id]: [activeTabId] } : {}),
+                            }
                             const { selectedRangedWeapon, selectedMeleeWeapon, extraWeaponProfiles } =
-                              resolveWeapons(unit, defaults, gameData.weaponUpgrades)
+                              resolveWeapons(unit, previewUpgrades, gameData.weaponUpgrades)
                             return (
-                              <UnitStatPanel
-                                stats={unit.stats}
-                                factionColor={factionColor}
-                                keywords={gameData.keywords}
-                                selectedRangedWeapon={selectedRangedWeapon}
-                                selectedMeleeWeapon={selectedMeleeWeapon}
-                                extraWeaponProfiles={extraWeaponProfiles}
-                              />
+                              <>
+                                {tabOptions.length > 1 && (
+                                  <div className="flex gap-1 px-3 pt-3 pb-1 border-t border-border">
+                                    {tabOptions.map((opt, i) => {
+                                      const active = (activeTabId ?? tabOptions[0]?.id) === opt.id
+                                      return (
+                                        <button
+                                          key={opt.id}
+                                          onClick={() => setPreviewOptionIds((prev) => ({ ...prev, [unit.id]: opt.id }))}
+                                          className="px-3 py-1 rounded font-display text-xs uppercase tracking-wider transition-all"
+                                          style={{
+                                            backgroundColor: active ? factionColor + '25' : 'transparent',
+                                            color: active ? factionColor : 'var(--color-text-muted)',
+                                            border: `1px solid ${active ? factionColor + '60' : 'var(--color-border)'}`,
+                                          }}
+                                        >
+                                          Loadout {i + 1}
+                                        </button>
+                                      )
+                                    })}
+                                  </div>
+                                )}
+                                <UnitStatPanel
+                                  stats={unit.stats}
+                                  factionColor={factionColor}
+                                  keywords={gameData.keywords}
+                                  selectedRangedWeapon={selectedRangedWeapon}
+                                  selectedMeleeWeapon={selectedMeleeWeapon}
+                                  extraWeaponProfiles={extraWeaponProfiles}
+                                />
+                              </>
                             )
                           })()}
                         </div>
