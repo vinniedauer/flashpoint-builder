@@ -250,7 +250,15 @@
             "advance": 2,
             "sprint": 3,
             "shields": 2
-          }
+          },
+          "defaultRangedProfiles": [
+            {
+              "name": "MA40 Assault Rifle",
+              "range": "R4",
+              "ap": "-",
+              "special": "Rapid Fire, Weight of Fire(2)"
+            }
+          ]
         },
         {
           "id": "spartan_mk7",
@@ -1529,7 +1537,15 @@
             "advance": 1,
             "sprint": 3,
             "shields": 3
-          }
+          },
+          "defaultRangedProfiles": [
+            {
+              "name": "MA40 Assault Rifle",
+              "range": "R4",
+              "ap": "-",
+              "special": "Rapid Fire, Weight of Fire(2)"
+            }
+          ]
         },
         {
           "id": "spartan_hazop",

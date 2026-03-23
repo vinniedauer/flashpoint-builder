@@ -38,6 +38,10 @@ export function resolveWeapons(
         (id) => s.options.find((o) => o.id === id)?.weaponProfiles ?? []
       )
     )
+  // Append default ranged (e.g. MA40) when no ranged upgrade is selected from the pool
+  if (!selectedRangedWeapon && unit.defaultRangedProfiles?.length) {
+    extraWeaponProfiles.push(...unit.defaultRangedProfiles)
+  }
   // Append default melee (e.g. Fists) when no melee upgrade is selected from the pool
   if (!selectedMeleeWeapon && unit.defaultMeleeProfiles?.length) {
     extraWeaponProfiles.push(...unit.defaultMeleeProfiles)

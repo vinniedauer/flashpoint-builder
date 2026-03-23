@@ -48,6 +48,7 @@ export interface Unit {
   unique?: boolean
   stats?: UnitStats
   defaultMeleeProfiles?: WeaponProfile[]
+  defaultRangedProfiles?: WeaponProfile[]
 }
 
 export interface UpgradeSlot {

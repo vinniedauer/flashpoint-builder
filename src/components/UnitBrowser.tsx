@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import type { GameData, Unit, Faction } from '../types/game'
+import type { GameData, Unit, Faction, UpgradeSlot } from '../types/game'
+import { getDefaultUpgrades, resolveWeapons } from '../utils/upgrades'
 import UnitDetailModal from './UnitDetailModal'
 import UnitStatPanel from './UnitStatPanel'
 
@@ -16,10 +17,21 @@ const TYPE_LABELS: Record<UnitType, string> = {
   support: 'Support',
 }
 
+function getLoadoutTabSlot(unit: Unit): UpgradeSlot | null {
+  return unit.upgradeSlots.find(
+    (slot) =>
+      slot.required &&
+      slot.maxSelections === 1 &&
+      !slot.slotType &&
+      slot.options.filter((o) => (o.weaponProfiles?.length ?? 0) > 0).length > 1
+  ) ?? null
+}
+
 export default function UnitBrowser({ gameData }: Props) {
   const [selectedFactionId, setSelectedFactionId] = useState(gameData.factions[0]?.id ?? '')
   const [selectedUnit, setSelectedUnit] = useState<{ unit: Unit; faction: Faction } | null>(null)
   const [expandedStatId, setExpandedStatId] = useState<string | null>(null)
+  const [previewOptionIds, setPreviewOptionIds] = useState<Record<string, string>>({})
 
   const faction = gameData.factions.find((f) => f.id === selectedFactionId)
 
@@ -67,6 +79,7 @@ export default function UnitBrowser({ gameData }: Props) {
             <div className="space-y-1">
               {units.map((unit) => {
                 const statsOpen = expandedStatId === unit.id
+                const factionColor = faction!.colorHex
                 return (
                   <div
                     key={unit.id}
@@ -94,7 +107,7 @@ export default function UnitBrowser({ gameData }: Props) {
                         </div>
                         <span
                           className="font-mono text-sm flex-shrink-0 ml-3"
-                          style={{ color: faction?.colorHex }}
+                          style={{ color: factionColor }}
                         >
                           {unit.pointCost} pts
                         </span>
@@ -107,15 +120,10 @@ export default function UnitBrowser({ gameData }: Props) {
                           title="Unit stats"
                         >
                           <svg
-                            width="14"
-                            height="14"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            style={{ transform: statsOpen ? 'rotate(180deg)' : 'none', color: statsOpen ? faction?.colorHex : 'var(--color-chevron)', transition: 'transform 0.2s, color 0.2s' }}
+                            width="14" height="14" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" strokeWidth="1.5"
+                            strokeLinecap="round" strokeLinejoin="round"
+                            style={{ transform: statsOpen ? 'rotate(180deg)' : 'none', color: statsOpen ? factionColor : 'var(--color-chevron)', transition: 'transform 0.2s, color 0.2s' }}
                           >
                             <polyline points="6 9 12 15 18 9" />
                           </svg>
@@ -123,9 +131,50 @@ export default function UnitBrowser({ gameData }: Props) {
                       )}
                     </div>
 
-                    {unit.stats && statsOpen && (
-                      <UnitStatPanel stats={unit.stats} factionColor={faction!.colorHex} keywords={gameData.keywords} />
-                    )}
+                    {unit.stats && statsOpen && (() => {
+                      const tabSlot = getLoadoutTabSlot(unit)
+                      const tabOptions = tabSlot?.options.filter((o) => (o.weaponProfiles?.length ?? 0) > 0) ?? []
+                      const activeTabId = previewOptionIds[unit.id] ?? tabOptions[0]?.id
+                      const previewUpgrades = {
+                        ...getDefaultUpgrades(unit),
+                        ...(tabSlot && activeTabId ? { [tabSlot.id]: [activeTabId] } : {}),
+                      }
+                      const { selectedRangedWeapon, selectedMeleeWeapon, extraWeaponProfiles } =
+                        resolveWeapons(unit, previewUpgrades, gameData.weaponUpgrades)
+                      return (
+                        <>
+                          {tabOptions.length > 1 && (
+                            <div className="flex gap-1 px-3 pt-3 pb-1 border-t border-border">
+                              {tabOptions.map((opt, i) => {
+                                const active = (activeTabId ?? tabOptions[0]?.id) === opt.id
+                                return (
+                                  <button
+                                    key={opt.id}
+                                    onClick={() => setPreviewOptionIds((prev) => ({ ...prev, [unit.id]: opt.id }))}
+                                    className="px-3 py-1 rounded font-display text-xs uppercase tracking-wider transition-all"
+                                    style={{
+                                      backgroundColor: active ? factionColor + '25' : 'transparent',
+                                      color: active ? factionColor : 'var(--color-text-muted)',
+                                      border: `1px solid ${active ? factionColor + '60' : 'var(--color-border)'}`,
+                                    }}
+                                  >
+                                    Loadout {i + 1}
+                                  </button>
+                                )
+                              })}
+                            </div>
+                          )}
+                          <UnitStatPanel
+                            stats={unit.stats}
+                            factionColor={factionColor}
+                            keywords={gameData.keywords}
+                            selectedRangedWeapon={selectedRangedWeapon}
+                            selectedMeleeWeapon={selectedMeleeWeapon}
+                            extraWeaponProfiles={extraWeaponProfiles}
+                          />
+                        </>
+                      )
+                    })()}
                   </div>
                 )
               })}

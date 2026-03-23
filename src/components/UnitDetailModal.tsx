@@ -1,4 +1,6 @@
-import type { Unit, GameData } from '../types/game'
+import { useState } from 'react'
+import type { Unit, GameData, WeaponProfile, KeywordEntry, Upgrade, WeaponUpgrade } from '../types/game'
+import KeywordModal from './KeywordModal'
 
 interface Props {
   unit: Unit
@@ -7,19 +9,99 @@ interface Props {
   onClose: () => void
 }
 
+function baseKeyword(kw: string): string {
+  return kw.replace(/\s*\(\d+\)$/, '').trim()
+}
+
+function WeaponProfileRow({
+  profile: p,
+  factionColor,
+  keywords,
+  onKeywordClick,
+}: {
+  profile: WeaponProfile
+  factionColor: string
+  keywords: KeywordEntry[]
+  onKeywordClick: (kw: string) => void
+}) {
+  const specialKeywords = p.special ? p.special.split(',').map((s) => s.trim()) : []
+  return (
+    <div className="mb-1 last:mb-0">
+      <div className="flex items-baseline justify-between gap-2">
+        <span className="font-display text-xs font-semibold" style={{ color: factionColor }}>{p.name}</span>
+        <div className="flex items-baseline gap-2 shrink-0">
+          <span className="font-mono text-xs text-text-muted">{p.range}</span>
+          {p.ap !== '-' && <span className="font-mono text-xs text-text-muted">AP{p.ap}</span>}
+        </div>
+      </div>
+      {specialKeywords.length > 0 && (
+        <p className="font-display text-xs text-text-muted italic">
+          {specialKeywords.map((kw, i) => {
+            const hasDesc = keywords.some((k) => k.name.toLowerCase() === baseKeyword(kw).toLowerCase())
+            return (
+              <span key={kw}>
+                {i > 0 && ', '}
+                {hasDesc ? (
+                  <button
+                    onClick={() => onKeywordClick(kw)}
+                    className="italic underline decoration-dotted underline-offset-2 hover:opacity-80 transition-opacity"
+                  >
+                    {kw}
+                  </button>
+                ) : (
+                  <span>{kw}</span>
+                )}
+              </span>
+            )
+          })}
+        </p>
+      )}
+    </div>
+  )
+}
+
+/** Merges profiles from the full weaponUpgrades list into a slot option (for weapon pool slots). */
+function mergeProfiles(option: Upgrade, weaponUpgrades: WeaponUpgrade[]): WeaponProfile[] {
+  if (option.weaponProfiles?.length) return option.weaponProfiles
+  const match = weaponUpgrades.find((w) => w.id === option.id)
+  return match?.profiles ?? []
+}
+
 export default function UnitDetailModal({ unit, gameData, factionColor, onClose }: Props) {
-  const getSlotOptions = (slot: import('../types/game').UpgradeSlot) => {
+  const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set())
+  const [activeKeyword, setActiveKeyword] = useState<string | null>(null)
+
+  const toggleExpanded = (id: string) => {
+    setExpandedIds((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+
+  const handleKeywordClick = (kw: string) => {
+    const base = baseKeyword(kw)
+    const entry = gameData.keywords.find((k) => k.name.toLowerCase() === base.toLowerCase())
+    if (entry) setActiveKeyword(kw)
+  }
+
+  const activeEntry = activeKeyword
+    ? gameData.keywords.find((k) => k.name.toLowerCase() === baseKeyword(activeKeyword).toLowerCase())
+    : null
+
+  const getSlotOptions = (slot: import('../types/game').UpgradeSlot): (Upgrade & { profiles: WeaponProfile[] })[] => {
     if (slot.slotType === 'weapon_melee') {
       return gameData.weaponUpgrades
         .filter((w) => w.category === 'melee')
-        .map((w) => ({ id: w.id, name: w.name, pointCost: w.pointCost, description: '' }))
+        .map((w) => ({ id: w.id, name: w.name, pointCost: w.pointCost, description: '', weaponProfiles: w.profiles, profiles: w.profiles ?? [] }))
     }
     if (slot.slotType === 'weapon_ranged') {
       return gameData.weaponUpgrades
         .filter((w) => w.category === 'ranged')
-        .map((w) => ({ id: w.id, name: w.name, pointCost: w.pointCost, description: '' }))
+        .map((w) => ({ id: w.id, name: w.name, pointCost: w.pointCost, description: '', weaponProfiles: w.profiles, profiles: w.profiles ?? [] }))
     }
-    return slot.options
+    return slot.options.map((o) => ({ ...o, profiles: mergeProfiles(o, gameData.weaponUpgrades) }))
   }
 
   return (
@@ -89,29 +171,73 @@ export default function UnitDetailModal({ unit, gameData, factionColor, onClose 
                   </div>
 
                   <div className="space-y-1">
-                    {options.map((option) => (
-                      <div
-                        key={option.id}
-                        className="flex items-center justify-between px-4 py-3 rounded-lg bg-surface-hi border border-border"
-                      >
-                        <div>
-                          <span className="font-display text-sm text-text-primary">
-                            {option.name}
-                          </span>
-                          {option.description && (
-                            <p className="text-text-muted font-display text-xs mt-0.5">
-                              {option.description}
-                            </p>
+                    {options.map((option) => {
+                      const expanded = expandedIds.has(option.id)
+                      const hasExpandable = !!(option.description || option.profiles.length > 0)
+
+                      return (
+                        <div key={option.id}>
+                          <div
+                            className="flex rounded-lg border overflow-hidden"
+                            style={{ borderColor: 'var(--color-border)' }}
+                          >
+                            {/* Name + cost (non-interactive) */}
+                            <div className="flex-1 flex items-center justify-between px-4 py-3 bg-surface-hi min-w-0">
+                              <span className="font-display text-sm text-text-primary">{option.name}</span>
+                              <span
+                                className="font-mono text-xs ml-2 flex-shrink-0"
+                                style={{ color: option.pointCost > 0 ? factionColor : 'var(--color-radio-border)' }}
+                              >
+                                {option.pointCost > 0 ? `+${option.pointCost}` : 'free'}
+                              </span>
+                            </div>
+
+                            {/* Chevron */}
+                            {hasExpandable && (
+                              <button
+                                onClick={() => toggleExpanded(option.id)}
+                                className="px-3 border-l border-border flex items-center justify-center shrink-0 hover:bg-surface-hover transition-all bg-surface-hi"
+                              >
+                                <svg
+                                  width="14" height="14" viewBox="0 0 24 24"
+                                  fill="none" stroke="currentColor" strokeWidth="1.5"
+                                  strokeLinecap="round" strokeLinejoin="round"
+                                  style={{
+                                    transform: expanded ? 'rotate(180deg)' : 'none',
+                                    transition: 'transform 0.2s',
+                                    color: expanded ? factionColor : 'var(--color-chevron)',
+                                  }}
+                                >
+                                  <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                              </button>
+                            )}
+                          </div>
+
+                          {expanded && hasExpandable && (
+                            <div
+                              className="mt-1 px-4 py-2.5 rounded-lg"
+                              style={{ backgroundColor: factionColor + '0C', border: `1px solid ${factionColor}30` }}
+                            >
+                              {option.description && (
+                                <p className="font-display text-xs text-text-secondary leading-relaxed mb-2 last:mb-0">
+                                  {option.description}
+                                </p>
+                              )}
+                              {option.profiles.map((p, i) => (
+                                <WeaponProfileRow
+                                  key={i}
+                                  profile={p}
+                                  factionColor={factionColor}
+                                  keywords={gameData.keywords}
+                                  onKeywordClick={handleKeywordClick}
+                                />
+                              ))}
+                            </div>
                           )}
                         </div>
-                        <span
-                          className="font-mono text-xs ml-2 flex-shrink-0"
-                          style={{ color: option.pointCost > 0 ? factionColor : 'var(--color-radio-border)' }}
-                        >
-                          {option.pointCost > 0 ? `+${option.pointCost}` : 'free'}
-                        </span>
-                      </div>
-                    ))}
+                      )
+                    })}
                   </div>
                 </div>
               )
@@ -119,6 +245,15 @@ export default function UnitDetailModal({ unit, gameData, factionColor, onClose 
           )}
         </div>
       </div>
+
+      {activeEntry && (
+        <KeywordModal
+          name={activeEntry.name}
+          description={activeEntry.description}
+          factionColor={factionColor}
+          onClose={() => setActiveKeyword(null)}
+        />
+      )}
     </div>
   )
 }
