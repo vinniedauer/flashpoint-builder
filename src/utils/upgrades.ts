@@ -38,5 +38,9 @@ export function resolveWeapons(
         (id) => s.options.find((o) => o.id === id)?.weaponProfiles ?? []
       )
     )
+  // Append default melee (e.g. Fists) when no melee upgrade is selected from the pool
+  if (!selectedMeleeWeapon && unit.defaultMeleeProfiles?.length) {
+    extraWeaponProfiles.push(...unit.defaultMeleeProfiles)
+  }
   return { selectedRangedWeapon, selectedMeleeWeapon, extraWeaponProfiles }
 }
